@@ -1,0 +1,46 @@
+.header {
+  width: 100vw;
+  height: auto;
+  margin-top: 7rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url("../../assets/backgroundImages/1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  padding: 1rem 3rem;
+  box-sizing: border-box;
+  text-align: center;
+  animation: var(--fade-in);
+  font-family: var(--primary-font);
+}
+.header span {
+  font-size: 1rem;
+}
+.header h2 {
+  padding: 0 5rem;
+  font-size: 2rem;
+}
+
+@media (max-width: 780px) {
+.header h2 {
+  font-size: 1.7rem;
+  padding: 0;
+}
+.header span {
+  font-size: .8rem;
+}
+}
+@media (max-width: 400px) {
+  .header h2 {
+    font-size: 1.2rem;
+    padding: 0;
+  }
+  .header span {
+    font-size: .8rem;
+  }
+}

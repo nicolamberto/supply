@@ -1,0 +1,39 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+.primary_button{
+  padding: 10px;
+  min-width: 8rem;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: .5rem;
+  background-color: var(--primary-bg-color);
+  color: white;
+}
+.primary_button:hover{
+  background-color: #0c9457;
+  color: white;
+}
+:root {
+  /*Fuentes*/
+  --primary-font: "Montserrat", sans-serif;
+  --primary-bg-color: #0a7c48;
+  /*Animaciones*/
+  --fade-in: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}

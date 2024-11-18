@@ -1,0 +1,135 @@
+.contact_main {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--primary-bg-color);
+  font-family: var(--primary-font);
+  color: white;
+  box-sizing: border-box;
+  padding: 3rem;
+}
+
+.container_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  height: 90%;
+  margin: auto;
+}
+.item {
+  width: 100%;
+  height: 100%;
+  border: 5px solid red;
+}
+.container_form h3 {
+  font-size: 1.8rem;
+  color: var(--primary-font-color);
+  margin-bottom: 1rem;
+}
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+.contact_form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #333;
+  gap: 1rem;
+}
+
+.contact_form input,
+.contact_form textarea {
+  padding: 10px;
+  border: 1px solid #a0a0a0;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.contact_form input:focus,
+.contact_form textarea:focus {
+  border-color: var(--primary-accent-color);
+}
+
+.contact_form button {
+  align-self: center;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: var(--primary-bg-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact_form button:hover {
+  background-color: black;
+}
+
+.container_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.header {
+  text-align: center;
+}
+
+.header h3 {
+  font-size: 2rem;
+}
+.map {
+  width: 90%;
+  height: auto;
+  max-height: 20rem;
+}
+.map img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin-top: 3rem;
+}
+@media (max-width: 780px) {
+  .contact_main {
+    grid-template-columns: 1fr;
+  }
+
+  .container_form {
+    order: 1;
+  }
+
+  .container_info {
+    order: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact_main {
+    padding: 1rem;
+  }
+
+  .container_form,
+  .container_info {
+    padding: 1rem;
+  }
+}

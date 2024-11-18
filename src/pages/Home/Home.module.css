@@ -1,0 +1,25 @@
+.home_main {
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.icon {
+  position: fixed;
+  top: 85vh;
+  right: 1rem;
+  width: 80px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 40px #bebebe68, -10px -10px 40px #ffffff3e;
+}
+@media (max-width: 400px) {
+  .icon{
+    width: 60px;
+    top: 90vh;
+  }
+}
