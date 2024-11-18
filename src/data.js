@@ -2,13 +2,13 @@
 import imageCategorie1 from "../src/assets/imagesCategories/1.png"
 import imageCategorie2 from "../src/assets/imagesCategories/2.png"
 import imageCategorie3 from "../src/assets/imagesCategories/3.png"
-import imageCategorie4 from "../src/assets/imagesCategories/7.png"
-import imageCategorie5 from "../src/assets/imagesCategories/6.png"
-import imageCategorie6 from "../src/assets/imagesCategories/9.png"
-import imageCategorie7 from "../src/assets/imagesCategories/5.png"
-import imageCategorie8 from "../src/assets/imagesCategories/4.png"
-import imageCategorie9 from "../src/assets/imagesCategories/10.png"
-import imageCategorie10 from "../src/assets/imagesCategories/8.png"
+import imageCategorie4 from "../src/assets/imagesCategories/4.png"
+import imageCategorie5 from "../src/assets/imagesCategories/5.png"
+import imageCategorie6 from "../src/assets/imagesCategories/6.png"
+import imageCategorie7 from "../src/assets/imagesCategories/7.png"
+import imageCategorie8 from "../src/assets/imagesCategories/8.png"
+import imageCategorie9 from "../src/assets/imagesCategories/9.png"
+import imageCategorie10 from "../src/assets/imagesCategories/10.png"
 import imageCategorie11 from "../src/assets/imagesCategories/11.png"
 import imageCategorie12 from "../src/assets/imagesCategories/12.png"
 import imageCategorie13 from "../src/assets/imagesCategories/13.png"
@@ -224,49 +224,49 @@ export const categories = [
     {
         id: 4,
         nombre: "Bines Plásticos",
-        imagen: imageCategorie4,
+        imagen: imageCategorie7,
         slug: "bines-plasticos",
 
     },
     {
         id: 5,
         nombre: "Canastos Plásticos",
-        imagen: imageCategorie5,
+        imagen: imageCategorie6,
         slug: "canastos-plasticos",
 
     },
     {
         id: 6,
         nombre: "Cajones Plásticos",
-        imagen: imageCategorie6,
+        imagen: imageCategorie8,
         slug: "cajones-plasticos",
 
     },
     {
         id: 7,
         nombre: "Recipientes de Residuos",
-        imagen: imageCategorie7,
+        imagen: imageCategorie5,
         slug: "recipientes-de-residuos",
 
     },
     {
         id: 8,
         nombre: "Estaciones Ambientales",
-        imagen: imageCategorie8,
+        imagen: imageCategorie4,
         slug: "estaciones-ambientales",
 
     },
     {
         id: 9,
         nombre: "Gavetas Plásticas",
-        imagen: imageCategorie9,
+        imagen: imageCategorie10,
         slug: "gavetas-plasticas",
 
     },
     {
         id: 10,
         nombre: "Recipientes Alimenticios",
-        imagen: imageCategorie10,
+        imagen: imageCategorie9,
         slug: "recipientes-alimenticios",
 
     },
@@ -2190,6 +2190,7 @@ export const products = [
         description: "650mm x 950mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
             thermalSpectrum: "-20° / +80° C",
+            loadCapacity: null,
             capacity: "320L",
             material: "Polietileno de alta densidad",
             variants: null,
@@ -2206,6 +2207,7 @@ export const products = [
         description: "760mm x 994mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
             thermalSpectrum: "-20° / +80° C",
+            loadCapacity: null,
             capacity: "400L",
             material: "Polietileno de alta densidad",
             variants: null,
@@ -2222,6 +2224,7 @@ export const products = [
         description: "750mm x 1150mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
             thermalSpectrum: "-20° / +80° C",
+            loadCapacity: null,
             capacity: "500L",
             material: "Polietileno de alta densidad",
             colors: null,
@@ -2238,6 +2241,7 @@ export const products = [
         description: "850mm x 1250mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
             thermalSpectrum: "-20° / +80° C",
+            loadCapacity: null,
             capacity: "700L",
             material: "Polietileno de alta densidad",
             colors: null,
@@ -2254,6 +2258,7 @@ export const products = [
         description: "990mm x 1550mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
             thermalSpectrum: "-20° / +80° C",
+            loadCapacity: null,
             capacity: "1000L",
             material: "Polietileno de alta densidad",
             colors: null,
@@ -2271,6 +2276,7 @@ export const products = [
         description: "930mm x 1930mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
             thermalSpectrum: "-20° / +80° C",
+            loadCapacity: null,
             capacity: "1250L",
             material: "Polietileno de alta densidad",
             colors: null,
@@ -2287,6 +2293,7 @@ export const products = [
         description: "1000mm x 2260mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
             thermalSpectrum: "-20° / +80° C",
+            loadCapacity: null,
             capacity: "1650L",
             material: "Polietileno de alta densidad",
             colors: null,
@@ -2303,6 +2310,7 @@ export const products = [
         description: "1120mm x 2330mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
             thermalSpectrum: "-20° / +80° C",
+            loadCapacity: null,
             capacity: "2050L",
             material: "Polietileno de alta densidad",
             colors: null,
@@ -2319,6 +2327,7 @@ export const products = [
         description: "1500mm x 1160mm x 2450mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
             thermalSpectrum: "-20° / +80° C",
+            loadCapacity: null,
             capacity: "3000L",
             material: "Polietileno de alta densidad",
             colors: null,
@@ -2333,8 +2342,9 @@ export const products = [
         name: "BIN ESTRUCTURAL 3400 LITROS",
         image: [tanquesLiquidos14],
         description: "1450mm x 1210mm Alto x 2900mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
-        technicalDetail: {
+        technicalDetails: {
             thermalSpectrum: "-20° / +80° C",
+            loadCapacity: null,
             capacity: "3400L",
             material: "Polietileno de alta densidad",
             colors: null,
@@ -2351,6 +2361,7 @@ export const products = [
         description: "1750mm x 1383mm x 2555mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
             thermalSpectrum: "-20° / +80° C",
+            loadCapacity: null,
             capacity: "4400L",
             material: "Polietileno de alta densidad",
             colors: null,
@@ -2367,6 +2378,7 @@ export const products = [
         description: "1550mm x 1280mm x 3060mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
             thermalSpectrum: "-20° / +80° C",
+            loadCapacity: null,
             capacity: "5250L",
             material: "Polietileno de alta densidad",
             colors: null,
@@ -2383,6 +2395,7 @@ export const products = [
         description: "1550mm x 1280mm x 4500mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
             thermalSpectrum: "-20° / +80° C",
+            loadCapacity: null,
             capacity: "6000L",
             material: "Polietileno de alta densidad",
             colors: null,
@@ -2399,6 +2412,7 @@ export const products = [
         description: "1750mm x 3240mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
             thermalSpectrum: "-20° / +80° C",
+            loadCapacity: null,
             capacity: "7000L",
             material: "Polietileno de alta densidad",
             colors: null,
@@ -2415,6 +2429,7 @@ export const products = [
         description: "1930mm x 3850mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
             thermalSpectrum: "-20° / +80° C",
+            loadCapacity: null,
             capacity: "10000L",
             material: "Polietileno de alta densidad",
             colors: null,
@@ -2431,6 +2446,7 @@ export const products = [
         description: "80 x 80 x 125 cm de alto. 1m³. Resistencia a ácidos, acetatos y derivados del petróleo.",
         technicalDetails: {
             thermalSpectrum: null,
+            loadCapacity: null,
             capacity: "1m³",
             material: "Polietileno de alta densidad",
             colors: null,
@@ -2447,6 +2463,7 @@ export const products = [
         description: "100 x 134 x 150 cm de alto. 1m³. Resistencia a ácidos, acetatos y derivados del petróleo.",
         technicalDetails: {
             thermalSpectrum: null,
+            loadCapacity: null,
             capacity: "1m³",
             material: "Polietileno de alta densidad",
             colors: null,
@@ -2467,7 +2484,8 @@ export const products = [
             capacity: "12L",
             material: null,
             colors: ["#1b962d", "#000000", "#ea1a1a", "#201ae0", "#f3f520"],
-            variants: "Línea económica"
+            variants: "Línea económica",
+            ecofriendly: null
         }
     },
     {
@@ -2567,7 +2585,8 @@ export const products = [
             capacity: "45L",
             material: "Polietileno de alta densidad",
             colors: ["#1b962d", "#000000", "#ea1a1a", "#201ae0", "#f3f520"],
-            variants: "Línea Reforzada"
+            variants: "Línea Reforzada",
+            ecofriendly: null
         }
     },
     {
@@ -2651,7 +2670,7 @@ export const products = [
             material: null,
             colors: null,
             variants: null,
-            ecofriendly: true
+            ecofriendly: "econfriendly"
         }
     },
     {
@@ -2667,7 +2686,7 @@ export const products = [
             material: null,
             colors: null,
             variants: null,
-            ecofriendly: true
+            ecofriendly: "econfriendly"
         }
     },
     {
@@ -2683,7 +2702,7 @@ export const products = [
             material: null,
             colors: null,
             variants: null,
-            ecofriendly: true
+            ecofriendly: "econfriendly"
         }
     },
     {
@@ -2699,7 +2718,7 @@ export const products = [
             material: null,
             colors: null,
             variants: null,
-            ecofriendly: true
+            ecofriendly: "econfriendly"
         }
     },
     {
@@ -2715,7 +2734,7 @@ export const products = [
             material: null,
             colors: null,
             variants: null,
-            ecofriendly: true
+            ecofriendly: "econfriendly"
         }
     },
     {
@@ -2731,7 +2750,7 @@ export const products = [
             material: null,
             colors: null,
             variants: null,
-            ecofriendly: true
+            ecofriendly: "econfriendly"
         }
     },
     {
@@ -2747,7 +2766,7 @@ export const products = [
             material: null,
             colors: null,
             variants: null,
-            ecofriendly: true
+            ecofriendly: "econfriendly"
         }
     },
 
