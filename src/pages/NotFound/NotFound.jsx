@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./NotFound.module.css";
-import useTitle from "../../Hooks/useTitle";
+import useTitle from "../../hooks/useTitle";
 
 function NotFound({}) {
   //Texto de la pestaña del nevegador segun la pantalla que se está mostrando
