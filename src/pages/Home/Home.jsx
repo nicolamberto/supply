@@ -10,6 +10,7 @@ import Categories from "../../components/Categories/Categories";
 import { categories } from "../../data";
 import iconWts from "../../assets/icons/whatsapp.svg"
 function Home({}) {
+  
   //Texto de la pestaña del nevegador segun la pantalla que se está mostrando
   useTitle("Pallets Plásticos | Supply Argentina");
   console.log(categories);
