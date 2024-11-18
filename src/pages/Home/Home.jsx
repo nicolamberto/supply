@@ -8,7 +8,6 @@ import Footer from "../../components/Footer/Footer";
 import Contact from "../../components/Contact/Contact";
 import Categories from "../../components/Categories/Categories";
 import { categories } from "../../data";
-import iconWts from "../../assets/icons/whatsapp.svg"
 function Home({}) {
   
   //Texto de la pestaña del nevegador segun la pantalla que se está mostrando
@@ -22,7 +21,6 @@ function Home({}) {
       <Categories/>
       <CompanyOverview/>
       {/* <Contact/> */}
-      <img className={style.icon} src={iconWts} alt="whatsapp" />
       <Footer/>
     </section>
   );

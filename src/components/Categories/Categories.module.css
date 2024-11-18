@@ -11,7 +11,7 @@
 }
 .container_categories {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 30rem;
   height: auto;
   box-sizing: border-box;
@@ -22,19 +22,31 @@
 .item {
   width: 100%;
   height: 100%;
-  border: 5px solid black;
+  border: 5px solid var(  --primary-bg-color);
   box-sizing: border-box;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: end;
+  display: grid;
+  grid-template-rows: 1.6fr .4fr;
 }
 .item img {
   width: 100%;
-  height: 80%;
-  object-fit: contain;
-  position: absolute;
-  top: 0;
+  height: 100%;
+  object-fit: cover;
+}
+.title{
+  width: 100%;
+  height: 100%;
+  background-color: var(  --primary-bg-color);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: white !important;
+  font-family: var( --primary-font);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
 }
 @media (max-width: 1024px) {
   .container_categories {
