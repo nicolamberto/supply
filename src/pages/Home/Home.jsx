@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Home.module.css";
-import useTitle from "../../Hooks/useTitle";
+import useTitle from "../../hooks/useTitle";
 import Navbar from "../../components/Navbar/Navbar";
 import Header from "../../components/Header/Header";
 import CompanyOverview from "../../components/CompanyOverview/CompanyOverview";

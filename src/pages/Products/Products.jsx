@@ -4,7 +4,7 @@ import { products } from "../../data";
 import Navbar from "../../components/Navbar/Navbar";
 import Card from "../../components/Card/Card";
 import Footer from "../../components/Footer/Footer";
-
+import useTitle from "../../hooks/useTitle";
 function Products() {
   const location = useLocation();
   const currentSlug = decodeURIComponent(location.pathname.split("/").pop());
@@ -17,6 +17,7 @@ function Products() {
     (prod) => prod.category === currentSlug
   );
 console.log(filteredProducts);
+  useTitle(`${currentSlug.replace(/-/g, " ").toUpperCase()} | Supply Argentina`)
 
   return <section className={style.products_main}>
     <Navbar/>
