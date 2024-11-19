@@ -2,92 +2,105 @@
   width: 100vw;
   height: auto;
   min-height: 50vh;
-  background-color: white;
-  display: grid;
-  place-items: center;
-  grid-template-columns: 1.3fr 0.7fr;
-  box-sizing: border-box;
-  padding: 2.5rem;
-  text-align: center;
   font-family: var(--primary-font);
   position: relative;
-}
-.container_description {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
-  align-items: start;
-  text-align: start;
+  align-items: center;
+  background-color: #fbfcfc;
+  box-sizing: border-box;
+  padding: 2rem 0;
 }
-.container_description h2 {
-  font-size: 3rem;
-  margin: 0;
+.container_up {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.container_description {
+  max-width: 50%;
 }
 .container_description p {
-  font-size: 1.2rem;
-  max-width: 70%;
+  font-size: 1.1rem;
+  padding: 0;
+}
+.title {
+  font-size: 2rem;
 }
 .container_count {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
 }
 .count {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 10px;
   font-size: 1.5rem;
-  color: green;
+  color: var(--primary-bg-color);
+  font-weight: 600;
 }
-.button_contact {
-  position: absolute;
-  bottom: 2.5rem;
-  left: 50%;
-  transform: translate(-50%);
+.container_marcas {
+  width: 99vw;
+  height: 10rem;
+  margin-top: 2rem;
+  overflow: hidden; /* Oculta las imágenes fuera del contenedor */
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: auto;
+}
+
+.marquee {
+  display: flex;
+  animation: scroll 50s linear infinite; /* Duración ajustable */
+}
+
+.marquee img {
+  height: 10rem;
+  width: auto;
+  margin-right: 1rem; /* Espaciado opcional entre imágenes */
+  object-fit: contain;
+  /* filter: grayscale(100%) brightness(0.99); */
+}
+
+/* Animación de desplazamiento */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 @media (max-width: 768px) {
-  .companyOverview_main {
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
-  }
-  .container_count {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: start;
-  }
-  .container_description {
-    display: flex;
+  .container_up {
     flex-flow: column nowrap;
     justify-content: center;
-    align-items: center;
     text-align: center;
   }
+  .companyOverview_main{
+    min-height: 70vh;
+  }
+
 }
 @media (max-width: 400px) {
-  .companyOverview_main {
-    width: 100vw;
-    height: auto;
-    min-height: 60vh;
-    padding: 0;
-  }
   .container_description {
-    margin-top: 2.5rem;
-  }
-  .container_count {
-    margin-bottom: 5rem;
-    gap: 0;
-
-  }
-  .container_description h2 {
-    font-size: 2rem;
-    margin: 0;
+    max-width: none;
   }
   .container_description p {
     font-size: 1rem;
-    max-width: 90%;
+    padding: 0 10px;
   }
-  .count {
+  .count{
     font-size: 1.2rem;
   }
 }

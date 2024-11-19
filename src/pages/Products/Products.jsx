@@ -1,22 +1,19 @@
 import style from "./Products.module.css";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { products } from "../../data";
 import Navbar from "../../components/Navbar/Navbar";
 import Card from "../../components/Card/Card";
 import Footer from "../../components/Footer/Footer";
 import useTitle from "../../hooks/useTitle";
-function Products() {
+import list from "../../assets/isotipos/lista.png";
+function Products({ addToCart, filteredProducts }) {
   const location = useLocation();
   const currentSlug = decodeURIComponent(location.pathname.split("/").pop());
 
-  // Encuentra la categoría correspondiente al slug
-  const category = products.find((cat) => cat.slug === currentSlug);
-
   // Filtra los productos
-  const filteredProducts = products.filter(
+  const filteredProductsLocal = products.filter(
     (prod) => prod.category === currentSlug
   );
-  console.log(filteredProducts);
   useTitle(
     `${currentSlug.replace(/-/g, " ").toUpperCase()} | Supply Argentina`
   );
@@ -24,14 +21,24 @@ function Products() {
   return (
     <section className={style.products_main}>
       <Navbar />
+      {/* <Link to={"/Presupuesto"}>
+        <div className={style.icon}>
+          <img src={list} alt="carrito" />
+          <span>{filteredProducts.length}</span>
+        </div>
+      </Link> */}
+
       <h2>{currentSlug.replace(/-/g, " ").toUpperCase()}</h2>
       <div className={style.container_products}>
-        {filteredProducts.map((item, index) => (
+        {filteredProductsLocal.map((item) => (
           <Card
+            key={item.id}
             image={item.image[0]}
             name={item.name}
             description={item.description}
             technicalDetails={item.technicalDetails}
+            addToCart={addToCart}
+            id={item.id}
           />
         ))}
       </div>

@@ -2,7 +2,7 @@ import { SiTinyletter } from "react-icons/si";
 import ProductBadge from "../ProductBadge/ProductBadge";
 import style from "./Card.module.css";
 import iconEcoFriend from "../../assets/isotipos/frend.png";
-function Card({ name, image, description, technicalDetails }) {
+function Card({ name, image, description, technicalDetails, addToCart, id }) {
   //   {
 
   //     id: 1,
@@ -22,55 +22,36 @@ function Card({ name, image, description, technicalDetails }) {
   //     }
 
   // }
-  console.log(technicalDetails.ecofriendly);
 
   return (
     <div className={style.card_main}>
+      <span className={style.name_product}>{name}</span>
       <div className={style.container_image}>
-        {/* <div className={style.container_isotipos_up}>
-          <span>{name}</span>
-          {technicalDetails.capacity && (
-            <ProductBadge item={technicalDetails.capacity} />
-          )}
-        </div>
         <img className={style.product_image} src={image} alt="producto" />
-        <div className={style.container_isotipos_down}>
-          {technicalDetails.loadCapacity && (
-            <ProductBadge item={technicalDetails.loadCapacity} />
-          )}
-          {technicalDetails.thermalSpectrum && (
-            <ProductBadge item={technicalDetails.thermalSpectrum} />
-          )}
-          {technicalDetails.ecofriendly ? (
-            <div className={style.container_eco}>
-              <img src={iconEcoFriend} alt="ecofriendly" />
-            </div>
-          ) : null}
-        </div> */}
-        <div className={style.container_isotipos_up}>
-          <span>{name}</span>
-          {technicalDetails.capacity && (
-            <ProductBadge item={technicalDetails.capacity} />
-          )}
-        </div>
-        <img className={style.product_image} src={image} alt="producto" />
-        <div className={style.container_isotipos_down}>
-          {technicalDetails.loadCapacity && (
-            <ProductBadge item={technicalDetails.loadCapacity} />
-          )}
-          {technicalDetails.thermalSpectrum && (
-            <ProductBadge item={technicalDetails.thermalSpectrum} />
-          )}
-          {technicalDetails.ecofriendly ? (
-            <div className={style.container_eco}>
-              <img src={iconEcoFriend} alt="ecofriendly" />
-            </div>
-          ) : null}
-        </div>
       </div>
-      <div className={style.container_title}>
-        <p>{description}</p>
-        <button className={style.button}>Agregar al pedido</button>
+      <div className={style.container_detail}>
+        <div className={style.container_isotipos}>
+          {technicalDetails.capacity && (
+            <ProductBadge item={technicalDetails.capacity} />
+          )}
+          {technicalDetails.loadCapacity && (
+            <ProductBadge item={technicalDetails.loadCapacity} />
+          )}
+          {technicalDetails.thermalSpectrum && (
+            <ProductBadge item={technicalDetails.thermalSpectrum} />
+          )}
+          {technicalDetails.ecofriendly ? (
+            <div className={style.container_eco}>
+              <img src={iconEcoFriend} alt="ecofriendly" />
+            </div>
+          ) : null}
+        </div>
+        <div className={style.container_title}>
+          <p>{description}</p>
+          <button onClick={(e) => addToCart(id)} className={style.button}>
+            Agregar al pedido
+          </button>
+        </div>
       </div>
       {/* <div className={style.container_image}>
         <div className={style.container_isotipos_up}>
@@ -79,7 +60,7 @@ function Card({ name, image, description, technicalDetails }) {
             <ProductBadge item={technicalDetails.capacity} />
           )}
         </div>
-        <img src={image} alt="" />
+        <img className={style.product_image} src={image} alt="producto" />
         <div className={style.container_isotipos_down}>
           {technicalDetails.loadCapacity && (
             <ProductBadge item={technicalDetails.loadCapacity} />
@@ -87,10 +68,16 @@ function Card({ name, image, description, technicalDetails }) {
           {technicalDetails.thermalSpectrum && (
             <ProductBadge item={technicalDetails.thermalSpectrum} />
           )}
+          {technicalDetails.ecofriendly ? (
+            <div className={style.container_eco}>
+              <img src={iconEcoFriend} alt="ecofriendly" />
+            </div>
+          ) : null}
         </div>
       </div>
       <div className={style.container_title}>
         <p>{description}</p>
+        <button onClick={ (e)=> addToCart(id)} className={style.button}>Agregar al pedido</button>
       </div> */}
     </div>
   );

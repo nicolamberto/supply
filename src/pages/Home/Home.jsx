@@ -8,15 +8,19 @@ import Footer from "../../components/Footer/Footer";
 import Contact from "../../components/Contact/Contact";
 import Categories from "../../components/Categories/Categories";
 import { categories } from "../../data";
-function Home({}) {
+import list from "../../assets/isotipos/lista.png"
+function Home({filteredProducts}) {
   
   //Texto de la pestaña del nevegador segun la pantalla que se está mostrando
   useTitle("Pallets Plásticos | Supply Argentina");
-  console.log(categories);
   
   return (
     <section className={style.home_main}>
       <Navbar />
+      {/* <div className={style.icon}>
+      <img src={list} alt="carrito" />
+      <span>{filteredProducts.length}</span>
+      </div> */}
       <Header />
       <Categories/>
       <CompanyOverview/>
