@@ -9,28 +9,8 @@
   flex-flow: column nowrap;
   align-items: center;
 }
-.icon {
-  width: 70px;
-  height: 50px;
-  position: fixed;
-  z-index: 5;
-  top: 8rem;
-  left: 1rem;
-}
-.icon img {
-  width: 100%;
-
-}
-.icon span {
-  position: absolute;
-  z-index: 5;
-  right: 0;
-  bottom: 0;
-  border-radius: 50%;
-  padding: 5px 10px;
-  background-color: red;
-  color: white;
-  font-size: 1.1rem;
+.cart_container {
+  position: relative;
 }
 @media (max-width: 400px) {
   .icon{

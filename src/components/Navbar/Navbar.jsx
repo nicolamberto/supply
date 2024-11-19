@@ -5,9 +5,10 @@ import { VscListUnordered, VscChromeClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { BsTelephone } from "react-icons/bs";
 import { CiMail } from "react-icons/ci";
-import { FaClipboardList } from "react-icons/fa";
-function Navbar() {
+
+function Navbar({ orders }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  console.log(orders, "nav");
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -30,17 +31,23 @@ function Navbar() {
           <img className={style.navbar_logo} src={logo} alt="logotipo" />
         </Link>
         <button className={style.navbar_toggle} onClick={toggleMenu}>
-          {menuOpen ? <VscChromeClose className={style.icon} /> : <VscListUnordered className={style.icon} />}
+          {menuOpen ? (
+            <VscChromeClose className={style.icon} />
+          ) : (
+            <VscListUnordered className={style.icon} />
+          )}
         </button>
         <div
           className={`${style.navbar_links} ${
             menuOpen ? style.navbar_links_open : ""
           }`}
         >
-          <a href="#">Inicio</a>
-          <a href="#">Productos</a>
-          <a href="#">Contacto/Pedidos</a>
-          <a href="#">Servicios</a>
+          <Link to="/">Inicio</Link>
+          <Link to="/productos">Productos</Link>
+          <Link to="/presupuesto">
+            Presupuestos/Pedidos <span>{`(${orders})`}</span>
+          </Link>
+          <Link to="/servicios">Servicios</Link>
         </div>
       </div>
     </section>

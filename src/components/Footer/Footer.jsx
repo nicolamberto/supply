@@ -1,5 +1,6 @@
 import style from "./Footer.module.css";
 import { SiFacebook, SiInstagram, SiWhatsapp   } from "react-icons/si";
+
 function Footer() {
   return (
     <footer className={style.footer_main}>

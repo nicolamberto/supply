@@ -2,6 +2,8 @@ import { SiTinyletter } from "react-icons/si";
 import ProductBadge from "../ProductBadge/ProductBadge";
 import style from "./Card.module.css";
 import iconEcoFriend from "../../assets/isotipos/frend.png";
+import { Link } from "react-router-dom";
+
 function Card({ name, image, description, technicalDetails, addToCart, id }) {
   //   {
 

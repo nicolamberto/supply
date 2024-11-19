@@ -1,6 +1,5 @@
 import style from "./Contact.module.css";
 import imageMap from "../../assets/imageMap/map.jpeg";
-
 function Contact() {
   return (
     <section className={style.contact_main}>

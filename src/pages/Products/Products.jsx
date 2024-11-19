@@ -20,13 +20,7 @@ function Products({ addToCart, filteredProducts }) {
 
   return (
     <section className={style.products_main}>
-      <Navbar />
-      {/* <Link to={"/Presupuesto"}>
-        <div className={style.icon}>
-          <img src={list} alt="carrito" />
-          <span>{filteredProducts.length}</span>
-        </div>
-      </Link> */}
+      <Navbar orders={filteredProducts.length} />
 
       <h2>{currentSlug.replace(/-/g, " ").toUpperCase()}</h2>
       <div className={style.container_products}>
