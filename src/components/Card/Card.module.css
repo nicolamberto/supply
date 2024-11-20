@@ -45,19 +45,18 @@
 .container_detail {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .container_isotipos {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center;
-  background-color: var(--primary-bg-color);
-  min-height: 3.5rem;
-  box-sizing: border-box;
-  padding: 0 0.5rem;
-  width: 100%;
+width: 100%;
+height: auto;
+max-height: 5rem;
+display: flex;
+flex-flow: row wrap;
+justify-content: space-around;
+padding: 5px 0;
+align-items: center;
 }
 .container_title {
   color: white;
@@ -66,20 +65,28 @@
   padding-left: 0.5rem;
 }
 .button {
-  padding: 8px 10px;
+  padding: 10px;
   border: none;
+  font-size: 1.1rem;
   border-radius: 8px;
-  font-weight: bold;
-  text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
   background-color: rgb(255, 255, 255);
-  border: 2px solid rgb(22, 209, 75);
   color: rgb(0, 0, 0);
+}
+.button_add {
+  border: none;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: 1.3rem;
+  padding: 8px 10px;
+
 }
 
 .button:hover {
-  background-color: rgb(165, 221, 181);
-  color: rgb(0, 0, 0);
+  background-color: #085e3a;
+  color: rgb(255, 255, 255);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
 }
