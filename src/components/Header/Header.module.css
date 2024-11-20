@@ -1,46 +1,49 @@
 .header {
   width: 100vw;
-  height: auto;
+  min-height: 20rem;
   margin-top: 7rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
-    url("../../assets/backgroundImages/1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  color: white;
-  padding: 1rem 3rem;
-  box-sizing: border-box;
-  text-align: center;
-  animation: var(--fade-in);
-  font-family: var(--primary-font);
+  overflow: hidden; /* Oculta las imágenes fuera del contenedor */
+  position: relative;
 }
-.header span {
-  font-size: 1rem;
+
+.image_container {
+  display: flex; /* Coloca las imágenes en una fila */
+  width: 300%; /* Tres imágenes, por lo tanto 3 veces el ancho del contenedor */
+  height: 100%;
+  animation: slide 60s infinite; /* Animación automática */
 }
-.header h2 {
-  padding: 0 5rem;
-  font-size: 2rem;
+
+.banner {
+  width: 100%; /* Cada imagen ocupa el ancho del contenedor */
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Animación para desplazar las imágenes */
+@keyframes slide {
+  0% {
+    transform: translateX(0); /* Muestra la primera imagen */
+  }
+  33.33% {
+    transform: translateX(-100%); /* Muestra la segunda imagen */
+  }
+  66.66% {
+    transform: translateX(-200%); /* Muestra la tercera imagen */
+  }
+  100% {
+    transform: translateX(0); /* Regresa a la primera imagen */
+  }
 }
 
 @media (max-width: 780px) {
-.header h2 {
-  font-size: 1.7rem;
-  padding: 0;
-}
-.header span {
-  font-size: .8rem;
-}
-}
-@media (max-width: 400px) {
-  .header h2 {
-    font-size: 1.2rem;
-    padding: 0;
+  .header {
+    min-height: 10rem; /* Ajusta la altura en pantallas más pequeñas */
   }
-  .header span {
-    font-size: .8rem;
+}
+
+@media (max-width: 400px) {
+  .header {
+    min-height: 8rem; /* Ajusta aún más la altura */
   }
 }

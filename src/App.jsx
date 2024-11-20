@@ -9,8 +9,8 @@ import { products } from "./data";
 import list from "../src/assets/isotipos/lista.png";
 import Orders from "./pages/Orders/Orders";
 import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
-
-
+import Categories from "./components/Categories/Categories";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   const [productsCart, setProductsCart] = useState([]); // IDs del carrito
@@ -25,13 +25,13 @@ function App() {
   }
 
   function deleteItem(id) {
-    const newCart = productsCart.filter(productId => productId !== id);
+    const newCart = productsCart.filter((productId) => productId !== id);
     setProductsCart(newCart); // Actualiza el estado del carrito
     updateFilteredProducts(newCart); // Actualiza los productos filtrados
   }
 
   function updateFilteredProducts(cartIds) {
-    const selectedProducts = products.filter(product =>
+    const selectedProducts = products.filter((product) =>
       cartIds.includes(product.id)
     );
     setFilteredProducts(selectedProducts);
@@ -43,15 +43,35 @@ function App() {
 
   return (
     <div className="app">
+      <Navbar orders={productsCart.length} />
       <Routes>
         <Route path="*" element={<NotFound />} />
-        <Route path="/" element={<Home filteredProducts={filteredProducts} />} />
-        <Route path="/:seccion" element={<Products addToCart={addToCart} filteredProducts={filteredProducts} />} />
-        <Route path="/Presupuesto" element={<ShoppingCart deleteItem={deleteItem} filteredProducts={filteredProducts} />} />
+        <Route path="/Productos" element={<Categories />} />
+        <Route
+          path="/"
+          element={<Home filteredProducts={filteredProducts} />}
+        />
+        <Route
+          path="/:seccion"
+          element={
+            <Products
+              addToCart={addToCart}
+              filteredProducts={filteredProducts}
+            />
+          }
+        />
+        <Route
+          path="/Presupuesto"
+          element={
+            <ShoppingCart
+              deleteItem={deleteItem}
+              filteredProducts={filteredProducts}
+            />
+          }
+        />
       </Routes>
     </div>
   );
 }
-
 
 export default App;

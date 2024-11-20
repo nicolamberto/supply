@@ -44,7 +44,7 @@
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
-  background-color: white;
+  background-color: var(--primary-bg-color);
   min-height: 5rem;
   box-sizing: border-box;
   padding: 0 .5rem;

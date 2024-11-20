@@ -9,7 +9,8 @@
   gap: 0.5rem;
   font-weight: 900;
   font-size: .8rem;
-  background-color: #fbfcfc;
+  background-color: var(--primary-bg-color);
+  color: white;
 }
 .main img {
   width: 100%;

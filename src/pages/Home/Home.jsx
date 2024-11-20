@@ -17,7 +17,6 @@ function Home({ filteredProducts }) {
 
   return (
     <section className={style.home_main}>
-      <Navbar orders={filteredProducts.length} />
       <Header />
       <Categories />
       <CompanyOverview />

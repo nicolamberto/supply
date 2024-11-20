@@ -9,7 +9,6 @@ function ShoppingCart({ filteredProducts, deleteItem }) {
 
   return (
     <section className={`${style.main}`}>
-      <Navbar orders={filteredProducts.length} />
       <div className={style.cartWindow}>
         <h2>Consultas y Pedidos</h2>
         <div className={style.pantallaMovil}>

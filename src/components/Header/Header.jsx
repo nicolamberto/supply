@@ -1,28 +1,21 @@
-import style from "./Header.module.css"
-import { VscStarFull } from "react-icons/vsc";
-import { FaWhatsapp } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import style from "./Header.module.css";
+import banner1 from "../../assets/banners/1.png";
+import banner2 from "../../assets/banners/2.png";
+import banner3 from "../../assets/banners/3.png";
 
-function Header () {
-
-
-    return (
-        <div className={style.header}>
-        <h2>
-          Comprometidos con el servicio y la excelencia en productos
-          industriales.
-        </h2>
-        <button className="primary_button">Chatea con nosotros</button>
-        <span>o llamanos 810-444-0152</span>
-        <div>
-          <VscStarFull />
-          <VscStarFull />
-          <VscStarFull />
-          <VscStarFull />
-          <VscStarFull />
-        </div>
-        <span>Calidad | Servicio | Innovación | Satisfacción</span>
+function Header() {
+  return (
+    <div className={style.header}>
+      <div className={style.image_container}>
+        <img src={banner1} className={style.banner} alt="Banner 1" />
+        <img src={banner2} className={style.banner} alt="Banner 2" />
+        <img src={banner3} className={style.banner} alt="Banner 3" />
       </div>
-    )
+    </div>
+  );
 }
 
-export default Header
+export default Header;
+

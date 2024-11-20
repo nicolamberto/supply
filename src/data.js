@@ -204,7 +204,7 @@ import campanaRecoleccion2 from "../src/assets/productos/CAMPANAS DE RECOLECCION
 export const categories = [
     {
         id: 1,
-        nombre: "Bateas & Pallets Antiderrame1",
+        nombre: "Bateas & Pallets Antiderrame",
         imagen: imageCategorie1,
         slug: "bateas-pallets-antiderrame",
     },

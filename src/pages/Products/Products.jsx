@@ -20,7 +20,6 @@ function Products({ addToCart, filteredProducts }) {
 
   return (
     <section className={style.products_main}>
-      <Navbar orders={filteredProducts.length} />
 
       <h2>{currentSlug.replace(/-/g, " ").toUpperCase()}</h2>
       <div className={style.container_products}>
