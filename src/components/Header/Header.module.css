@@ -1,12 +1,26 @@
 .header {
+  box-sizing: border-box;
   width: 100vw;
-  min-height: 20rem;
+  height: auto;
+  background-color: var(--primary-bg-color);
   margin-top: 7rem;
-  display: flex;
-  overflow: hidden; /* Oculta las imágenes fuera del contenedor */
+  position: relative;
+  overflow: hidden;
   position: relative;
 }
-
+.swiper {
+  width: 100vw;
+  height: 20vh;
+}
+.swiper_slider {
+  width: 100%;
+  height: 100%;
+}
+.swiper_slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .image_container {
   display: flex; /* Coloca las imágenes en una fila */
   width: 300%; /* Tres imágenes, por lo tanto 3 veces el ancho del contenedor */
@@ -37,13 +51,10 @@
 }
 
 @media (max-width: 780px) {
-  .header {
-    min-height: 10rem; /* Ajusta la altura en pantallas más pequeñas */
-  }
 }
 
 @media (max-width: 400px) {
-  .header {
-    min-height: 8rem; /* Ajusta aún más la altura */
+  .swiper {
+  height: 10vh;
   }
 }

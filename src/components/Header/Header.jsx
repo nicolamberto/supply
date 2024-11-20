@@ -4,15 +4,26 @@ import style from "./Header.module.css";
 import banner1 from "../../assets/banners/1.png";
 import banner2 from "../../assets/banners/2.png";
 import banner3 from "../../assets/banners/3.png";
+import Carrousel from "../Carrousel/Carrousel";
 
 function Header() {
+
+  let banners = [banner1,banner2,banner3]
   return (
     <div className={style.header}>
-      <div className={style.image_container}>
-        <img src={banner1} className={style.banner} alt="Banner 1" />
-        <img src={banner2} className={style.banner} alt="Banner 2" />
-        <img src={banner3} className={style.banner} alt="Banner 3" />
-      </div>
+      <Swiper
+        modules={[Autoplay]}
+        autoplay={{ delay: 6000 }}
+        loop={true}
+        className={style.swiper}
+        direction="vertical"
+      >
+        {banners.map((banner, index) => (
+          <SwiperSlide className={style.swiper_slider} key={index} >
+            <img src={banner} alt={`Banner ${index + 1}`} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 }

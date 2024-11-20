@@ -8,7 +8,7 @@ import Footer from "../../components/Footer/Footer";
 import Contact from "../../components/Contact/Contact";
 import Categories from "../../components/Categories/Categories";
 import { categories } from "../../data";
-
+import imageWhatsapp from "../../assets/logos/whatsapp.png"
 import list from "../../assets/isotipos/lista.png";
 import ShoppingCart from "../ShoppingCart/ShoppingCart";
 function Home({ filteredProducts }) {
@@ -20,8 +20,10 @@ function Home({ filteredProducts }) {
       <Header />
       <Categories />
       <CompanyOverview />
-      {/* <Contact/> */}
       <Footer />
+      <div className={style.icon_whatsapp}>
+        <img src={imageWhatsapp} alt="" />
+      </div>
     </section>
   );
 }
