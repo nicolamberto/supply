@@ -10,7 +10,7 @@
 }
 .swiper {
   width: 100vw;
-  height: 20vh;
+  height: 30vh;
 }
 .swiper_slider {
   width: 100%;
@@ -51,6 +51,9 @@
 }
 
 @media (max-width: 780px) {
+  .swiper {
+    height: 20vh;
+    }
 }
 
 @media (max-width: 400px) {
