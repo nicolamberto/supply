@@ -22,12 +22,12 @@
   .icon_whatsapp{
     width: 100px;
     height: 100px;
-    top: 90vh;
+    top: 85vh;
   }
 }@media (max-width: 400px) {
   .icon_whatsapp{
     width: 60px;
     height: 60px;
-    top: 90vh;
+    top: 88vh;
   }
 }

@@ -13,7 +13,7 @@ function Header() {
     <div className={style.header}>
       <Swiper
         modules={[Autoplay]}
-        autoplay={{ delay: 6000 }}
+        autoplay={{ delay: 4000 }}
         loop={true}
         className={style.swiper}
         direction="vertical"
