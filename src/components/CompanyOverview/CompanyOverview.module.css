@@ -10,6 +10,7 @@
   background-color: #fbfcfc;
   box-sizing: border-box;
   padding: 2rem 0;
+  gap: 2.5rem;
 }
 .container_up {
   display: flex;
@@ -25,7 +26,7 @@
   padding: 0;
 }
 .title {
-  font-size: 2rem;
+  font-size: 4rem;
 }
 .container_count {
   display: flex;
@@ -41,7 +42,7 @@
   align-items: center;
   gap: 1rem;
   padding: 10px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--primary-bg-color);
   font-weight: 600;
 }
@@ -85,22 +86,42 @@
   .container_up {
     flex-flow: column nowrap;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+
+  }
+  .container_description {
+    max-width: 80%;
   }
   .companyOverview_main{
     min-height: 70vh;
   }
+  .title {
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+
+  }
+  .count{
+    font-size: 1.7rem;
+  }
 
 }
 @media (max-width: 400px) {
-  .container_description {
-    max-width: none;
-  }
+
   .container_description p {
     font-size: 1rem;
-    padding: 0 10px;
+    padding: 20px 10px;
+    max-width: none;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin:  0;
+    box-sizing: border-box;
   }
   .count{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+  }
+  .title {
+    font-size: 2rem;
   }
 }
