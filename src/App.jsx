@@ -1,5 +1,5 @@
 import React from "react";
-import {Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import "./App.css";
 import NotFound from "./pages/NotFound/NotFound";
@@ -9,7 +9,7 @@ import { products } from "./data";
 import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 import Categories from "./components/Categories/Categories";
 import Navbar from "./components/Navbar/Navbar";
-
+import Categorias from "./pages/Categorias/Categorias";
 
 function App() {
   const [productsCart, setProductsCart] = useState([]); // IDs del carrito
@@ -23,8 +23,8 @@ function App() {
     }
   }
 
-  function deleteCart(){
-    setFilteredProducts([])
+  function deleteCart() {
+    setFilteredProducts([]);
   }
 
   function deleteItem(id) {
@@ -49,7 +49,7 @@ function App() {
       <Navbar orders={productsCart.length} />
       <Routes>
         <Route path="*" element={<NotFound />} />
-        <Route path="/Productos" element={<Categories />} />
+        <Route path="/Productos" element={<Categorias />} />
         <Route
           path="/"
           element={<Home filteredProducts={filteredProducts} />}

@@ -9,14 +9,15 @@ const Formulario = ({ productos, deleteCart }) => {
         `// ${producto.nombre} - Cantidad:  ${producto.cantidad}  //`
     )
     .join(", ");
+  
   const [formulario, setFormulario] = useState({
     nombre: "",
     email: "",
     telefono: "",
     mensaje: "",
   });
-  console.log(formulario);
-  console.log(formattedProducts);
+
+  const [error, setError] = useState(""); // Para mostrar mensajes de error
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -24,9 +25,20 @@ const Formulario = ({ productos, deleteCart }) => {
   };
 
   const handleSubmit = (e, method) => {
-    e.preventDefault();
+    // e.preventDefault();
+    setError(""); // Reinicia el mensaje de error
 
-    // Obtenemos los datos del formulario (puedes ajustar esto a tu estructura)
+    // Validaciones
+    if (productos.length === 0) {
+      setError("No tienes productos en el pedido.");
+      return;
+    }
+
+    if (!formulario.nombre || !formulario.email || !formulario.mensaje) {
+      setError("Completa los campos obligatorios.");
+      return;
+    }
+
     const templateParams = {
       nombre: formulario.nombre,
       email: formulario.email,
@@ -37,13 +49,12 @@ const Formulario = ({ productos, deleteCart }) => {
 
     switch (method) {
       case "email":
-        // Lógica para enviar el correo
         emailjs
           .send(
-            "service_q2iv4sb", // Reemplaza con tu Service ID
-            "template_707yzk7", // Reemplaza con tu Template ID
+            "service_q2iv4sb",
+            "template_707yzk7",
             templateParams,
-            "wuk7TXQLWBRooSaS-" // Reemplaza con tu Public Key
+            "wuk7TXQLWBRooSaS-"
           )
           .then(
             (response) => {
@@ -73,6 +84,8 @@ const Formulario = ({ productos, deleteCart }) => {
       default:
         alert("Método no reconocido");
     }
+
+    // Resetea el formulario y el carrito
     deleteCart();
     setFormulario({
       nombre: "",
@@ -83,8 +96,9 @@ const Formulario = ({ productos, deleteCart }) => {
   };
 
   return (
-    <form className={styles.formulario} onSubmit={handleSubmit}>
+    <form className={styles.formulario} onSubmit={(e) => e.preventDefault()}>
       <h2>Formulario de Contacto</h2>
+      {error && <p className={styles.error}>{error}</p>} {/* Muestra error */}
       <input
         type="text"
         name="nombre"
@@ -115,10 +129,10 @@ const Formulario = ({ productos, deleteCart }) => {
         onChange={handleInputChange}
         required
       />
-      <button type="submit" onClick={(e) => handleSubmit(e, "email")}>
+      <button type="button" onClick={(e) => handleSubmit(e, "email")}>
         Enviar por Email
       </button>
-      <button type="submit" onClick={(e) => handleSubmit(e, "whatsapp")}>
+      <button type="button" onClick={(e) => handleSubmit(e, "whatsapp")}>
         Enviar por WhatsApp
       </button>
     </form>

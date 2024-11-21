@@ -46,9 +46,8 @@
   max-width: 15rem;
 }
 .navbar_links {
-  font-size: 1.1rem;
+  font-size: 1rem;
   width: 50%;
-  gap: 1rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
@@ -57,12 +56,12 @@
 }
 .navbar_links a {
   text-decoration: none !important;
-  color: black;
+  color:  #0a7c48;
 }
 .navbar_links a:hover {
   text-decoration: none !important;
-  color: #0a7c48;
-  border-bottom: 1px solid #0a7c48;
+  color: black;
+  border-bottom: 1px solid black;
 }
 .navbar_toggle {
   display: none;

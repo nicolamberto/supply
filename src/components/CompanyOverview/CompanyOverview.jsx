@@ -42,12 +42,11 @@ function CompanyOverview() {
         </div>
         <div className={style.container_count}>
           <div className={style.count}>
-            <CountUp start={0} end={1500} duration={6} />
-
+            1500
             <span>Clientes satisfechos</span>
           </div>
           <div className={style.count}>
-            <CountUp start={0} end={10} duration={8} />
+            10
             <span>Años en el mercado</span>
           </div>
         </div>

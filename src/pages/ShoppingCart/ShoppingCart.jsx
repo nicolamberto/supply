@@ -25,7 +25,6 @@ function ShoppingCart({ filteredProducts, deleteItem, deleteCart }) {
   }));
   return (
     <section className={`${style.main}`}>
-      <h2>Consultas y Pedidos</h2>
       <div className={style.cartWindow}>
         <div className={style.container_products}>
           {filteredProducts.length === 0 ? (

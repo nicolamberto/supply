@@ -8,7 +8,13 @@
   height: 100%;
   font-family: var(--primary-font);
 }
-
+.error{
+  font-size: .8rem;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  margin: .2rem;
+  padding: 0;
+}
 .formulario h2 {
   text-align: center;
   color: white;
@@ -17,7 +23,7 @@
 .formulario input,
 textarea {
   width: 80%;
-  padding: 20px;
+  padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -35,18 +41,19 @@ textarea {
   padding: 10px;
   margin: 5px 0;
   background-color: #f6f6f6;
-  color: rgb(5, 5, 5);
+  color: var(--primary-bg-color);
   border: none;
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
-  font-weight: 500;
+  font-weight: 600;
   box-sizing: border-box;
 }
 
 .formulario button:hover {
-  background-color: var(--primary-bg-color);
-  color: rgba(255, 255, 255, 0.893);
-  border: 1px solid white;
+  background-color: #085e3a;;
+  color: rgb(255, 255, 255);
+  border: 2px solid rgba(255, 255, 255, 0.705);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
 }
