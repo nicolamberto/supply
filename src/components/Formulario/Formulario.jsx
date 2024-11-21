@@ -73,7 +73,7 @@ const Formulario = ({ productos, deleteCart }) => {
         break;
 
       case "whatsapp":
-        let numeroWhatsapp = "2612159554";
+        let numeroWhatsapp = "1166823300";
         const mensajeWhatsApp = `Hola, soy ${formulario.nombre}. Estoy interesado en los productos: ${formattedProducts}. Puedes contactarme al correo ${formulario.email} o al teléfono ${formulario.telefono}.`;
         const urlWhatsApp = `https://wa.me/+549${numeroWhatsapp}?text=${encodeURIComponent(
           mensajeWhatsApp
