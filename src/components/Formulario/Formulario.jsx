@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import styles from "./Formulario.module.css";
 import emailjs from "@emailjs/browser";
 
-const Formulario = ({ productos }) => {
-
+const Formulario = ({ productos, deleteCart }) => {
   const formattedProducts = productos
     .map(
       (producto) =>
@@ -63,18 +62,24 @@ const Formulario = ({ productos }) => {
         break;
 
       case "whatsapp":
-        let numeroWhatsapp = "2612159554"
+        let numeroWhatsapp = "2612159554";
         const mensajeWhatsApp = `Hola, soy ${formulario.nombre}. Estoy interesado en los productos: ${formattedProducts}. Puedes contactarme al correo ${formulario.email} o al teléfono ${formulario.telefono}.`;
         const urlWhatsApp = `https://wa.me/+549${numeroWhatsapp}?text=${encodeURIComponent(
           mensajeWhatsApp
         )}`;
         window.open(urlWhatsApp, "_blank");
-        alert("Mensaje enviado por WhatsApp");
         break;
 
       default:
         alert("Método no reconocido");
     }
+    deleteCart();
+    setFormulario({
+      nombre: "",
+      email: "",
+      telefono: "",
+      mensaje: "",
+    });
   };
 
   return (

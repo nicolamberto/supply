@@ -4,7 +4,7 @@ import useTitle from "../../hooks/useTitle";
 import Footer from "../../components/Footer/Footer";
 import Formulario from "../../components/Formulario/Formulario";
 
-function ShoppingCart({ filteredProducts, deleteItem }) {
+function ShoppingCart({ filteredProducts, deleteItem, deleteCart }) {
   useTitle("Presupuestos y consultas | Supply Argentina");
   const [productos, setProductos] = useState(filteredProducts);
 
@@ -58,7 +58,7 @@ function ShoppingCart({ filteredProducts, deleteItem }) {
           ))}
         </div>
         <div className={style.container_form}>
-          <Formulario productos={productosConCantidad} />
+          <Formulario productos={productosConCantidad} deleteCart={deleteCart} />
         </div>
       </div>
       <Footer />

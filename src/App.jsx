@@ -23,6 +23,10 @@ function App() {
     }
   }
 
+  function deleteCart(){
+    setFilteredProducts([])
+  }
+
   function deleteItem(id) {
     const newCart = productsCart.filter((productId) => productId !== id);
     setProductsCart(newCart); // Actualiza el estado del carrito
@@ -65,6 +69,7 @@ function App() {
             <ShoppingCart
               deleteItem={deleteItem}
               filteredProducts={filteredProducts}
+              deleteCart={deleteCart}
             />
           }
         />
