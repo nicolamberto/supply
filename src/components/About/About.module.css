@@ -1,0 +1,36 @@
+.about_main {
+  width: 100vw;
+  height: 70vh;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  box-sizing: border-box;
+  background-image: url("../../assets/about/2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+  color: white;
+  font-family: var(--primary-font);
+  backdrop-filter: blur(5px);
+  color: black;
+}
+.title {
+  font-size: 2rem;
+}
+.text {
+  font-size: 1.5rem;
+}
+.container_numbers {
+  width: 100%;
+  height: 5rem;
+  border: 2px solid red;
+}

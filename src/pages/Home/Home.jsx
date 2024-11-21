@@ -11,6 +11,7 @@ import { categories } from "../../data";
 import imageWhatsapp from "../../assets/logos/whatsapp.png"
 import list from "../../assets/isotipos/lista.png";
 import ShoppingCart from "../ShoppingCart/ShoppingCart";
+import About from "../../components/About/About";
 function Home({ filteredProducts }) {
   //Texto de la pestaña del nevegador segun la pantalla que se está mostrando
   useTitle("Pallets Plásticos | Supply Argentina");
@@ -19,6 +20,7 @@ function Home({ filteredProducts }) {
     <section className={style.home_main}>
       <Header />
       <Categories />
+      {/* <About/> */}
       <CompanyOverview />
       <Footer />
       <div className={style.icon_whatsapp}>

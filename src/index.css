@@ -4,6 +4,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   min-height: 100vh;
+  background-color: #fbfcfc;
+
 }
 .primary_button{
   padding: 10px;

@@ -3,27 +3,42 @@
   height: 100%;
   box-sizing: border-box;
   border: 5px solid var(--primary-bg-color);
-  background-color: var(--primary-bg-color);
   font-family: var(--primary-font);
   display: flex;
   flex-flow: column nowrap;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 6px 6px 5px -2px rgba(0, 0, 0, 0.6);
   position: relative;
+  background-color: var(--primary-bg-color);
 }
 .container_image {
   width: 100%;
-  height: 50%;
+  height: 55%;
   position: relative;
   display: flex;
   flex-flow: column nowrap;
   background-color: white;
   margin-top: 3rem;
 }
-.container_image img {
+.product_image {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  transition: transform 1s ease;
+}
+.product_image:hover{
+  transform: scale(.8);
+}
+.container_eco {
+  width: 120px;
+  height: 90px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.logo_ecofriend {
+  width: 100%;
+  height: 100%;
 }
 .name_product {
   position: absolute;
@@ -33,7 +48,7 @@
   font-size: 1.2rem;
   font-weight: 600;
   width: 100%;
-  height: auto;
+  height: 3rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -47,32 +62,41 @@
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
+  padding: 1rem 0.5rem;
+  box-sizing: border-box;
+  color: white;
 }
 .container_isotipos {
-width: 100%;
-height: auto;
-max-height: 5rem;
-display: flex;
-flex-flow: row wrap;
-justify-content: space-around;
-padding: 5px 2px;
-align-items: center;
+  width: 100%;
+  height: auto;
+  max-height: 5rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 5px 2px;
+  align-items: center;
 }
 .container_title {
-  color: white;
   text-align: start;
   box-sizing: border-box;
   padding-left: 0.5rem;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 .button {
-  padding: 10px;
   border: none;
-  font-size: 1.1rem;
-  border-radius: 8px;
-  cursor: pointer;
   transition: all 0.3s ease;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 15px 25px;
+  text-transform: uppercase;
+  border-radius: 12px;
 }
 .button_add {
   border: none;
@@ -80,9 +104,10 @@ align-items: center;
   background-color: transparent;
   color: rgb(255, 255, 255);
   font-weight: 600;
-  font-size: 1.3rem;
-  padding: 8px 10px;
+  font-size: 1rem;
 
+  padding: 15px 10px;
+  text-transform: uppercase;
 }
 
 .button:hover {

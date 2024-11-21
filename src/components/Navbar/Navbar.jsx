@@ -8,7 +8,6 @@ import { CiMail } from "react-icons/ci";
 
 function Navbar({ orders }) {
   const [menuOpen, setMenuOpen] = useState(false);
-  console.log(orders, "nav");
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
