@@ -8,10 +8,11 @@ import Footer from "../../components/Footer/Footer";
 import Contact from "../../components/Contact/Contact";
 import Categories from "../../components/Categories/Categories";
 import { categories } from "../../data";
-import imageWhatsapp from "../../assets/logos/whatsapp.png"
+import imageWhatsapp from "../../assets/logos/whatsapp.png";
 import list from "../../assets/isotipos/lista.png";
 import ShoppingCart from "../ShoppingCart/ShoppingCart";
 import About from "../../components/About/About";
+import { openWhatsAppChat } from "../../hooks/openWhatsAppChat";
 function Home({ filteredProducts }) {
   //Texto de la pestaña del nevegador segun la pantalla que se está mostrando
   useTitle("Pallets Plásticos | Supply Argentina");
@@ -23,7 +24,15 @@ function Home({ filteredProducts }) {
       {/* <About/> */}
       <CompanyOverview />
       <Footer />
-      <div className={style.icon_whatsapp}>
+      <div
+        onClick={() =>
+          openWhatsAppChat(
+            "5491166823300",
+            "Hola, estoy interesado en tus productos. ¿Podrías brindarme más información?"
+          )
+        }
+        className={style.icon_whatsapp}
+      >
         <img src={imageWhatsapp} alt="" />
       </div>
     </section>
