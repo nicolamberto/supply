@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./Servicios.module.css";
 import imageBackground from "../../assets/backgroundImages/1.jpg";
+import { openWhatsAppChat } from "../../hooks/openWhatsAppChat";
 import Footer from "../../components/Footer/Footer";
 function Servicios() {
   return (
@@ -18,7 +19,17 @@ function Servicios() {
           preventa, ayudando a nuestros clientes a encontrar los mejores
           productos en vista de sus necesidades específicas.
         </span>
-        <button className={style.button}>Contactanos</button>
+        <button
+          onClick={() =>
+            openWhatsAppChat(
+              "5491166823300",
+              "Hola, estoy interesado en tus productos. ¿Podrías brindarme más información?"
+            )
+          }
+          className={style.button}
+        >
+          Contactanos
+        </button>
       </div>
       <Footer />
     </div>
