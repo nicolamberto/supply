@@ -7,6 +7,8 @@ function NotFound({}) {
   useTitle("404 NotFound | Supply Argentina");
   return (
     <section className={style.NotFound_main}>
+
+      
       <h1>pagina no encontrada</h1>
     </section>
   );
