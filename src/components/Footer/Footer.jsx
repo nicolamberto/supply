@@ -11,8 +11,8 @@ function Footer() {
           <SiWhatsapp />
         </div>
         <span>0810-444-0152</span>
-        <span>ventas@supply.com.ar</span>
-        <span>© 2024. Supply Argenitina. All rights reserved.</span>
+        <span>ventas@supplyargentina.com.ar</span>
+        <span>© 2024. Supply Argentina. All rights reserved.</span>
       </section>
       <section className={style.container_form}>
         <span>

@@ -59,7 +59,7 @@
 
 .marquee {
   display: flex;
-  animation: scroll 50s linear infinite; /* Duración ajustable */
+  animation: scroll 40s linear infinite; /* Duración ajustable */
 }
 
 .marquee img {
@@ -73,13 +73,10 @@
 /* Animación de desplazamiento */
 @keyframes scroll {
   0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(-50%);
+    transform: translateX(100%); /* Comienza fuera de la pantalla a la derecha */
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(-100%); /* Sale completamente de la pantalla a la izquierda */
   }
 }
 @media (max-width: 768px) {

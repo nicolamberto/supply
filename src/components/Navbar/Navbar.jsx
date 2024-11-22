@@ -21,7 +21,7 @@ function Navbar({ orders }) {
           <BsTelephone /> 0810 444 0152
         </p>
         <p>
-          <CiMail /> ventas@supply.com.ar
+          <CiMail /> ventas@supplyargentina.com.ar
         </p>
       </div>
       {/* Parte inferior de la navbar */}
