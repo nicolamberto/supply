@@ -37,7 +37,6 @@ import imageProductBateaPallets21 from "../src/assets/productos/BATEAS ANTIDERRA
 import imageProductBateaPallets22 from "../src/assets/productos/BATEAS ANTIDERRAME/22.png"
 import imageProductBateaPallets23 from "../src/assets/productos/BATEAS ANTIDERRAME/23.png"
 /*Imagenes de productos de PALLETS PLASTICOS*/
-
 import imageProductPalletsPlasticos1 from "../src/assets/productos/PALLETS PLASTICOS/1.png"
 import imageProductPalletsPlasticos2 from "../src/assets/productos/PALLETS PLASTICOS/2.png"
 import imageProductPalletsPlasticos3 from "../src/assets/productos/PALLETS PLASTICOS/3.png"
@@ -48,7 +47,6 @@ import imageProductPalletsPlasticos7 from "../src/assets/productos/PALLETS PLAST
 import imageProductPalletsPlasticos8 from "../src/assets/productos/PALLETS PLASTICOS/8.png"
 import imageProductPalletsPlasticos9 from "../src/assets/productos/PALLETS PLASTICOS/9.png"
 import imageProductPalletsPlasticos10 from "../src/assets/productos/PALLETS PLASTICOS/10.png"
-
 /*Imagenes de productos de ESTACIONES AMBIENTALES*/
 import estacionesAmbientales1 from "../src/assets/productos/ESTACIONES AMBIENTALES/1.png"
 import estacionesAmbientales2 from "../src/assets/productos/ESTACIONES AMBIENTALES/2.png"
@@ -60,10 +58,7 @@ import estacionesAmbientales7 from "../src/assets/productos/ESTACIONES AMBIENTAL
 import estacionesAmbientales8 from "../src/assets/productos/ESTACIONES AMBIENTALES/8.png"
 import estacionesAmbientales9 from "../src/assets/productos/ESTACIONES AMBIENTALES/9.png"
 import estacionesAmbientales10 from "../src/assets/productos/ESTACIONES AMBIENTALES/10.png"
-
-
 /*Imagenes de productos de CONTENEDORES CON RUEDAS*/
-
 import contenedoresRuedas1 from "../src/assets/productos/CONTENEDORES CON RUEDAS/1.png"
 import contenedoresRuedas2 from "../src/assets/productos/CONTENEDORES CON RUEDAS/2.png"
 import contenedoresRuedas3 from "../src/assets/productos/CONTENEDORES CON RUEDAS/3.png"
@@ -74,7 +69,6 @@ import contenedoresRuedas7 from "../src/assets/productos/CONTENEDORES CON RUEDAS
 import contenedoresRuedas8 from "../src/assets/productos/CONTENEDORES CON RUEDAS/8.png"
 import contenedoresRuedas9 from "../src/assets/productos/CONTENEDORES CON RUEDAS/9.png"
 import contenedoresRuedas10 from "../src/assets/productos/CONTENEDORES CON RUEDAS/10.png"
-
 /*Imagenes de productos de Bines Plásticos*/
 import binesPlasticos1 from "../src/assets/productos/BINES PLASTICOS/1.png"
 import binesPlasticos2 from "../src/assets/productos/BINES PLASTICOS/2.png"
@@ -107,16 +101,10 @@ import canastosPlasticos20 from "../src/assets/productos/CANASTOS PLASTICOS/20.p
 import canastosPlasticos21 from "../src/assets/productos/CANASTOS PLASTICOS/21.png"
 import canastosPlasticos22 from "../src/assets/productos/CANASTOS PLASTICOS/22.png"
 import canastosPlasticos23 from "../src/assets/productos/CANASTOS PLASTICOS/23.png"
-
 /*Imagenes de productos de TAMBORES PLASTICOS*/
-
 import tamboresPlasticos1 from "../src/assets/productos/TAMBORES PLASTICOS/1.png"
 import tamboresPlasticos2 from "../src/assets/productos/TAMBORES PLASTICOS/2.png"
 import tamboresPlasticos3 from "../src/assets/productos/TAMBORES PLASTICOS/3.png"
-
-
-
-
 /*Imagenes de productos de Cajones Plásticos*/
 import cajonesPlasticos1 from "../src/assets/productos/CAJONES PLASTICOS/1.png"
 import cajonesPlasticos2 from "../src/assets/productos/CAJONES PLASTICOS/2.png"
@@ -141,16 +129,13 @@ import cajonesPlasticos20 from "../src/assets/productos/CAJONES PLASTICOS/20.png
 import cajonesPlasticos21 from "../src/assets/productos/CAJONES PLASTICOS/21.png"
 import cajonesPlasticos22 from "../src/assets/productos/CAJONES PLASTICOS/22.png"
 import cajonesPlasticos23 from "../src/assets/productos/CAJONES PLASTICOS/23.png"
-
 /*Imagenes de productos de Recipientes Alimenticios*/
 import recipienteAlimenticios1 from "../src/assets/productos/RECIPIENTES ALIMENTICIOS/1.png"
 import recipienteAlimenticios2 from "../src/assets/productos/RECIPIENTES ALIMENTICIOS/2.png"
 import recipienteAlimenticios3 from "../src/assets/productos/RECIPIENTES ALIMENTICIOS/3.png"
 import recipienteAlimenticios4 from "../src/assets/productos/RECIPIENTES ALIMENTICIOS/4.png"
 import recipienteAlimenticios5 from "../src/assets/productos/RECIPIENTES ALIMENTICIOS/5.png"
-
 /*Imagenes de productos de RECIPIENTES DE RESIDUOS*/
-
 import recipienteResidios1 from "../src/assets/productos/RECIPIENTES DE RESIDUOS/1.png"
 import recipienteResidios2 from "../src/assets/productos/RECIPIENTES DE RESIDUOS/2.png"
 import recipienteResidios3 from "../src/assets/productos/RECIPIENTES DE RESIDUOS/3.png"
@@ -162,7 +147,6 @@ import recipienteResidios8 from "../src/assets/productos/RECIPIENTES DE RESIDUOS
 import recipienteResidios9 from "../src/assets/productos/RECIPIENTES DE RESIDUOS/9.png"
 import recipienteResidios10 from "../src/assets/productos/RECIPIENTES DE RESIDUOS/10.png"
 import recipienteResidios11 from "../src/assets/productos/RECIPIENTES DE RESIDUOS/11.png"
-
 /*Imagenes de productos de GAVETAS PLÁSTICAS*/
 import gavetasPlasticas1 from "../src/assets/productos/GAVETAS PLÁSTICAS/1.png"
 import gavetasPlasticas2 from "../src/assets/productos/GAVETAS PLÁSTICAS/2.png"
@@ -173,9 +157,7 @@ import gavetasPlasticas6 from "../src/assets/productos/GAVETAS PLÁSTICAS/6.png"
 import gavetasPlasticas7 from "../src/assets/productos/GAVETAS PLÁSTICAS/7.png"
 import gavetasPlasticas8 from "../src/assets/productos/GAVETAS PLÁSTICAS/8.png"
 import gavetasPlasticas9 from "../src/assets/productos/GAVETAS PLÁSTICAS/9.png"
-
 /*Imagenes de productos de Tanques para Líquidos*/
-
 import tanquesLiquidos1 from "../src/assets/productos/TANQUES PARA LIQUIDOS/1.png"
 import tanquesLiquidos2 from "../src/assets/productos/TANQUES PARA LIQUIDOS/2.png"
 import tanquesLiquidos3 from "../src/assets/productos/TANQUES PARA LIQUIDOS/3.png"
@@ -206,7 +188,7 @@ export const categories = [
         id: 1,
         nombre: "Bateas & Pallets Antiderrame",
         imagen: imageCategorie1,
-        slug: "bateas-pallets-antiderrame",
+        slug: "bateas-y-pallets-antiderrame",
     },
     {
         id: 2,
@@ -218,7 +200,7 @@ export const categories = [
         id: 3,
         nombre: "Contenedores con Ruedas",
         imagen: imageCategorie3,
-        slug: "contenedores-con-ruedas",
+        slug: "contenedores-plasticos-con-ruedas",
 
     },
     {
@@ -297,7 +279,7 @@ export const products = [
     {
 
         id: 1,
-        category: "bateas-pallets-antiderrame",
+        category: "bateas-y-pallets-antiderrame",
         name: "B43 | 67X67X15CM",
         image: [imageProductBateaPallets1, imageProductBateaPallets2],
         description: "Batea de Contención para 1 Tambor, Alta Resistencia Térmica, Uso opcional con Hidrocarburos, Fácil Limpieza AntiAdherente a la Suciedad",
@@ -316,7 +298,7 @@ export const products = [
     {
 
         id: 2,
-        category: "bateas-pallets-antiderrame",
+        category: "bateas-y-pallets-antiderrame",
         name: "B424 | 77X76X38CM",
         image: [imageProductBateaPallets3],
         description: "Batea de Contención para 2 Tambores, Alta Resistencia Térmica, Uso opcional con Hidrocarburos, Fácil Limpieza AntiAdherente a la Suciedad",
@@ -335,7 +317,7 @@ export const products = [
     {
 
         id: 3,
-        category: "bateas-pallets-antiderrame",
+        category: "bateas-y-pallets-antiderrame",
         name: "B40 | 800x1200x150",
         image: [imageProductBateaPallets4, imageProductBateaPallets5],
         description: "Batea de Contención para 2 Tambores, Alta Resistencia Térmica, Uso opcional con Hidrocarburos, Fácil Limpieza AntiAdherente a la Suciedad",
@@ -354,7 +336,7 @@ export const products = [
     {
 
         id: 4,
-        category: "bateas-pallets-antiderrame",
+        category: "bateas-y-pallets-antiderrame",
         name: "B41 | 80X120X15CM",
         image: [imageProductBateaPallets6, imageProductBateaPallets7],
         description: "Batea de Contención para 2 Tambores, Doble Entrada para Autoelevador, Uso opcional con Hidrocarburos, Fácil Limpieza AntiAdherente a la Suciedad",
@@ -372,7 +354,7 @@ export const products = [
     },
     {
         id: 5,
-        category: "bateas-pallets-antiderrame",
+        category: "bateas-y-pallets-antiderrame",
         name: "B422 | 137X78X46CM",
         image: [imageProductBateaPallets8, imageProductBateaPallets9],
         description: "Batea de Contención para 2 Tambores, Doble Entrada para Autoelevador, Uso opcional con Hidrocarburos, Fácil Limpieza AntiAdherente a la Suciedad",
@@ -391,7 +373,7 @@ export const products = [
     {
 
         id: 6,
-        category: "bateas-pallets-antiderrame",
+        category: "bateas-y-pallets-antiderrame",
         name: "B427 | 129X90X35CM",
         image: [imageProductBateaPallets10],
         description: "Batea de Contención Mediana para 2 Tambores, Doble Entrada para Autoelevador, Uso opcional con Hidrocarburos, Fácil Limpieza AntiAdherente a la Suciedad",
@@ -410,7 +392,7 @@ export const products = [
     {
 
         id: 7,
-        category: "bateas-pallets-antiderrame",
+        category: "bateas-y-pallets-antiderrame",
         name: "B46 | 100X120X15CM",
         image: [imageProductBateaPallets11, imageProductBateaPallets12],
         description: "Batea de Contención Baja para 4 Tambores, Doble Entrada para Autoelevador, Mejora la descarga al reducir la altura, Fácil Limpieza AntiAdherente a la Suciedad",
@@ -429,7 +411,7 @@ export const products = [
     {
 
         id: 8,
-        category: "bateas-pallets-antiderrame",
+        category: "bateas-y-pallets-antiderrame",
         name: "B451 | 1280X1280X280CM",
         image: [imageProductBateaPallets13],
         description: "Batea de Contención Mediana para 4 Tambores, Doble Entrada para Autoelevador, Uso Opcional con Hidrocarburos, Fácil Limpieza AntiAdherente a la Suciedad",
@@ -448,7 +430,7 @@ export const products = [
     {
 
         id: 9,
-        category: "bateas-pallets-antiderrame",
+        category: "bateas-y-pallets-antiderrame",
         name: "B416 | 120X120X48CM",
         image: [imageProductBateaPallets14],
         description: "Batea de Contención Alta para 4 Tambores, Doble Entrada para Autoelevador, Uso Opcional con Hidrocarburos, Fácil Limpieza AntiAdherente a la Suciedad",
@@ -467,7 +449,7 @@ export const products = [
     {
 
         id: 10,
-        category: "bateas-pallets-antiderrame",
+        category: "bateas-y-pallets-antiderrame",
         name: "B45 | 128X128X19CM",
         image: [imageProductBateaPallets15],
         description: "Batea de Contención Mediana para 4 Tambores, Doble Entrada para Autoelevador, Uso Opcional con Hidrocarburos, Fácil Limpieza AntiAdherente a la Suciedad",
@@ -486,7 +468,7 @@ export const products = [
     {
 
         id: 11,
-        category: "bateas-pallets-antiderrame",
+        category: "bateas-y-pallets-antiderrame",
         name: "B420 | 143X138X93CM",
         image: [imageProductBateaPallets16],
         description: "Batea de Contención para 1 IBC - ECO BULK, Base de Apoyo de Estructura Metálica, Opcional Antiderrame para Válvula, Facil Limpiado Anti Adherente a la Suciedad",
@@ -505,7 +487,7 @@ export const products = [
     {
 
         id: 12,
-        category: "bateas-pallets-antiderrame",
+        category: "bateas-y-pallets-antiderrame",
         name: "B444 | 220X140X30CM",
         image: [imageProductBateaPallets17, imageProductBateaPallets18],
         description: "Batea de Contención para 2 IBC - ECO BULK, Base de Apoyo de Estructura Metálica, Opcional Antiderrame para Válvula, Facil Limpiado Anti Adherente a la Suciedad",
@@ -524,7 +506,7 @@ export const products = [
     {
 
         id: 13,
-        category: "bateas-pallets-antiderrame",
+        category: "bateas-y-pallets-antiderrame",
         name: "415 | 150X250X100CM",
         image: [imageProductBateaPallets19],
         description: "Batea de Contención para 2 IBC - ECO BULK, Base de Apoyo de Estructura Metálica, Opcional Antiderrame para Válvula, Facil Limpiado Anti Adherente a la Suciedad",
@@ -543,7 +525,7 @@ export const products = [
     {
 
         id: 14,
-        category: "bateas-pallets-antiderrame",
+        category: "bateas-y-pallets-antiderrame",
         name: "B437 | 146X128X16CM",
         image: [imageProductBateaPallets20],
         description: "Batea de Contención Baja Usos Varios, Base de Apoyo de Estructura Metálica, Gran Resistencia a Hidrocarburos, Facil Limpiado Anti Adherente a la Suciedad",
@@ -562,7 +544,7 @@ export const products = [
     {
 
         id: 15,
-        category: "bateas-pallets-antiderrame",
+        category: "bateas-y-pallets-antiderrame",
         name: "B438 | 146X128X27CM",
         image: [imageProductBateaPallets21],
         description: "Batea de Contención Mediana Usos Varios, Base de Apoyo de Estructura Metálica, Gran Resistencia a Hidrocarburos, Facil Limpiado Anti Adherente a la Suciedad",
@@ -581,7 +563,7 @@ export const products = [
     {
 
         id: 16,
-        category: "bateas-pallets-antiderrame",
+        category: "bateas-y-pallets-antiderrame",
         name: "B439 | 146X128X61CM",
         image: [imageProductBateaPallets22],
         description: "Batea de Contención Alta Usos Varios, Base de Apoyo de Estructura Metálica, Gran Resistencia a Hidrocarburos, Facil Limpiado Anti Adherente a la Suciedad",
@@ -600,7 +582,7 @@ export const products = [
     {
 
         id: 17,
-        category: "bateas-pallets-antiderrame",
+        category: "bateas-y-pallets-antiderrame",
         name: "B42 | 140X120X12CM",
         image: [imageProductBateaPallets23],
         description: "Base de Contención Plana Usos Varios",
@@ -807,7 +789,7 @@ export const products = [
     {
 
         id: 28,
-        category: "contenedores-con-ruedas",
+        category: "contenedores-plasticos-con-ruedas",
         name: "120 LITROS",
         image: [contenedoresRuedas1],
         description: "2 Ruedas de Caucho Macizo Tapa Abisagrada 48 x 55 x 99 cm de alto",
@@ -827,7 +809,7 @@ export const products = [
     {
 
         id: 29,
-        category: "contenedores-con-ruedas",
+        category: "contenedores-plasticos-con-ruedas",
         name: "240 LITROS",
         image: [contenedoresRuedas2],
         description: "2 Ruedas de Caucho Macizo Tapa Abisagrada 58 x 73,5 x 107 cm de alto",
@@ -847,7 +829,7 @@ export const products = [
     {
 
         id: 30,
-        category: "contenedores-con-ruedas",
+        category: "contenedores-plasticos-con-ruedas",
         name: "360 LITROS",
         image: [contenedoresRuedas3],
         description: "2 Ruedas de Caucho Macizo Tapa Abisagrada 62 x 85 x 109,5 cm de alto",
@@ -867,7 +849,7 @@ export const products = [
     {
 
         id: 31,
-        category: "contenedores-con-ruedas",
+        category: "contenedores-plasticos-con-ruedas",
         name: "700 LITROS",
         image: [contenedoresRuedas4],
         description: "4 Ruedas de Caucho Macizo Tapa Abisagrada 139 x 797 x 121 cm de alto",
@@ -887,7 +869,7 @@ export const products = [
     {
 
         id: 32,
-        category: "contenedores-con-ruedas",
+        category: "contenedores-plasticos-con-ruedas",
         name: "1100 LITROS",
         image: [contenedoresRuedas5],
         description: "4 Ruedas de Caucho Macizo Tapa Abisagrada 137 x 107,7 x 132,5 cm de alto, Sistema DIN30700 para recolección en camión",
@@ -907,7 +889,7 @@ export const products = [
     {
 
         id: 33,
-        category: "contenedores-con-ruedas",
+        category: "contenedores-plasticos-con-ruedas",
         name: "1110 LITROS",
         image: [contenedoresRuedas6],
         description: "4 Ruedas de Caucho Macizo Tapa Abisagrada 108 x 129 x 137 cm de alto, Sistema DIN30700 para recolección en camión",
@@ -927,7 +909,7 @@ export const products = [
     {
 
         id: 34,
-        category: "contenedores-con-ruedas",
+        category: "contenedores-plasticos-con-ruedas",
         name: "660 LITROS IGNÍFUGO",
         image: [contenedoresRuedas7],
         description: "4 Ruedas (dos con freno) Tapa Abisagrada 116 x 63 x 123 cm de alto",
@@ -947,7 +929,7 @@ export const products = [
     {
 
         id: 35,
-        category: "contenedores-con-ruedas",
+        category: "contenedores-plasticos-con-ruedas",
         name: "800 LITROS IGNÍFUGO",
         image: [contenedoresRuedas8],
         description: "4 Ruedas (dos con freno) Tapa Abisagrada 83,5 x 126 x 132 cm de alto",
@@ -967,7 +949,7 @@ export const products = [
     {
 
         id: 36,
-        category: "contenedores-con-ruedas",
+        category: "contenedores-plasticos-con-ruedas",
         name: "1100 LITROS IGNÍFUGO",
         image: [contenedoresRuedas9],
         description: "4 Ruedas (dos con freno) Tapa Abisagrada 127 x 107,7 x 130 cm de alto, Sistema DIN30700 para recolección en camión ",
@@ -987,7 +969,7 @@ export const products = [
     {
 
         id: 37,
-        category: "contenedores-con-ruedas",
+        category: "contenedores-plasticos-con-ruedas",
         name: "550 LITROS",
         image: [contenedoresRuedas10],
         description: "4 Ruedas de Goma Compacta 150mm Tapa Abisagrada 80 x 132 x 106 cm de alto, Sistema DIN30700 para recolección en camión",
