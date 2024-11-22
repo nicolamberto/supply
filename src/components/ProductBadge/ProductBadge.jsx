@@ -27,7 +27,7 @@ function ProductBadge({ item }) {
 
   return (
     <div className={style.main}>
-      <img src={icon} alt="isotipo" />
+      <img className={style.icon} src={icon} alt="isotipo" />
       <span>{item}</span>
     </div>
   );

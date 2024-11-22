@@ -7,9 +7,13 @@
   align-items: center;
   text-wrap: nowrap;
   gap: 0.5rem;
-  font-weight: 900;
-  font-size: .8rem;
+  font-weight: 700;
+  font-size: .7rem;
   color: white;
+}
+.icon{
+  max-width: 25px;
+  max-height: 25px;
 }
 .main img {
   width: 100%;
