@@ -1,6 +1,5 @@
 import React from "react";
 import style from "./Servicios.module.css";
-import imageBackground from "../../assets/backgroundImages/1.jpg";
 import { openWhatsAppChat } from "../../hooks/openWhatsAppChat";
 import Footer from "../../components/Footer/Footer";
 function Servicios() {
