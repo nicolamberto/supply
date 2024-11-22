@@ -10,6 +10,7 @@ import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 import Categories from "./components/Categories/Categories";
 import Navbar from "./components/Navbar/Navbar";
 import Categorias from "./pages/Categorias/Categorias";
+import Servicios from "./pages/Servicios/Servicios";
 
 function App() {
   const [productsCart, setProductsCart] = useState([]); // IDs del carrito
@@ -24,7 +25,8 @@ function App() {
   }
 
   function deleteCart() {
-    setFilteredProducts([]);
+    setProductsCart([]);
+    updateFilteredProducts([]); // Actualiza los productos seleccionados
   }
 
   function deleteItem(id) {
@@ -73,6 +75,7 @@ function App() {
             />
           }
         />
+        <Route path="/servicios" element={<Servicios />} />
       </Routes>
     </div>
   );
