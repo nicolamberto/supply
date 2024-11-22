@@ -27,7 +27,7 @@
   transition: transform 1s ease;
 }
 .product_image:hover{
-  transform: scale(.8);
+  transform: scale(.9);
 }
 .container_eco {
   width: 120px;
