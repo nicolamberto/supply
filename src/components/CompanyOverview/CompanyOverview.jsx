@@ -29,8 +29,44 @@ function CompanyOverview() {
   ];
 
   return (
-    <section className={style.companyOverview_main}>
-      <div className={style.container_up}>
+    <section className={style.main}>
+      <div className={style.main_container}>
+        <div className={style.info_section}>
+          <div className={style.text_container}>
+            <h2 className={style.title}>Compromiso y calidad</h2>
+            <p className={style.description}>
+              En Supply Argentina, nos dedicamos a la fabricación y
+              comercialización de recipientes plásticos industriales, ofreciendo
+              soluciones adaptadas a las necesidades de nuestros clientes con un
+              servicio excepcional.
+            </p>
+          </div>
+          <div className={style.counter_container}>
+            <div className={style.counter}>
+              <span className={style.counter_number}>+1500</span>
+              <p className={style.counter_label}>Clientes satisfechos</p>
+            </div>
+            <div className={style.counter}>
+              <span className={style.counter_number}>+10</span>
+              <p className={style.counter_label}>Años en el mercado</p>
+            </div>
+          </div>
+        </div>
+        <div className={style.carousel_section}>
+          <div className={style.carousel_track}>
+            {logosMarcas.map((item, index) => (
+              <img
+                className={style.image}
+                key={`first-${index}`}
+                src={item}
+                alt={`Logo ${index}`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* <div className={style.container_up}>
         <div className={style.container_description}>
           <h2 className={style.title}>Compromiso y calidad</h2>
           <p>
@@ -57,7 +93,7 @@ function CompanyOverview() {
             <img key={index} src={item} alt={`Logo ${index}`} />
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

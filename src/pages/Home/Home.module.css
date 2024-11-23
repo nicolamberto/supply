@@ -1,9 +1,10 @@
 .home_main {
   width: 100vw;
-  height: auto;
-  min-height: 100vh;
   background-color: #fbfcfc;
-
+  gap: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
 .icon_whatsapp {
   position: fixed;
@@ -21,20 +22,19 @@
   width: 100%;
   height: auto;
   transition: transform 0.3s ease;
-
 }
 .icon_whatsapp img:hover {
   transform: scale(1.5);
-
 }
 @media (max-width: 800px) {
-  .icon_whatsapp{
+  .icon_whatsapp {
     width: 100px;
     height: 100px;
     top: 85vh;
   }
-}@media (max-width: 400px) {
-  .icon_whatsapp{
+}
+@media (max-width: 400px) {
+  .icon_whatsapp {
     width: 60px;
     height: 60px;
     top: 88vh;

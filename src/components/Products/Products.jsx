@@ -1,11 +1,12 @@
 import style from "./Products.module.css";
 import { Link, useLocation } from "react-router-dom";
 import { products } from "../../data";
-import Navbar from "../../components/Navbar/Navbar";
-import Card from "../../components/Card/Card";
-import Footer from "../../components/Footer/Footer";
+import Navbar from "../Navbar/Navbar";
+import Card from "../Card/Card";
+import Footer from "../Footer/Footer";
 import useTitle from "../../hooks/useTitle";
-import list from "../../assets/isotipos/lista.png";
+
+
 function Products({ addToCart, filteredProducts }) {
   const location = useLocation();
   const currentSlug = decodeURIComponent(location.pathname.split("/").pop());

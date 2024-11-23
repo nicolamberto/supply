@@ -3,14 +3,14 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import "./App.css";
 import NotFound from "./pages/NotFound/NotFound";
-import Products from "./pages/Products/Products";
+import Products from "./components/Products/Products";
 import { useState } from "react";
 import { products } from "./data";
 import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
-import Categories from "./components/Categories/Categories";
 import Navbar from "./components/Navbar/Navbar";
 import Categorias from "./pages/Categorias/Categorias";
 import Servicios from "./pages/Servicios/Servicios";
+import Productos from "./components/Categories/Categories";
 
 function App() {
   const [productsCart, setProductsCart] = useState([]); // IDs del carrito
@@ -76,6 +76,8 @@ function App() {
           }
         />
         <Route path="/servicios" element={<Servicios />} />
+        <Route path="/a" element={<Productos />} />
+
       </Routes>
     </div>
   );
