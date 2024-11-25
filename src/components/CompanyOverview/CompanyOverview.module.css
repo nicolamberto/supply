@@ -30,7 +30,6 @@
   align-items: center;
   gap: 2rem;
   color: var(--primary-bg-color);
-
 }
 .title {
   font-size: 4rem;
@@ -55,13 +54,12 @@
 
 .carousel_track {
   display: flex;
-  gap: 10rem;
-  width: 290%;
+  gap: 5rem;
+  width: 250%;
   height: 100%;
   box-sizing: border-box;
   animation: scroll 25s linear infinite; /* Ajusta la duración según sea necesario */
 }
-
 
 .image {
   width: auto;
@@ -69,15 +67,16 @@
   object-fit: contain;
 }
 
-
 /* Animación de desplazamiento */
 @keyframes scroll {
   0% {
-    transform: translateX(50rem); /* Comienza fuera de la pantalla a la derecha */
+    transform: translateX(
+      -100%
+    ); /* Comienza fuera de la pantalla a la derecha */
   }
   100% {
     transform: translateX(
-      -100%
+      100%
     ); /* Sale completamente de la pantalla a la izquierda */
   }
 }
@@ -103,7 +102,7 @@
 }
 @media (max-width: 800px) {
   .main {
-    padding: 2rem 2rem;
+    padding: 2rem 5rem;
   }
   .description {
     max-width: none;
@@ -135,14 +134,13 @@
     font-weight: 400;
   }
   .counter_container {
-
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
-  .info_section{
+  .info_section {
     gap: 2.5rem;
   }
 }

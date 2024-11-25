@@ -7,8 +7,9 @@ import Footer from "../../components/Footer/Footer";
 import imageWhatsapp from "../../assets/logos/whatsapp.png";
 import { openWhatsAppChat } from "../../hooks/openWhatsAppChat";
 import Categories from "../../components/Categories/Categories";
-
-
+import HeaderPrueba from "../../components/HeaderPrueba/HeaderPrueba";
+import Servicios from "../Servicios/Servicios";
+import Location from "../../components/Location/Location";
 function Home({ filteredProducts }) {
   //Texto de la pestaña del nevegador segun la pantalla que se está mostrando
   useTitle("Pallets Plásticos | Supply Argentina");
@@ -16,9 +17,10 @@ function Home({ filteredProducts }) {
   return (
     <section className={style.home_main}>
       <Header />
-      <Categories/>
-      {/* <About/> */}
+      <Categories />
       <CompanyOverview />
+      {/* <div className={style.divider}></div> */}
+      <Location />
       <Footer />
       <div
         onClick={() =>

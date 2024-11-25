@@ -11,6 +11,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Categorias from "./pages/Categorias/Categorias";
 import Servicios from "./pages/Servicios/Servicios";
 import Productos from "./components/Categories/Categories";
+import HeaderPrueba from "./components/HeaderPrueba/HeaderPrueba";
 
 function App() {
   const [productsCart, setProductsCart] = useState([]); // IDs del carrito
@@ -76,7 +77,7 @@ function App() {
           }
         />
         <Route path="/servicios" element={<Servicios />} />
-        <Route path="/a" element={<Productos />} />
+        <Route path="/about" element={<HeaderPrueba />} />
 
       </Routes>
     </div>

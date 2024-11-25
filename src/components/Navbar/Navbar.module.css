@@ -102,15 +102,20 @@
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 5rem;
-    right: 0;
+    top: 7rem;
+    right: .5rem;
+    border-radius: 8px;
     background-color: white;
-    padding: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+
   }
 
   .navbar_links a {
     margin: 0.5rem 0;
     color: #0a7c48;
+    font-weight: 600;
+    text-wrap: nowrap;
   }
 
   .navbar_links a:hover {
@@ -122,5 +127,7 @@
   .navbar_top {
     font-size: 0.7rem;
     font-weight: 600;
+    padding-right: 1rem;
+
   }
 }
