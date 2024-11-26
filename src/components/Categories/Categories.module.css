@@ -28,14 +28,9 @@
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
-  -webkit-animation-name: bounceIn;
-  animation-name: bounceIn;
-  -webkit-animation-duration: 0.75s;
-  animation-duration: 0.75s;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+  -webkit-animation: scale-up-center 0.3s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   border-radius: 10px;
   box-sizing: border-box;
   padding: 0 5px;
@@ -59,7 +54,6 @@
   height: 100%;
   object-fit: cover;
   transition: ease 0.5s;
-
 }
 .container_title {
   display: flex;
@@ -75,6 +69,36 @@
   transform: scale(1.1);
 }
 /*Animaciones*/
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+/* 
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 .bounceIn {
   -webkit-animation-name: bounceIn;
   animation-name: bounceIn;
@@ -138,36 +162,36 @@
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
     transform: scale3d(0.3, 0.3, 0.3);
   }
-}
+} */
 @media (max-width: 1024px) {
-    .main{
-        padding: 1rem 6rem;
-    }
-    .content{
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .main {
+    padding: 1rem 6rem;
+  }
+  .content {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 @media (max-width: 800px) {
-    .main{
-        padding: 1rem 4rem;
-    }
-    .content{
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 25rem;
-    }
+  .main {
+    padding: 1rem 4rem;
+  }
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 25rem;
+  }
 }
 @media (max-width: 400px) {
-    .main{
-        padding: 1rem 2rem;
-    }
-    .content{
-        grid-template-columns: 1fr;
-        grid-auto-rows: 25rem;
-    }
-    .title {
-        text-align: center;
-        padding: 0rem 1rem;
-        padding-bottom: 2rem;
-        font-size: 1.2rem;
-    }
+  .main {
+    padding: 1rem 2rem;
+  }
+  .content {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 25rem;
+  }
+  .title {
+    text-align: center;
+    padding: 0rem 1rem;
+    padding-bottom: 2rem;
+    font-size: 1.2rem;
+  }
 }

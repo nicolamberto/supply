@@ -11,19 +11,7 @@ function Header() {
   let banners = [banner1,banner2,banner3]
   return (
     <div className={style.header}>
-      <Swiper
-        modules={[Autoplay]}
-        autoplay={{ delay: 4000 }}
-        loop={true}
-        className={style.swiper}
-        direction="vertical"
-      >
-        {banners.map((banner, index) => (
-          <SwiperSlide className={style.swiper_slider} key={index} >
-            <img src={banner} alt={`Banner ${index + 1}`} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <Carrousel indicator={false} images={banners}/>
     </div>
   );
 }

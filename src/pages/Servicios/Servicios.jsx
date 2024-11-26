@@ -27,7 +27,7 @@ function Servicios() {
           }
           className={style.button}
         >
-          Contactanos
+          Contactenos
         </button>
       </div>
       <Footer />

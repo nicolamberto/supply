@@ -53,19 +53,10 @@
 }
 
 .carousel_track {
-  display: flex;
-  gap: 5rem;
-  width: 250%;
-  height: 100%;
-  box-sizing: border-box;
-  animation: scroll 25s linear infinite; /* Ajusta la duración según sea necesario */
+  width: 100vw;
+  height: 10rem;
 }
 
-.image {
-  width: auto;
-  max-height: 100%;
-  object-fit: contain;
-}
 
 /* Animación de desplazamiento */
 @keyframes scroll {
@@ -142,5 +133,8 @@
   }
   .info_section {
     gap: 2.5rem;
+  }
+  .title{
+    font-size: 1.5rem;
   }
 }

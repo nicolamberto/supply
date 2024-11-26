@@ -2,36 +2,12 @@
   box-sizing: border-box;
   width: 100vw;
   height: auto;
+  min-height: 5rem;
   background-color: var(--primary-bg-color);
   margin-top: 7rem;
   position: relative;
   overflow: hidden;
   position: relative;
-}
-.swiper {
-  width: 100vw;
-  height: 30vh;
-}
-.swiper_slider {
-  width: 100%;
-  height: 100%;
-}
-.swiper_slider img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.image_container {
-  display: flex; /* Coloca las imágenes en una fila */
-  width: 300%; /* Tres imágenes, por lo tanto 3 veces el ancho del contenedor */
-  height: 100%;
-  animation: slide 60s infinite; /* Animación automática */
-}
-
-.banner {
-  width: 100%; /* Cada imagen ocupa el ancho del contenedor */
-  height: 100%;
-  object-fit: contain;
 }
 
 /* Animación para desplazar las imágenes */

@@ -8,12 +8,12 @@
   text-wrap: nowrap;
   gap: 0.5rem;
   font-weight: 700;
-  font-size: .7rem;
+  font-size: .5rem;
   color: white;
 }
 .icon{
-  max-width: 25px;
-  max-height: 25px;
+  max-width: 20px;
+  max-height: 20px;
 }
 .main img {
   width: 100%;

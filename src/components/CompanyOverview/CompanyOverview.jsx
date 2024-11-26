@@ -12,6 +12,7 @@ import imageMarca8 from "../../assets/marcas/8.png";
 import imageMarca9 from "../../assets/marcas/9.png";
 import imageMarca10 from "../../assets/marcas/10.png";
 import imageMarca11 from "../../assets/marcas/11.png";
+import Carrousel from "../Carrousel/Carrousel";
 
 function CompanyOverview() {
   let logosMarcas = [
@@ -54,46 +55,10 @@ function CompanyOverview() {
         </div>
         <div className={style.carousel_section}>
           <div className={style.carousel_track}>
-            {logosMarcas.map((item, index) => (
-              <img
-                className={style.image}
-                key={`first-${index}`}
-                src={item}
-                alt={`Logo ${index}`}
-              />
-            ))}
+          <Carrousel slidesPerView={4} indicator={false} autoplayDelay={1000} images={logosMarcas}/>
           </div>
         </div>
       </div>
-
-      {/* <div className={style.container_up}>
-        <div className={style.container_description}>
-          <h2 className={style.title}>Compromiso y calidad</h2>
-          <p>
-            En Supply Argentina, nos dedicamos a la fabricación y
-            comercialización de recipientes plásticos industriales, ofreciendo
-            soluciones adaptadas a las necesidades de nuestros clientes con un
-            servicio excepcional.
-          </p>
-        </div>
-        <div className={style.container_count}>
-          <div className={style.count}>
-            1500
-            <span>Clientes satisfechos</span>
-          </div>
-          <div className={style.count}>
-            10
-            <span>Años en el mercado</span>
-          </div>
-        </div>
-      </div>
-      <div className={style.container_marcas}>
-        <div className={style.marquee}>
-          {logosMarcas.map((item, index) => (
-            <img key={index} src={item} alt={`Logo ${index}`} />
-          ))}
-        </div>
-      </div> */}
     </section>
   );
 }

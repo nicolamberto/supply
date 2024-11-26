@@ -10,16 +10,20 @@ import Categories from "../../components/Categories/Categories";
 import HeaderPrueba from "../../components/HeaderPrueba/HeaderPrueba";
 import Servicios from "../Servicios/Servicios";
 import Location from "../../components/Location/Location";
+import Carrousel from "../../components/Carrousel/Carrousel";
+import image1 from "../../assets/marcas/1.png" 
+import image2 from "../../assets/marcas/2.png" 
+import image3 from "../../assets/marcas/3.png" 
 function Home({ filteredProducts }) {
   //Texto de la pestaña del nevegador segun la pantalla que se está mostrando
   useTitle("Pallets Plásticos | Supply Argentina");
+  let images = [image1, image2, image3]
 
   return (
     <section className={style.home_main}>
       <Header />
       <Categories />
       <CompanyOverview />
-      {/* <div className={style.divider}></div> */}
       <Location />
       <Footer />
       <div

@@ -6,27 +6,28 @@ import Card from "../Card/Card";
 import Footer from "../Footer/Footer";
 import useTitle from "../../hooks/useTitle";
 
-
 function Products({ addToCart, filteredProducts }) {
   const location = useLocation();
   const currentSlug = decodeURIComponent(location.pathname.split("/").pop());
 
-  // Filtra los productos
+  // Filtrar productos por categoría
   const filteredProductsLocal = products.filter(
     (prod) => prod.category === currentSlug
   );
   useTitle(
-    `${currentSlug.replace(/-/g, " ").toUpperCase()} | Supply Argentina`
+    `Supply Argentina | ${currentSlug.replace(/-/g, " ").toUpperCase()}`
   );
 
   return (
-    <section className={style.products_main}>
-      <h2>{currentSlug.replace(/-/g, " ").toUpperCase()}</h2>
-      <div className={style.container_products}>
+    <section className={style.productsPage}>
+      <h2 className={style.pageTitle}>
+        {currentSlug.replace(/-/g, " ").toUpperCase()}
+      </h2>
+      <div className={style.productsGrid}>
         {filteredProductsLocal.map((item) => (
           <Card
             key={item.id}
-            image={item.image[0]}
+            image={item.image}
             name={item.name}
             description={item.description}
             technicalDetails={item.technicalDetails}

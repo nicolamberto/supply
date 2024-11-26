@@ -1,0 +1,28 @@
+.indicator_container {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 1;
+  }
+  .indicator_dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.512);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  .indicator_dot.active {
+    background-color: var(--primary-bg-color);
+    width: 20px; /* Cambia el ancho */
+    height: 10px; /* Mantén la altura */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: all 0.5s ease; /* Animación suave */
+  }
+  
