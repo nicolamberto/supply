@@ -2131,7 +2131,7 @@ export const products = [
     {
         id: 101,
         category: "tanques-para-liquidos",
-        name: "BIN ESTRUCTURAL",
+        name: "BIN ESTRUCTURAL 1000 L.",
         image: [tanquesLiquidos1],
         description: "Con estructura Aluminio Zincado Aptos para usar con Autoelevador o Zorra Manual - Apilables Aptos para líquidos de distintas densidades - Carga superior con tapa roscada de 200mm con junta ring",
         technicalDetails: {
@@ -2149,7 +2149,7 @@ export const products = [
     {
         id: 102,
         category: "tanques-para-liquidos",
-        name: "BIN ESTRUCTURAL",
+        name: "TANQUE PARA LIQUIDOS 120L",
         image: [tanquesLiquidos2, tanquesLiquidos3],
         description: "420mm x 850mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta ring",
         technicalDetails: {
@@ -2167,7 +2167,7 @@ export const products = [
     {
         id: 103,
         category: "tanques-para-liquidos",
-        name: "BIN ESTRUCTURAL 320 LITROS",
+        name: "TANQUE PARA LIQUIDOS 320L",
         image: [tanquesLiquidos4],
         description: "650mm x 950mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
@@ -2184,7 +2184,7 @@ export const products = [
     {
         id: 104,
         category: "tanques-para-liquidos",
-        name: "BIN ESTRUCTURAL 400 LITROS",
+        name: "TANQUE PARA LIQUIDOS 400L",
         image: [tanquesLiquidos5],
         description: "760mm x 994mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
@@ -2201,7 +2201,7 @@ export const products = [
     {
         id: 105,
         category: "tanques-para-liquidos",
-        name: "BIN ESTRUCTURAL 500 LITROS",
+        name: "TANQUE PARA LIQUIDOS 500L",
         image: [tanquesLiquidos6],
         description: "750mm x 1150mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
@@ -2218,7 +2218,7 @@ export const products = [
     {
         id: 106,
         category: "tanques-para-liquidos",
-        name: "BIN ESTRUCTURAL 700 LITROS",
+        name: "TANQUE PARA LIQUIDOS 700L",
         image: [tanquesLiquidos7],
         description: "850mm x 1250mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
@@ -2235,7 +2235,7 @@ export const products = [
     {
         id: 107,
         category: "tanques-para-liquidos",
-        name: "BIN ESTRUCTURAL 1000 LITROS",
+        name: "TANQUE PARA LIQUIDOS 1000L",
         image: [tanquesLiquidos8],
         description: "990mm x 1550mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
@@ -2253,7 +2253,7 @@ export const products = [
     {
         id: 108,
         category: "tanques-para-liquidos",
-        name: "BIN ESTRUCTURAL 1250 LITROS",
+        name: "TANQUE PARA LIQUIDOS 1250L",
         image: [tanquesLiquidos9],
         description: "930mm x 1930mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
@@ -2270,7 +2270,7 @@ export const products = [
     {
         id: 109,
         category: "tanques-para-liquidos",
-        name: "BIN ESTRUCTURAL 1650 LITROS",
+        name: "TANQUE PARA LIQUIDOS 1650L",
         image: [tanquesLiquidos10],
         description: "1000mm x 2260mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
@@ -2287,7 +2287,7 @@ export const products = [
     {
         id: 110,
         category: "tanques-para-liquidos",
-        name: "BIN ESTRUCTURAL 2050 LITROS",
+        name: "TANQUE PARA LIQUIDOS 2050L",
         image: [tanquesLiquidos11],
         description: "1120mm x 2330mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
@@ -2304,7 +2304,7 @@ export const products = [
     {
         id: 111,
         category: "tanques-para-liquidos",
-        name: "BIN ESTRUCTURAL 3000 LITROS",
+        name: "TANQUE PARA LIQUIDOS 3000L",
         image: [tanquesLiquidos12, tanquesLiquidos13],
         description: "1500mm x 1160mm x 2450mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
@@ -2321,7 +2321,7 @@ export const products = [
     {
         id: 112,
         category: "tanques-para-liquidos",
-        name: "BIN ESTRUCTURAL 3400 LITROS",
+        name: "TANQUE PARA LIQUIDOS 3400L",
         image: [tanquesLiquidos14],
         description: "1450mm x 1210mm Alto x 2900mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
@@ -2338,7 +2338,7 @@ export const products = [
     {
         id: 113,
         category: "tanques-para-liquidos",
-        name: "BIN ESTRUCTURAL 4400 LITROS",
+        name: "TANQUE PARA LIQUIDOS 4400L",
         image: [tanquesLiquidos15],
         description: "1750mm x 1383mm x 2555mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
@@ -2355,7 +2355,7 @@ export const products = [
     {
         id: 114,
         category: "tanques-para-liquidos",
-        name: "BIN ESTRUCTURAL 5250 LITROS",
+        name: "TANQUE PARA LIQUIDOS 5250L",
         image: [tanquesLiquidos16],
         description: "1550mm x 1280mm x 3060mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
@@ -2372,7 +2372,7 @@ export const products = [
     {
         id: 115,
         category: "tanques-para-liquidos",
-        name: "BIN ESTRUCTURAL 6000 LITROS",
+        name: "TANQUE PARA LIQUIDOS 6000L",
         image: [tanquesLiquidos17],
         description: "1550mm x 1280mm x 4500mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
@@ -2389,7 +2389,7 @@ export const products = [
     {
         id: 116,
         category: "tanques-para-liquidos",
-        name: "BIN ESTRUCTURAL 7000 LITROS",
+        name: "TANQUE PARA LIQUIDOS 7000L",
         image: [tanquesLiquidos18],
         description: "1750mm x 3240mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
@@ -2406,7 +2406,7 @@ export const products = [
     {
         id: 117,
         category: "tanques-para-liquidos",
-        name: "BIN ESTRUCTURAL 10000 LITROS",
+        name: "TANQUE PARA LIQUIDOS 10000L",
         image: [tanquesLiquidos19],
         description: "1930mm x 3850mmL Resistencia a ácidos, acetatos y deriv. del petróleo Carga superior con tapa roscada de 200mm con junta 'ring'",
         technicalDetails: {
