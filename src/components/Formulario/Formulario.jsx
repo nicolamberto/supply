@@ -130,11 +130,11 @@ const Formulario = ({ productos, deleteCart }) => {
         required
       />
       <button type="button" onClick={(e) => handleSubmit(e, "email")}>
-        Enviar por Email
+        Enviar
       </button>
-      <button type="button" onClick={(e) => handleSubmit(e, "whatsapp")}>
+      {/* <button type="button" onClick={(e) => handleSubmit(e, "whatsapp")}>
         Enviar por WhatsApp
-      </button>
+      </button> */}
     </form>
   );
 };
