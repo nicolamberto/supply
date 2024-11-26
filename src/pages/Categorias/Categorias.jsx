@@ -1,12 +1,12 @@
 import React from "react";
 import style from "./Categorias.module.css";
 import Footer from "../../components/Footer/Footer";
-import Categories from "../../components/Categories/Categories"
+import CategoriesProducts from "../../components/categoriesProducts/categoriesProducts";
 
 function Categorias() {
   return (
     <div className={style.main}>
-      <Categories/>
+      <CategoriesProducts/>
       <Footer />
     </div>
   );

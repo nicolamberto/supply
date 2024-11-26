@@ -3,7 +3,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  min-height: 100vh;
   background-color: #fbfcfc;
 
 }
@@ -29,6 +28,7 @@ body {
   --primary-bg-color: #0a7c48;
   /*Animaciones*/
   --fade-in: fadeIn 0.5s ease-in-out forwards;
+  --scale-up-center: scale-up-center 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 @keyframes fadeIn {
@@ -37,5 +37,25 @@ body {
   }
   to {
       opacity: 1;
+  }
+}
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }

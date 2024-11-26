@@ -4,6 +4,7 @@ import useTitle from "../../hooks/useTitle";
 import Footer from "../../components/Footer/Footer";
 import Formulario from "../../components/Formulario/Formulario";
 
+
 function ShoppingCart({ filteredProducts, deleteItem, deleteCart }) {
   useTitle("Presupuestos y consultas | Supply Argentina");
   const [productos, setProductos] = useState(filteredProducts);

@@ -1,7 +1,6 @@
 .home_main {
   width: 100vw;
   background-color: #fbfcfc;
-  gap: 2rem;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;

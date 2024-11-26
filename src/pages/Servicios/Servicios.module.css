@@ -17,36 +17,46 @@
   width: auto;
   height: auto;
   box-sizing: border-box;
-  padding: 8rem 4rem;
+  padding: 4rem 8rem;
   display: flex;
+  gap: 2.5rem;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.706);
+  background-color: rgba(0, 0, 0, 0.807);
 }
 .title {
-  font-size: 2.2rem;
+  font-size: 3rem;
   font-weight: 900;
+  text-transform: uppercase;
+  margin: 0;
 }
 .text {
   max-width: 60%;
   text-align: center;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
+  font-family: "Open Sans", sans-serif;
 }
 .button {
-  border: none;
-  transition: all 0.3s ease;
-  background-color: var(--primary-bg-color);
-  color: var(--primary-bg-color);
-  font-weight: 600;
+  padding: 0.5rem;
   font-size: 1rem;
-  padding: 10px 15px;
+  font-weight: bold;
   text-transform: uppercase;
-  border-radius: 12px;
-  color: white;
+  border: none;
+  border-radius: 8px;
+  background-color: whitesmoke;
+  color: var(--primary-bg-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 1rem;
+  max-width: 90%;
+  margin: auto;
+  box-sizing: border-box;
 }
 
 .button:hover {
@@ -64,24 +74,25 @@
     background-position: -40rem;
     max-width: none;
   }
-  .text{
+  .text {
     max-width: none;
   }
 }
 @media (max-width: 400px) {
-    .main {
-        background-position: -70rem;
-        max-width: none;
-      }
-    .content {
-       padding: 1rem .5rem;
-      }
-      .title{
-        margin: .5rem;
-        font-size: 2rem;
-        text-align: center;
-      }
-      .text{
-        font-size: .9rem;
-      }
+  .main {
+    background-position: -70rem;
+    max-width: none;
+  }
+  .content {
+    padding: 1rem 0.5rem;
+  }
+  .title {
+    margin: 0.5rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .text {
+    font-size: 1rem;
+    line-height: 20px;
+  }
 }

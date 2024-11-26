@@ -11,18 +11,22 @@ import HeaderPrueba from "../../components/HeaderPrueba/HeaderPrueba";
 import Servicios from "../Servicios/Servicios";
 import Location from "../../components/Location/Location";
 import Carrousel from "../../components/Carrousel/Carrousel";
-import image1 from "../../assets/marcas/1.png" 
-import image2 from "../../assets/marcas/2.png" 
-import image3 from "../../assets/marcas/3.png" 
+import image1 from "../../assets/marcas/1.png";
+import image2 from "../../assets/marcas/2.png";
+import image3 from "../../assets/marcas/3.png";
+import useScrollToTop from "../../hooks/useScrollToTop";
+import CategoriesProducts from "../../components/categoriesProducts/categoriesProducts";
 function Home({ filteredProducts }) {
   //Texto de la pestaña del nevegador segun la pantalla que se está mostrando
   useTitle("Pallets Plásticos | Supply Argentina");
-  let images = [image1, image2, image3]
+  let images = [image1, image2, image3];
+  useScrollToTop()
 
   return (
     <section className={style.home_main}>
       <Header />
-      <Categories />
+      {/* <Categories /> */}
+      <CategoriesProducts/>
       <CompanyOverview />
       <Location />
       <Footer />

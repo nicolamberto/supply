@@ -4,7 +4,7 @@ import Home from "./pages/Home/Home";
 import "./App.css";
 import NotFound from "./pages/NotFound/NotFound";
 import Products from "./components/Products/Products";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { products } from "./data";
 import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 import Navbar from "./components/Navbar/Navbar";
@@ -12,10 +12,14 @@ import Categorias from "./pages/Categorias/Categorias";
 import Servicios from "./pages/Servicios/Servicios";
 import Productos from "./components/Categories/Categories";
 import HeaderPrueba from "./components/HeaderPrueba/HeaderPrueba";
+import useScrollToTop from "./hooks/useScrollToTop";
 
 function App() {
   const [productsCart, setProductsCart] = useState([]); // IDs del carrito
   const [filteredProducts, setFilteredProducts] = useState([]); // Productos seleccionados
+  const containerRef = useRef();
+  /*Hook para llevar las pantallas al top del scroll a la hora de navegar*/
+  useScrollToTop(containerRef);
 
   function addToCart(id) {
     if (!productsCart.includes(id)) {
@@ -48,10 +52,12 @@ function App() {
   }, [productsCart]);
 
   return (
-    <div className="app">
+    <div ref={containerRef} className="app">
       <Navbar orders={productsCart.length} />
       <Routes>
         <Route path="*" element={<NotFound />} />
+        <Route path="/404" element={<NotFound />} />
+
         <Route path="/Productos" element={<Categorias />} />
         <Route
           path="/"
@@ -78,7 +84,6 @@ function App() {
         />
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/about" element={<HeaderPrueba />} />
-
       </Routes>
     </div>
   );

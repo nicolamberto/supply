@@ -2,7 +2,6 @@
   box-sizing: border-box;
   width: 100vw;
   height: auto;
-  min-height: 5rem;
   background-color: var(--primary-bg-color);
   margin-top: 7rem;
   position: relative;

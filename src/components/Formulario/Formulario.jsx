@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styles from "./Formulario.module.css";
 import emailjs from "@emailjs/browser";
+import { useNavigate } from "react-router-dom";
+
 
 const Formulario = ({ productos, deleteCart }) => {
   const formattedProducts = productos
@@ -18,6 +20,7 @@ const Formulario = ({ productos, deleteCart }) => {
   });
 
   const [error, setError] = useState(""); // Para mostrar mensajes de error
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -64,6 +67,7 @@ const Formulario = ({ productos, deleteCart }) => {
                 response.text
               );
               alert("Mensaje enviado correctamente por Email");
+              navigate("/");
             },
             (error) => {
               console.error("Error al enviar el correo:", error);

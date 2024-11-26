@@ -36,6 +36,8 @@
 }
 .description {
   font-size: 1.2rem;
+  font-family: "Open Sans", sans-serif;
+
 }
 .counter_number {
   font-size: 2rem;

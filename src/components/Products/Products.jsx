@@ -5,15 +5,27 @@ import Navbar from "../Navbar/Navbar";
 import Card from "../Card/Card";
 import Footer from "../Footer/Footer";
 import useTitle from "../../hooks/useTitle";
+import { useNavigate } from "react-router-dom";
 
 function Products({ addToCart, filteredProducts }) {
   const location = useLocation();
+  const navigate = useNavigate();
   const currentSlug = decodeURIComponent(location.pathname.split("/").pop());
+
+  // Verificar si la categoría existe
+  const isValidCategory = products.some((prod) => prod.category === currentSlug);
+
+  // Redirigir si la categoría no es válida
+  if (!isValidCategory) {
+    navigate("/404"); // Cambia esto según tu ruta de "NotFound"
+    return null;
+  }
 
   // Filtrar productos por categoría
   const filteredProductsLocal = products.filter(
     (prod) => prod.category === currentSlug
   );
+  
   useTitle(
     `Supply Argentina | ${currentSlug.replace(/-/g, " ").toUpperCase()}`
   );
@@ -42,3 +54,4 @@ function Products({ addToCart, filteredProducts }) {
 }
 
 export default Products;
+
