@@ -24,34 +24,7 @@ function HeaderPrueba() {
 
   return (
     <div className={style.container}>
-      <Swiper
-        className={style.banner}
-        modules={[Autoplay]}
-        direction="vertical"
-        loop
-        autoplay={{ delay: 5000 }}
-        speed={1000}
-      >
-        {banners.map((banner, index) => (
-          <SwiperSlide className={style.bannerSlider} key={index}>
-            <img
-              src={banner.image}
-              alt={`Banner ${index + 1}`}
-              className={style.bannerImage}
-            />
-            <div className={style.bannerContent}>
-              {banner.text.map((line, i) => (
-                <p key={i} className={style.bannerText}>
-                  {line}
-                </p>
-              ))}
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <div className={style.footer}>
-        <h1 className={style.footerText}>MATERIALES PLÁSTICOS INDUSTRIALES</h1>
-      </div>
+
     </div>
   );
 }
