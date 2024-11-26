@@ -22,6 +22,7 @@ function ShoppingCart({ filteredProducts, deleteItem, deleteCart }) {
   // Filtrar productos que tengan cantidad mayor que 0
   const productosConCantidad = productos.map((producto) => ({
     nombre: producto.name,
+    categoria: producto.category,
     cantidad: producto.cantidad === undefined ? 1 : producto.cantidad,
   }));
   return (

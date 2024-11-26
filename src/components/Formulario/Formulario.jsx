@@ -3,15 +3,14 @@ import styles from "./Formulario.module.css";
 import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router-dom";
 
-
 const Formulario = ({ productos, deleteCart }) => {
   const formattedProducts = productos
     .map(
       (producto) =>
-        `// ${producto.nombre} - Cantidad:  ${producto.cantidad}  //`
+        `//Producto: ${producto.nombre} - Categoría: ${producto.categoria} - Cantidad solicitada: ${producto.cantidad}//`
     )
     .join(", ");
-  
+
   const [formulario, setFormulario] = useState({
     nombre: "",
     email: "",
@@ -49,8 +48,8 @@ const Formulario = ({ productos, deleteCart }) => {
       mensaje: formulario.mensaje,
       products: formattedProducts,
     };
-/*datos de la cuenta gmail los redondos*/ 
-/*
+    /*datos de la cuenta gmail los redondos*/
+    /*
 serviceID ok
 templateId ok
 
