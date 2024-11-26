@@ -49,15 +49,20 @@ const Formulario = ({ productos, deleteCart }) => {
       mensaje: formulario.mensaje,
       products: formattedProducts,
     };
+/*datos de la cuenta gmail los redondos*/ 
+/*
+serviceID ok
+templateId ok
 
+*/
     switch (method) {
       case "email":
         emailjs
           .send(
-            "service_q2iv4sb",
-            "template_707yzk7",
+            "service_315xqnq",
+            "template_xirimln",
             templateParams,
-            "wuk7TXQLWBRooSaS-"
+            "HSUz0VK0z6b2QOfSx"
           )
           .then(
             (response) => {
