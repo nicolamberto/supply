@@ -15,7 +15,9 @@ import image1 from "../../assets/marcas/1.png";
 import image2 from "../../assets/marcas/2.png";
 import image3 from "../../assets/marcas/3.png";
 import useScrollToTop from "../../hooks/useScrollToTop";
-import CategoriesProducts from "../../components/CategoriesProducts/CategoriesProducts";
+import CategoriesProducts from "../../components/CategoriesProducts/CategoriesProducts"
+
+
 function Home({ filteredProducts }) {
   //Texto de la pestaña del nevegador segun la pantalla que se está mostrando
   useTitle("Pallets Plásticos | Supply Argentina");
