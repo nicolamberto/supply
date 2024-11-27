@@ -13,6 +13,7 @@ import Servicios from "./pages/Servicios/Servicios";
 import Productos from "./components/Categories/Categories";
 import HeaderPrueba from "./components/HeaderPrueba/HeaderPrueba";
 import useScrollToTop from "./hooks/useScrollToTop";
+import Carrito from "./pages/Carrito/Carrito";
 
 function App() {
   const [productsCart, setProductsCart] = useState([]); // IDs del carrito
@@ -56,6 +57,7 @@ function App() {
       <Navbar orders={productsCart.length} />
       <Routes>
         <Route path="*" element={<NotFound />} />
+        <Route path="/carrito" element={<Carrito setFilteredProducts={filteredProducts} deleteItem={deleteItem} deleteCart={deleteCart} />} />
         <Route path="/404" element={<NotFound />} />
 
         <Route path="/Productos" element={<Categorias />} />
