@@ -19,10 +19,10 @@ function Navbar({ orders }) {
       {/* Parte superior de la navbar */}
       <div className={style.navbar_top}>
         <p>
-          <BsTelephone /> 0810 444 0152
+          <BsTelephone className={style.icon} /> 0810 444 0152
         </p>
         <p>
-          <CiMail /> ventas@supplyargentina.com.ar
+          <CiMail className={style.icon} /> ventas@supplyargentina.com.ar
         </p>
       </div>
       {/* Parte inferior de la navbar */}

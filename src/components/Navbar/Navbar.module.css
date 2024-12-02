@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Hind+Siliguri:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 .navbar_main {
-  width: 100vw;
+  width: 100%;
   height: auto;
-  z-index: 5;
   box-sizing: border-box;
   position: fixed;
   top: 0;
   left: 0;
   font-family: var(--primary-font);
+  z-index: 5;
 
 }
 .navbar_top {
@@ -16,7 +16,7 @@
   height: 3rem;
   font-size: 1.3rem;
   padding-right: 2.5rem;
-  gap: 1.5rem;
+  gap: 2rem;
   box-sizing: border-box;
   display: flex;
   justify-content: end;
@@ -31,6 +31,8 @@
   justify-content: center;
   align-items: center;
   gap: .5rem;
+  animation: var(--fade-in);
+
 }
 .navbar_bottom {
   width: 100%;
@@ -44,6 +46,12 @@
 }
 .navbar_logo {
   max-width: 15rem;
+  animation: var(--fade-in);
+  transition: ease .5s;
+
+}
+.navbar_logo:hover{
+  transform: scale(1.05);
 }
 .navbar_links {
   font-size: 1rem;
@@ -53,16 +61,26 @@
   justify-content: space-around;
   align-items: center;
   padding: 10px;
+  
+  
 
 }
 .navbar_links a {
   text-decoration: none !important;
   color:  #0a7c48;
+  font-weight: bold;
+  transition: border-bottom .3s ease-in-out;
+
+  
+  
 }
 .navbar_links a:hover {
   text-decoration: none !important;
   color: black;
   border-bottom: 1px solid black;
+  font-weight: bold;
+
+
 }
 .navbar_toggle {
   display: none;
@@ -74,6 +92,7 @@
 }
 .icon{
   font-size: 1.5rem;
+  font-weight: bold;
 }
 .navbar_links {
   display: flex;
