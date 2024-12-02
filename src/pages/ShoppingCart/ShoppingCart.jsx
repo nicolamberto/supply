@@ -9,7 +9,6 @@ import logo from "../../assets/logos/logo_small.png"
 function ShoppingCart({ filteredProducts, deleteItem, deleteCart }) {
   useTitle("Presupuestos y consultas | Supply Argentina");
   const [productos, setProductos] = useState(filteredProducts);
-  console.log(productos, "prod")
 
 
   // Función para manejar el cambio de cantidad de un producto

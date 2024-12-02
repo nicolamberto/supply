@@ -4,7 +4,6 @@ import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router-dom";
 
 const Formulario = ({ productos, deleteCart }) => {
-  console.log(productos);
   
   const formattedProducts = productos
     .map(

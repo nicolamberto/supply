@@ -7,6 +7,7 @@ import { BsTelephone } from "react-icons/bs";
 import { CiMail } from "react-icons/ci";
 
 function Navbar({ orders }) {
+  
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -44,7 +45,7 @@ function Navbar({ orders }) {
           <Link to="/">Inicio</Link>
           <Link to="/productos">Productos</Link>
           <Link to="/presupuesto">
-            Presupuestos/Pedidos <span>{`(${orders})`}</span>
+            Presupuestos/Pedidos {orders === 0 ? "" : <span className={style.orders_number}>{orders}</span>}
           </Link>
           <Link to="/servicios">Servicios</Link>
         </div>
