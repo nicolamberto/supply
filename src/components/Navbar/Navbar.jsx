@@ -6,8 +6,7 @@ import { Link } from "react-router-dom";
 import { BsTelephone } from "react-icons/bs";
 import { CiMail } from "react-icons/ci";
 
-function Navbar({ orders }) {
-  
+function Navbar({ orders = 0 }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -37,6 +36,7 @@ function Navbar({ orders }) {
             <VscListUnordered className={style.icon} />
           )}
         </button>
+        {/* Lógica de apertura/cierre del menú en dispositivos móviles */}
         <div
           className={`${style.navbar_links} ${
             menuOpen ? style.navbar_links_open : ""
@@ -45,7 +45,12 @@ function Navbar({ orders }) {
           <Link to="/">Inicio</Link>
           <Link to="/productos">Productos</Link>
           <Link to="/presupuesto">
-            Presupuestos/Pedidos {orders === 0 ? "" : <span className={style.orders_number}>{orders}</span>}
+            Presupuestos/Pedidos{" "}
+            {orders === 0 ? (
+              ""
+            ) : (
+              <span className={style.orders_number}>{orders}</span>
+            )}
           </Link>
           <Link to="/servicios">Servicios</Link>
         </div>

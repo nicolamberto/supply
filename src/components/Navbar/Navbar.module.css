@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Hind+Siliguri:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 .navbar_main {
-  width: 100%;
+  width: 99%;
   height: auto;
   box-sizing: border-box;
   position: fixed;
@@ -9,7 +9,6 @@
   left: 0;
   font-family: var(--primary-font);
   z-index: 5;
-
 }
 .navbar_top {
   width: 100%;
@@ -22,17 +21,16 @@
   justify-content: end;
   align-items: center;
   color: white;
-  background-color: #0a7c48;
-  font-weight: 500;
+  background-color: var(--primary-bg-color);
+  font-weight: bold;
 }
 .navbar_top p {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
   animation: var(--fade-in);
-
 }
 .navbar_bottom {
   width: 100%;
@@ -47,10 +45,9 @@
 .navbar_logo {
   max-width: 15rem;
   animation: var(--fade-in);
-  transition: ease .5s;
-
+  transition: ease 0.5s;
 }
-.navbar_logo:hover{
+.navbar_logo:hover {
   transform: scale(1.05);
 }
 .navbar_links {
@@ -61,26 +58,18 @@
   justify-content: space-around;
   align-items: center;
   padding: 10px;
-  
-  
-
 }
 .navbar_links a {
   text-decoration: none !important;
-  color:  #0a7c48;
+  color: var(--primary-bg-color);
   font-weight: bold;
-  transition: border-bottom .3s ease-in-out;
-
-  
-  
+  transition: border-bottom 0.3s ease-in-out;
 }
 .navbar_links a:hover {
   text-decoration: none !important;
-  color: black;
+  color: rgba(0, 0, 0, 0.553);
   border-bottom: 1px solid black;
   font-weight: bold;
-
-
 }
 .navbar_toggle {
   display: none;
@@ -90,7 +79,7 @@
   color: black;
   cursor: pointer;
 }
-.icon{
+.icon {
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -102,11 +91,11 @@
 .navbar_links_open {
   display: flex !important;
 }
-.orders_number{
+.orders_number {
   border-radius: 50%;
   color: white;
   background-color: #0a7c48;
-  font-size: .7rem;
+  font-size: 0.7rem;
   padding: 4px 8px;
   box-sizing: border-box;
 }
@@ -137,7 +126,7 @@
     border-radius: 0 0 0 10px;
     background-color: white;
     padding: 1rem 3rem;
-    box-shadow: -4px 4px 3px -2px rgba(0,0,0,0.54);
+    box-shadow: -4px 4px 3px -2px rgba(0, 0, 0, 0.54);
   }
 
   .navbar_links a {
@@ -154,9 +143,9 @@
 }
 @media (max-width: 400px) {
   .navbar_top {
-    font-size: 0.7rem;
-    font-weight: 600;
-    padding-right: 1rem;
-
+    font-size: 0.6rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
   }
 }

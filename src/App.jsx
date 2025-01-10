@@ -14,7 +14,6 @@ import Productos from "./components/Categories/Categories";
 import HeaderPrueba from "./components/HeaderPrueba/HeaderPrueba";
 import useScrollToTop from "./hooks/useScrollToTop";
 import Carrito from "./pages/Carrito/Carrito";
-
 function App() {
   const [productsCart, setProductsCart] = useState([]); // IDs del carrito
   const [filteredProducts, setFilteredProducts] = useState([]); // Productos seleccionados
