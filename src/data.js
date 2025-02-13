@@ -2063,7 +2063,7 @@ export const products = [
     {
         id: 97,
         category: "recipientes-alimenticios",
-        name: "RECIPIENTES RECTANGULARES",
+        name: "RECIPIENTES RECT. APILABLES",
         image: [recipienteAlimenticios5],
         description: "4L | 10L | 12L | 18L | 20L | 25L | 30L | 40L | 48L | 65L | 70L | 80L | 100L | 150L | 280L | 350L",
         technicalDetails: {
