@@ -1,65 +1,28 @@
-import { BiFontSize } from "react-icons/bi";
-import style from "./CompanyOverview.module.css";
-import CountUp from "react-countup";
-import imageMarca1 from "../../assets/marcas/1.png";
-import imageMarca2 from "../../assets/marcas/2.png";
-import imageMarca3 from "../../assets/marcas/3.png";
-import imageMarca4 from "../../assets/marcas/4.png";
-import imageMarca5 from "../../assets/marcas/5.png";
-import imageMarca6 from "../../assets/marcas/6.png";
-import imageMarca7 from "../../assets/marcas/7.png";
-import imageMarca8 from "../../assets/marcas/8.png";
-import imageMarca9 from "../../assets/marcas/9.png";
-import imageMarca10 from "../../assets/marcas/10.png";
-import imageMarca11 from "../../assets/marcas/11.png";
-import Carrousel from "../Carrousel/Carrousel";
+import React from 'react';
+import TextBlock from './elements/TextBlock';
+import Images from './elements/Images';
 
 function CompanyOverview() {
-  let logosMarcas = [
-    imageMarca1,
-    imageMarca2,
-    imageMarca3,
-    imageMarca4,
-    imageMarca5,
-    imageMarca6,
-    imageMarca7,
-    imageMarca8,
-    imageMarca9,
-    imageMarca10,
-    imageMarca11,
-  ];
 
   return (
-    <section className={style.main}>
-      <div className={style.main_container}>
-        <div className={style.info_section}>
-          <div className={style.text_container}>
-            <h2 className={style.title}>Compromiso y calidad</h2>
-            <p className={style.description}>
-              En Supply Argentina, nos dedicamos a la fabricación y
-              comercialización de recipientes plásticos industriales, ofreciendo
-              soluciones adaptadas a las necesidades de nuestros clientes con un
-              servicio excepcional.
-            </p>
-          </div>
-          <div className={style.counter_container}>
-            <div className={style.counter}>
-              <span className={style.counter_number}>+1500</span>
-              <p className={style.counter_label}>Clientes satisfechos</p>
-            </div>
-            <div className={style.counter}>
-              <span className={style.counter_number}>+10</span>
-              <p className={style.counter_label}>Años en el mercado</p>
-            </div>
-          </div>
+    <div className=' w-[100%] py-20 flex flex-col justify-center items-center bg-[#adc9b8] mx-[200px] rounded-[100px]'>
+
+      <div className="w-[95%] lg:w-[80%] 2xl:w-[60%]">
+
+        {/* bloque completo sobre mi */}
+        <div className="flex flex-row justify-center items-stretch gap-0">
+
+          {/* bloque de texto (titulo, texto y estadisticas) */}
+          <TextBlock/>
+
+          {/* imagenes */}
+          <Images/>
+
         </div>
-        <div className={style.carousel_section}>
-          <div className={style.carousel_track}>
-          <Carrousel slidesPerView={4} indicator={false} autoplayDelay={1000} images={logosMarcas}/>
-          </div>
-        </div>
+
       </div>
-    </section>
+
+    </div>
   );
 }
 

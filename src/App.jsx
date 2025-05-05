@@ -7,13 +7,16 @@ import Products from "./components/Products/Products";
 import { useState, useRef } from "react";
 import { products } from "./data";
 import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar2";
 import Categorias from "./pages/Categorias/Categorias";
 import Servicios from "./pages/Servicios/Servicios";
 import Productos from "./components/Categories/Categories";
 import HeaderPrueba from "./components/HeaderPrueba/HeaderPrueba";
 import useScrollToTop from "./hooks/useScrollToTop";
 import Carrito from "./pages/Carrito/Carrito";
+import ProductsStrapi from "./components/ProductsStrapi/ProductsStrapi";
+import { ProductProvider } from "./context/products";
+
 function App() {
   const [productsCart, setProductsCart] = useState([]); // IDs del carrito
   const [filteredProducts, setFilteredProducts] = useState([]); // Productos seleccionados
@@ -52,41 +55,45 @@ function App() {
   }, [productsCart]);
 
   return (
-    <div ref={containerRef} className="app">
-      <Navbar orders={productsCart.length} />
-      <Routes>
-        <Route path="*" element={<NotFound />} />
-        <Route path="/carrito" element={<Carrito setFilteredProducts={filteredProducts} deleteItem={deleteItem} deleteCart={deleteCart} />} />
-        <Route path="/404" element={<NotFound />} />
+    <ProductProvider>
+      <div ref={containerRef} className="app flex justify-center items-center flex-col">
+        <Navbar orders={productsCart.length} />
+        <Routes>
+          <Route path="*" element={<NotFound />} />
+          <Route path="/carrito" element={<Carrito setFilteredProducts={filteredProducts} deleteItem={deleteItem} deleteCart={deleteCart} />} />
+          <Route path="/404" element={<NotFound />} />
 
-        <Route path="/Productos" element={<Categorias />} />
-        <Route
-          path="/"
-          element={<Home filteredProducts={filteredProducts} />}
-        />
-        <Route
-          path="/:seccion"
-          element={
-            <Products
-              addToCart={addToCart}
-              filteredProducts={filteredProducts}
-            />
-          }
-        />
-        <Route
-          path="/Presupuesto"
-          element={
-            <ShoppingCart
-              deleteItem={deleteItem}
-              filteredProducts={filteredProducts}
-              deleteCart={deleteCart}
-            />
-          }
-        />
-        <Route path="/servicios" element={<Servicios />} />
-        <Route path="/about" element={<HeaderPrueba />} />
-      </Routes>
-    </div>
+          <Route path="/productos" element={<Categorias />} />
+          <Route path="/strapi" element={<ProductsStrapi />} />
+          <Route
+            path="/"
+            element={<Home filteredProducts={filteredProducts} />}
+          />
+          <Route
+            path="/:seccion"
+            element={
+              <Products
+                addToCart={addToCart}
+                filteredProducts={filteredProducts}
+              />
+            }
+          />
+          <Route
+            path="/Presupuesto"
+            element={
+              <ShoppingCart
+                deleteItem={deleteItem}
+                filteredProducts={filteredProducts}
+                deleteCart={deleteCart}
+              />
+            }
+          />
+          <Route path="/servicios" element={<Servicios />} />
+          <Route path="/about" element={<HeaderPrueba />} />
+        </Routes>
+      </div>
+    </ProductProvider>
+
   );
 }
 

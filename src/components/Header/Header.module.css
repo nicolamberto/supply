@@ -1,13 +1,3 @@
-.header {
-  box-sizing: border-box;
-  width: 100vw;
-  height: auto;
-  background-color: var(--primary-bg-color);
-  margin-top: 7rem;
-  position: relative;
-  overflow: hidden;
-  position: relative;
-}
 
 /* Animación para desplazar las imágenes */
 @keyframes slide {

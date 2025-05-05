@@ -183,30 +183,35 @@ import tanquesLiquidos19 from "../src/assets/productos/TANQUES PARA LIQUIDOS/19.
 import campanaRecoleccion1 from "../src/assets/productos/CAMPANAS DE RECOLECCION/1.png"
 import campanaRecoleccion2 from "../src/assets/productos/CAMPANAS DE RECOLECCION/2.png"
 
+import categoriafondo1 from '../src/assets/productos/categoriaconfondo1.jpeg'
+import categoriafondo2 from '../src/assets/productos/categoriaconfondo2.jpeg'
+import categoriafondo3 from '../src/assets/productos/categoriaconfondo3.jpeg'
+import categoriafondo4 from '../src/assets/productos/categoriaconfondo4.jpeg'
+
 export const categories = [
     {
         id: 1,
         nombre: "Bateas & Pallets Antiderrame",
-        imagen: imageCategorie1,
+        imagen: categoriafondo1,
         slug: "bateas-y-pallets-antiderrame",
     },
     {
         id: 2,
         nombre: "Pallets Plásticos",
-        imagen: imageCategorie2,
+        imagen: categoriafondo2,
         slug: "pallets-plasticos",
     },
     {
         id: 3,
         nombre: "Contenedores con Ruedas",
-        imagen: imageCategorie3,
+        imagen: categoriafondo3,
         slug: "contenedores-plasticos-con-ruedas",
 
     },
     {
         id: 4,
         nombre: "Bines Plásticos",
-        imagen: imageCategorie7,
+        imagen: categoriafondo4,
         slug: "bines-plasticos",
 
     },

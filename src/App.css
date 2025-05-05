@@ -1,6 +1,17 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'MiFuente';
+  src: url('/fonts/EastmanRomanTrial-Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-miFuente {
+  font-family: 'MiFuente', sans-serif;
+}
+
 .app{
-  width: 100vw;
-  height: 100vh;
   display: flex;
   flex-flow: column nowrap;
   overflow-x: hidden;
@@ -29,4 +40,32 @@
   font-size: 1.5rem;
   color: white;
   padding: 2px 8px;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #033908; /* Cambia el color de las flechas */
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: 40%; /* Ajusta la posición horizontal */
+}
+
+
+
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #033908; /* Cambia el fondo al pasar el mouse */
+  color: white; /* Cambia el color de las flechas al pasar el mouse */
 }

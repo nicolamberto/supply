@@ -65,7 +65,7 @@ textarea {
 }
 
 .formulario button:hover {
-  background-color: #085e3a;;
+  background-color: #085e3a;
   color: rgb(255, 255, 255);
   border: 2px solid rgba(255, 255, 255, 0.705);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);

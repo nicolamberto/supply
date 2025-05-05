@@ -15,7 +15,9 @@ import image1 from "../../assets/marcas/1.png";
 import image2 from "../../assets/marcas/2.png";
 import image3 from "../../assets/marcas/3.png";
 import useScrollToTop from "../../hooks/useScrollToTop";
-import CategoriesProducts from "../../components/CategoriesProducts/CategoriesProducts"
+import CategoriesProducts2 from "../../components/CategoriesProducts/CategoriesProducts2"
+import Features from "../../components/Features/Features";
+import CategoriesPage from "../../components/CategoriesProducts/CategoriesPage";
 
 
 function Home({ filteredProducts }) {
@@ -28,8 +30,9 @@ function Home({ filteredProducts }) {
     <section className={style.home_main}>
       <Header />
       {/* <Categories /> */}
-      <CategoriesProducts/>
+      <CategoriesPage/>
       <CompanyOverview />
+      <Features/>
       <Location />
       <Footer />
       <div
