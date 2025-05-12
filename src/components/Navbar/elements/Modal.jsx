@@ -1,15 +1,17 @@
 import React, { useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { categories } from '../../../data'
 import { Link } from 'react-router-dom'
+import { useProductContext } from '../../../context/products'
 
 
 const MotionLink = motion(Link)
 
 export default function Modal({ setIsHover, setMenuOpen }) {
 
+    const {setCategory, categories} = useProductContext()
 
-    const handleClickProductButton = () => {
+    const handleClickProductButton = (category) => {
+        setCategory(category)
         setIsHover(false)
         setMenuOpen(false)
     }
@@ -29,15 +31,15 @@ export default function Modal({ setIsHover, setMenuOpen }) {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.05 }}
                         className='w-full border-2 rounded-full flex justify-between md:justify-center items-center gap-3 px-5 z-10 overflow-hidden hover:bg-green-700 hover:text-white duration-100 text-[14px] md:text-[13px]'
-                        onClick={() => { handleClickProductButton()} }
+                        onClick={() => {handleClickProductButton(item.slug)} }
                         key={item.id}
-                        to={`/${item.slug}`}
+                        to={`/productos`}
                     >
 
                         <p className='text-start font-semibold text-nowrap uppercase' key={item.id}>
-                            {item.nombre}
+                            {item.name}
                         </p>
-                        <img src={item.imagen} alt="img" className='w-[20px] md:w-[50px]' />
+                        <img src={item.img} alt="img" className='w-[20px] md:w-[50px]' />
                     </MotionLink>
 
 

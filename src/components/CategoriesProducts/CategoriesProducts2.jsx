@@ -1,13 +1,10 @@
 
-import CarouselIndicator from "../CarouselIndicator/CarouselIndicator";
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Scrollbar, A11y } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import CategoryCard from "./elements/CategoryCard";
-import { getProductCategories } from "../../utils/get-product-categories";
+import { useProductContext } from "../../context/products";
 
 function Carrousel({
     images,
@@ -20,59 +17,23 @@ function Carrousel({
 
 
     //ARREGLAR TODO EL CODIGO BRO ESTA HECHO UN ASCO
-    const [categories , setCategories] = useState([]);
+    const {categories} = useProductContext()
 
-    useEffect(() => {
-      getProductCategories().then((data) => {
-        setCategories(data);
-      });
-    }, []);
   
     
 
     return (
-        <Swiper
-            modules={[Navigation, Scrollbar]}
-            autoplay={{ delay: autoplayDelay }}
-            
-            loop={loop}
-            navigation
-            breakpoints={{
-                0: {
-                    slidesPerView: 1,
-                    spaceBetween: 0,
-                },
-                520: {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 30,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                },
-                1380: {
-                    slidesPerView: 4,
-                    spaceBetween: 30,
-                },
-            }}
-            className=' h-[500px] w-[100%] flex flex-col justify-center items-center my-20 px-10 relative'
-            direction={direction}
-            slidesPerView={slidesPerView}
-        >
-            <div className="">
+        <div className='w-[100%] flex flex-col justify-center items-center my-20 relative'>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 items-center gap-8">
                 {categories.map((item, index) => (
-                    <SwiperSlide className={`relative flex justify-center items-center`} key={index}>
+                    <div className={`relative flex justify-center items-center`} key={index}>
                         <CategoryCard item={item}/>
-                    </SwiperSlide>
+                    </div>
                 ))}
             </div>
 
 
-        </Swiper>
+        </div>
     );
 }
 

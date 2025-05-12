@@ -10,9 +10,11 @@ import logoverde from "../../assets/logos/logo_small.png";
 import logoblanco from "../../assets/logos/logoblanco.png";
 
 
-function Navbar2({ orders = 0 }) {
+function Navbar2() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isHover, setIsHover] = useState(false);
+
+  const [isHoverCart, setIsHoverCart] = useState(false)
 
   const [isScrolled, setIsScrolled] = useState(false);
   const { scrollY } = useScroll()
@@ -56,8 +58,7 @@ function Navbar2({ orders = 0 }) {
 
 
         {/* MENU DESKTOP */}
-        <NavbarDesktop isHover={isHover} setIsHover={setIsHover} isScrolled={isScrolled} orders={orders} />
-
+        <NavbarDesktop isHover={isHover} setIsHover={setIsHover} isScrolled={isScrolled} isHoverCart={isHoverCart} setIsHoverCart={setIsHoverCart} />
 
         {/* MENU MOBILE */}
         <HamburgerButton setIsHover={setIsHover} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />

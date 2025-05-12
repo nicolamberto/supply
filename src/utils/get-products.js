@@ -22,7 +22,7 @@ export function getProducts({ categoryId }) {
                     name,
                     slug,
                     img,
-                    description
+                    description,
                 };
             });
         });

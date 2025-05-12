@@ -24,11 +24,10 @@ export default function NavbarMobile({ setMenuOpen, isHover, setIsHover }) {
             }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { delay: 0.2 } }}
-            className=" fixed inset-0 z-10 bg-[#033908]/80 backdrop-blur-md flex flex-col justify-center space-y-5 items-center overflow-y-auto"
+            className=" fixed inset-0 z-10 bg-[#033908]/80 backdrop-blur-md flex flex-col justify-center space-y-5 items-center overflow-y-auto border-2 border-white"
         >
             <motion.div
-
-                className="flex flex-col font-semibold text-[20px] text-white/80 uppercase w-[80%] h-[80%] "
+                className="flex flex-col font-semibold text-[20px] text-white/80 uppercase w-[80%] h-[80%] border-2 border-black"
             >
                 <Link to="/">Inicio</Link>
                 <div onClick={() => { setIsHover(!isHover) }}>
@@ -40,7 +39,6 @@ export default function NavbarMobile({ setMenuOpen, isHover, setIsHover }) {
                             )
                         }
                     </AnimatePresence>
-                    <div className="absolute w-[300px] left-1/2 right-1/2 h-10 z-0 bg-transparent" />
                 </div>
 
                 <Link to="/presupuesto">
