@@ -6,7 +6,7 @@ export function getProductCategories() {
       return res.data.map((item) => {
         const { name, slug, image } = item;
         const img = image?.url
-          ? `https://supply-strapi.onrender.com${image.url}`
+          ? `http://localhost:1337${image.url}`
           : null;
 
         return {
