@@ -1,21 +1,28 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Modal from './Modal'
-import { AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import ModalCart from './CartModal'
+import { useProductContext } from '../../../context/products'
 
 
 
 export default function NavbarDesktop({ isHover, setIsHover, isScrolled, isHoverCart, setIsHoverCart }) {
+
+    const { cart } = useProductContext()
+
     return (
         <div
-            className={`hidden md:flex flex-row flex-wrap gap-5 lg:gap-10 xl:gap-16 font-semibold uppercase transitiontext-[15px] ${isScrolled ? 'text-green-700' : 'text-white'}`}
+            className={`flex flex-row flex-wrap gap-10 lg:gap-10 xl:gap-16 font-semibold uppercase transitiontext-[15px] ${isScrolled ? 'text-green-700' : 'text-white'}`}
         >
 
-            <Link to="/">Inicio</Link>
+            <Link className='hidden md:block' to="/">Inicio</Link>
 
             {/* PRODUCTOS Y MODAL */}
-            <div onMouseEnter={() => { setIsHover(true) }} onMouseLeave={() => { setIsHover(false) }}>
+            <div
+                className='hidden md:block'
+                onMouseEnter={() => { setIsHover(true) }}
+                onMouseLeave={() => { setIsHover(false) }}>
                 <Link onClick={() => { setIsHover(false) }} to="/productos">Productos</Link>
                 <AnimatePresence>
                     {
@@ -28,8 +35,24 @@ export default function NavbarDesktop({ isHover, setIsHover, isScrolled, isHover
             </div>
 
             {/* CARRITO Y MODALCART */}
-            <div className='relative' onMouseEnter={() => { setIsHoverCart(true) }} onMouseLeave={() => { setIsHoverCart(false) }}>
+            <div className='relative pr-9 md:pr-0' onMouseEnter={() => { setIsHoverCart(true) }} onMouseLeave={() => { setIsHoverCart(false) }}>
                 <Link onClick={() => { setIsHoverCart(false) }} to="/presupuesto">PRESUPUESTO</Link>
+
+                <AnimatePresence>
+                    {cart.length > 0 && (
+                        <motion.span
+                            key={cart.length} // clave para que detecte el cambio
+                            initial={{ scale: 0, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0, opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className='absolute ml-1 px-[5px] text-[10px] rounded-full text-center text-white font-bold bg-blue-400'>
+                            {cart.length}
+                        </motion.span>
+                    )}
+                </AnimatePresence>
+
+
                 <AnimatePresence>
                     {
                         isHoverCart && (
@@ -39,9 +62,6 @@ export default function NavbarDesktop({ isHover, setIsHover, isScrolled, isHover
                 </AnimatePresence>
                 <div className="absolute left-1/2 -translate-x-1/2 w-[200px] h-10 z-0 bg-transparent" />
             </div>
-
-
-            <Link to="/servicios">Servicios</Link>
 
         </div>
     )

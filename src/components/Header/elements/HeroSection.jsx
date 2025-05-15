@@ -23,7 +23,7 @@ function HeroSection() {
           <p className="text-lg mb-0 text-center opacity-70 px-5">
             Soluciones resistentes, funcionales y a medida para tu industria.
           </p>
-          <Button />
+          <Button text={'Conoce nuestros productos'} url={'/productos'}/>
 
         </div>
       </div>

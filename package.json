@@ -21,6 +21,8 @@
     "react-router-dom": "^6.28.0",
     "react-spinners": "^0.17.0",
     "resend": "^4.0.1",
+    "sweetalert2": "^11.21.0",
+    "sweetalert2-react-content": "^5.1.0",
     "swiper": "^11.1.15",
     "tailwindcss": "^4.1.4"
   },

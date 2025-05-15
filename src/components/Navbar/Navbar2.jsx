@@ -8,7 +8,7 @@ import NavbarDesktop from "./elements/NavbarDesktop";
 import { HamburgerButton } from "./elements/AnimatedHamburgerButton";
 import logoverde from "../../assets/logos/logo_small.png";
 import logoblanco from "../../assets/logos/logoblanco.png";
-
+import logomobile from '../../assets/logos/logomobile.jpg'
 
 function Navbar2() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -50,8 +50,17 @@ function Navbar2() {
 
           {
             isScrolled ?
-              <img className='max-w-[250px]' src={logoverde} alt="logotipo" /> :
-              <img className='max-w-[250px]' src={logoblanco} alt="logotipo" />
+              <img className='max-w-[250px] hidden md:block' src={logoverde} alt="logotipo" /> 
+              :
+              <img className='max-w-[250px] hidden md:block' src={logoblanco} alt="logotipo" /> 
+
+          }
+          {
+            isScrolled ?
+              <img className='w-[50px] block md:hidden' src={logomobile} alt="logotipo" />
+              :
+              <img className='w-[70px] block md:hidden pl-5' src={logomobile} alt="logotipo" />
+
           }
 
         </Link>
@@ -61,7 +70,7 @@ function Navbar2() {
         <NavbarDesktop isHover={isHover} setIsHover={setIsHover} isScrolled={isScrolled} isHoverCart={isHoverCart} setIsHoverCart={setIsHoverCart} />
 
         {/* MENU MOBILE */}
-        <HamburgerButton setIsHover={setIsHover} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        {/*         <HamburgerButton setIsHover={setIsHover} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
         <AnimatePresence>
 
@@ -69,7 +78,7 @@ function Navbar2() {
             <NavbarMobile setMenuOpen={setMenuOpen} isHover={isHover} setIsHover={setIsHover} />
           )}
 
-        </AnimatePresence>
+        </AnimatePresence> */}
       </div>
 
 

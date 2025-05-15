@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { IoMdArrowDown } from 'react-icons/io'
+import { Link } from 'react-router-dom';
 
-export default function Button() {
+export default function Button({text, url}) {
     const [isHovering, setIsHovering] = useState(false);
 
     return (
@@ -34,7 +35,7 @@ export default function Button() {
                     }}
                 />
                 {/* Texto del botón */}
-                <p className="relative z-10 text-[15px] sm:text-[20px]">Conoce nuestros productos</p>
+                <Link to={url} className="relative z-10 text-[15px] sm:text-[20px]">{text}</Link>
 
             </motion.button>
         </div>

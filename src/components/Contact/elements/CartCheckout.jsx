@@ -7,9 +7,9 @@ export default function CartCheckout() {
 
   return (
     <div className='w-full h-full'>
-      <table className="table-fixed w-full border-separate border-spacing-y-4">
+      <table className="table-auto w-full border-separate border-spacing-y-4">
         <thead>
-          <tr className='text-[22px] text-[#00491f]'>
+          <tr className='text-[19px] lg:text-[22px] text-[#00491f]'>
             <th className='text-start px-4 py-2'>Producto</th>
             <th className='text-start px-4 py-2'>Cantidad</th>
             <th className='text-start px-4 py-2'>Acción</th>
@@ -21,18 +21,18 @@ export default function CartCheckout() {
               <td className='px-4 py-2'>
                 <div className="flex items-center gap-3">
                   <img src={item.img} alt={item.name} className='w-[50px]' />
-                  <p>{item.name}</p>
+                  <p className=' font-semibold text-[14px] sm:text-[17px]'>{item.name}</p>
                 </div>
               </td>
               <td className='px-4 py-2'>
-                <div className="border rounded-full flex items-center gap-6 w-fit px-2">
-                  <FaMinus onClick={() => removeFromCart(item)} className='cursor-pointer' />
-                  <p className="text-[20px]">{item.quantity}</p>
-                  <FaPlus onClick={() => addToCart(item)} className='cursor-pointer' />
+                <div className="border rounded-full flex items-center gap-2 sm:gap-6 w-fit px-2">
+                  <FaMinus onClick={() => removeFromCart(item)} className='cursor-pointer text-[10px]' />
+                  <p className="sm:text-[20px]">{item.quantity}</p>
+                  <FaPlus onClick={() => addToCart(item)} className='cursor-pointer text-[10px]' />
                 </div>
               </td>
               <td className='px-4 py-2'>
-                <button className='py-1 px-3 border border-green-900 rounded-full cursor-pointer'>Eliminar</button>
+                <button className='py-1 px-3 border border-green-900 rounded-full cursor-pointer text-[12px] sm:text-[17px]'>Eliminar</button>
               </td>
             </tr>
           ))}
