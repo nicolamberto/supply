@@ -10,6 +10,7 @@ import Location from "../../components/Location/Location";
 import useScrollToTop from "../../hooks/useScrollToTop";
 import Features from "../../components/Features/Features";
 import CategoriesPage from "../../components/CategoriesProducts/CategoriesPage";
+import Faqs from "../../components/Faqs/Faqs";
 
 
 function Home() {
@@ -24,6 +25,7 @@ function Home() {
       <CategoriesPage/>
       <CompanyOverview />
       <Features/>
+      <Faqs/>
       <Location />
       <div
         onClick={() =>

@@ -37,7 +37,7 @@ export default function NewProducts() {
 {/*                 <div className="w-[95%] lg:w-[80%] 2xl:w-[60%] py-10 lg:pl-5">
                     <OverlappingTitle firstTitle={titleArray.length == 2 ? titleArray[0] : titleArray.slice(0, 2).join(' ')} secondTitle={titleArray.length == 2 ? titleArray[1] : titleArray.slice(2).join(' ')} colorFirstTitle={'text-[#00491f]'} colorSecondTitle={'text-[#adc9b8]'} />
                 </div> */}
-                <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 p-4 w-[95%] lg:w-[80%] 2xl:w-[60%]">
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 p-4 w-[95%] lg:w-[80%] 2xl:w-[70%]">
 
                     {/* Barra lateral de filtros */}
                     <FilterBar/>

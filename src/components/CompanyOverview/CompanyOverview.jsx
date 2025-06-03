@@ -5,22 +5,21 @@ import Images from './elements/Images';
 function CompanyOverview() {
 
   return (
-    <div className=' w-[100%] py-20 flex flex-col justify-center items-center bg-[#adc9b8] mx-[200px] rounded-[100px]'>
+    <div className=' w-[100%] py-12 md:py-20 flex flex-col justify-center items-center bg-[#adc9b8] mx-[200px] rounded-[40px] md:rounded-[100px]'>
 
-      <div className="w-[95%] lg:w-[80%] 2xl:w-[60%]">
+      
 
         {/* bloque completo sobre mi */}
-        <div className="flex flex-row justify-center items-stretch gap-0">
+        <div className="flex flex-col md:flex-row justify-center items-stretch gap-0 w-[95%] lg:w-[80%] 2xl:w-[70%]">
 
           {/* bloque de texto (titulo, texto y estadisticas) */}
-          <TextBlock/>
+          <TextBlock />
 
           {/* imagenes */}
-          <Images/>
+          <Images />
 
         </div>
 
-      </div>
 
     </div>
   );

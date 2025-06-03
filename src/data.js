@@ -2761,5 +2761,39 @@ export const products = [
 ]
 
 
+export const faqs = [
+    {
+        id: 1,
+        question: '¿Qué tipo de maquinaria ofrecen?',
+        answer: 'Ofrecemos maquinaria industrial para lavado, teñido y acabado textil, como lavadoras, secadoras, centrífugas, calandras y sistemas de control. Nuestros equipos están diseñados para alto rendimiento y durabilidad.'
+    },
+    {
+        id: 2,
+        question: '¿Fabrican maquinaria a medida según las necesidades del cliente?',
+        answer: 'Sí, desarrollamos maquinaria totalmente personalizada según los procesos, volúmenes y necesidades técnicas de cada cliente, optimizando eficiencia, espacio y consumo energético.'
+    },
+    {
+        id: 3,
+        question: '¿Ofrecen servicio técnico y repuestos?',
+        answer: 'Contamos con servicio técnico especializado, atención postventa, mantenimiento programado y gran stock de repuestos originales para asegurar el funcionamiento continuo de cada equipo.'
+    },
+    {
+        id: 4,
+        question: '¿Cuál es el tiempo de entrega de una máquina?',
+        answer: 'Depende del modelo y su personalización. En general, el plazo de entrega va de 30 a 90 días hábiles desde la aprobación del pedido y confirmación de pago.'
+    },
+    {
+        id: 5,
+        question: '¿Realizan envíos a todo el país o al exterior?',
+        answer: 'Sí, realizamos envíos nacionales e internacionales. Trabajamos con empresas logísticas confiables que garantizan el transporte seguro y puntual de nuestras máquinas a destino.'
+    },
+    {
+        id: 6,
+        question: '¿Ofrecen capacitación para el uso de las máquinas?',
+        answer: 'Sí, brindamos capacitación técnica al personal que operará las máquinas, con instructivos detallados y asistencia para asegurar una instalación y uso correctos desde el inicio.'
+    },
+]
+
+
 
 

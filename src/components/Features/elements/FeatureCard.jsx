@@ -12,22 +12,22 @@ export default function ServiceCard() {
 
 
     return (
-        <div className="bg-[#00491f] text-white rounded-b-[120px] flex justify-center items-center ">
+        <div className="group bg-white text-[#00491f] hover:bg-[#00491f] hover:text-white transition rounded-b-[70px] flex justify-center items-center shadow-sm/20 hover:inset-shadow-sm/20 ">
 
-            <div className="flex flex-col justify-center items-start gap-5 px-10 pb-14 pt-6">
+            <div className="flex flex-col justify-center items-start gap-3  mx-10 mt-5 mb-10">
 
                 {/* icono */}
-                <div className="text-[50px]">
+                <div className="text-[35px]">
                     <DiApple />
                 </div>
 
                 {/* titulo */}
-                <div className="text-[25px] font-bold">
+                <div className="text-[25px] font-bold leading-tight">
                     <p>Calidad Industrial Garantizada</p>
                 </div>
 
                 {/* texto */}
-                <div className="text-white/70">
+                <div className="text-[#00491f]/70 group-hover:text-white/70 transition leading-tight">
                     <p>Fabricamos productos
                         resistentes, duraderos y
                         funcionales, pensados para las

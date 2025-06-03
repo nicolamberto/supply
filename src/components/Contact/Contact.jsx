@@ -14,7 +14,7 @@ export default function Contact() {
         <img src={banner} alt="banner" className='w-full h-full rounded-[20px] object-cover' />
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-10 sm:-translate-y-5 text-white  text-center flex flex-col w-full sm:gap-5'>
           <p className='text-3xl font-bold'>CONTACTANOS</p>
-          <Button text={'Volver al catalogo'} url={'/productos'}/>
+          <Button text={'Volver al catalogo'} url={'/productos'} />
         </div>
       </div>
 

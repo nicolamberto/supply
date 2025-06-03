@@ -43,7 +43,7 @@ function Navbar2() {
     >
 
       {/* SECCION QUE CONTIENE LOGO Y AMBOS MENUES */}
-      <div className="w-[95%] lg:w-[80%] 2xl:w-[60%] flex justify-between items-center">
+      <div className="w-[95%] lg:w-[80%] 2xl:w-[70%] flex justify-between items-center">
 
         {/* LOGO */}
         <Link to={"/"}>
