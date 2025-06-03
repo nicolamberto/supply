@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   padding: 0;
@@ -6,7 +5,8 @@ body {
   background-color: #efefef;
 
 }
-.primary_button{
+
+.primary_button {
   padding: 10px;
   min-width: 8rem;
   border: none;
@@ -18,10 +18,12 @@ body {
   background-color: var(--primary-bg-color);
   color: white;
 }
-.primary_button:hover{
+
+.primary_button:hover {
   background-color: #0c9457;
   color: white;
 }
+
 :root {
   /*Fuentes*/
   --primary-font: "Montserrat", sans-serif;
@@ -33,29 +35,49 @@ body {
 
 @keyframes fadeIn {
   from {
-      opacity: 0;
+    opacity: 0;
   }
+
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
+
 @-webkit-keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.5);
     transform: scale(0.5);
   }
+
   100% {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
 }
+
 @keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.5);
     transform: scale(0.5);
   }
+
   100% {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-200px * 11 - 0.5rem * 44));
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
 }

@@ -6,7 +6,7 @@ import LocationForm from "./elements/LocationForm";
 function Location() {
   return (
     <section className='w-full flex justify-center items-center py-20'>
-      <div className='w-[95%] lg:w-[80%] 2xl:w-[70%] flex flex-col justify-center items-start bg-white p-4 sm:p-8 md:p-14 pt-10 rounded-[40px]'>
+      <div className='w-[95%] lg:w-[80%] 2xl:w-[70%] flex flex-col justify-center items-start bg-white p-4 sm:p-8 md:p-14 pt-10 rounded-[15px] md:rounded-[40px]'>
 
         <OverlappingTitle firstTitle={'CONTACTATE'} secondTitle={'CON NOSOTROS'} colorFirstTitle={'text-[#00491f]'} colorSecondTitle={'text-[#adc9b8]'} />
 

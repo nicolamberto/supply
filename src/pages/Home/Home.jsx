@@ -11,6 +11,7 @@ import useScrollToTop from "../../hooks/useScrollToTop";
 import Features from "../../components/Features/Features";
 import CategoriesPage from "../../components/CategoriesProducts/CategoriesPage";
 import Faqs from "../../components/Faqs/Faqs";
+import ClientsCarousel from "../../components/ClientsCarousel/ClientsCarousel";
 
 
 function Home() {
@@ -25,6 +26,7 @@ function Home() {
       <CategoriesPage/>
       <CompanyOverview />
       <Features/>
+      <ClientsCarousel/>
       <Faqs/>
       <Location />
       <div

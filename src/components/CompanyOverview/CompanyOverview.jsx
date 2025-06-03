@@ -5,7 +5,7 @@ import Images from './elements/Images';
 function CompanyOverview() {
 
   return (
-    <div className=' w-[100%] py-12 md:py-20 flex flex-col justify-center items-center bg-[#adc9b8] mx-[200px] rounded-[40px] md:rounded-[100px]'>
+    <div className=' my-20 w-[100%] py-7 sm:py-20 flex flex-col justify-center items-center bg-[#adc9b8] mx-[200px] rounded-[15px] md:rounded-[100px]'>
 
       
 

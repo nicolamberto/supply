@@ -2648,7 +2648,7 @@ export const products = [
         id: 131,
         category: "estaciones-ambientales",
         name: "E14P",
-        image: [estacionesAmbientales1,estacionesAmbientales2],
+        image: [estacionesAmbientales1, estacionesAmbientales2],
         description: "Cartel superior con grafica a elección 30 x 27 x 46 de alto Individual, o módulos de hasta cuatro recipientes",
         technicalDetails: {
             thermalSpectrum: null,
@@ -2664,7 +2664,7 @@ export const products = [
         id: 132,
         category: "estaciones-ambientales",
         name: "E28P",
-        image: [estacionesAmbientales3,estacionesAmbientales4],
+        image: [estacionesAmbientales3, estacionesAmbientales4],
         description: "Cartel superior con grafica a elección 33 x 31 x 71 de alto Individual, o módulos de hasta cuatro recipientes",
         technicalDetails: {
             thermalSpectrum: null,
@@ -2680,7 +2680,7 @@ export const products = [
         id: 133,
         category: "estaciones-ambientales",
         name: "R1114",
-        image: [estacionesAmbientales5,estacionesAmbientales6],
+        image: [estacionesAmbientales5, estacionesAmbientales6],
         description: "Cartel superior con grafica a elección 36 x 42 x 78cm de alto Individual, o módulos de hasta cuatro recipientes",
         technicalDetails: {
             thermalSpectrum: null,
@@ -2794,6 +2794,53 @@ export const faqs = [
     },
 ]
 
+import marca1 from './assets/marcas/1.svg';
+import marca2 from './assets/marcas/2.svg';
+import marca3 from './assets/marcas/3.svg';
+import marca4 from './assets/marcas/4.svg';
+import marca5 from './assets/marcas/5.svg';
+import marca6 from './assets/marcas/6.svg';
+import marca7 from './assets/marcas/7.svg';
+import marca8 from './assets/marcas/8.svg';
+import marca9 from './assets/marcas/9.svg';
+import marca10 from './assets/marcas/10.svg';
+import marca11 from './assets/marcas/11.svg';
+
+export const marcas = [
+    {
+        img: marca1
+    },
+    {
+        img: marca2
+    },
+    {
+        img: marca3
+    },
+    {
+        img: marca4
+    },
+    {
+        img: marca5
+    },
+    {
+        img: marca6
+    },
+    {
+        img: marca7
+    },
+    {
+        img: marca8
+    },
+    {
+        img: marca9
+    },
+    {
+        img: marca10
+    },
+    {
+        img: marca11
+    },
+]
 
 
 
