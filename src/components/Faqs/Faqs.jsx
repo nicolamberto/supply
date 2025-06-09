@@ -27,7 +27,7 @@ export default function Faqs() {
                                 key={item.id}
                                 className="w-full flex flex-col justify-center items-start bg-white p-4 m-2 rounded-lg shadow-md cursor-pointer text-[#00491f]">
                                 <div className="w-full flex justify-between items-center">
-                                    <p className='text-[21px] xl:text-[30px] font-semibold pb-4'>{item.question}</p>
+                                    <p className='text-[21px] xl:text-[23px] font-semibold pb-4'>{item.question}</p>
                                     <motion.div 
                                     animate={{ rotate: activeQuestion === item.id ? 180 : 0 }}
                                     className="relative">

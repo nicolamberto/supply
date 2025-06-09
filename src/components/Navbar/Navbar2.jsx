@@ -31,12 +31,15 @@ function Navbar2() {
 
     /* SECCION QUE TOMA EL COMPLETO DEL ANCHO DE PANTALLA */
     <motion.section
+      initial={{ y: -50, opacity: 0 }}
       animate={{
+        y: 0, 
+        opacity: 1 ,
         background: isScrolled ? 'rgba(228, 239, 231, 1)' : 'rgba(255, 255, 255, 0)',
         height: isScrolled ? '80px' : '90px',
       }}
       transition={{
-        duration: 0.2, // Duración de la transición en segundos
+        duration: 0.35, // Duración de la transición en segundos
         ease: "easeInOut", // Curva de animación suave
       }}
       className={`w-full flex justify-center items-center fixed top-0 z-50 ${isScrolled ? 'pt-0' : 'pt-5'}`}

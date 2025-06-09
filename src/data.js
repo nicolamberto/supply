@@ -2842,5 +2842,22 @@ export const marcas = [
     },
 ]
 
+import { DiApple } from "react-icons/di";
 
-
+export const features = [
+    {
+        icon: DiApple,
+        title: 'Calidad Industrial Garantizada',
+        text: 'Fabricamos productos resistentes, duraderos y funcionales, pensados para las exigencias del trabajo diario y los entornos industriales más desafiantes.'
+    },
+    {
+        icon: DiApple,
+        title: 'Calidad Industrial Garantizada',
+        text: 'Fabricamos productos resistentes, duraderos y funcionales, pensados para las exigencias del trabajo diario y los entornos industriales más desafiantes.'
+    },
+    {
+        icon: DiApple,
+        title: 'Calidad Industrial Garantizada',
+        text: 'Fabricamos productos resistentes, duraderos y funcionales, pensados para las exigencias del trabajo diario y los entornos industriales más desafiantes.'
+    },
+]

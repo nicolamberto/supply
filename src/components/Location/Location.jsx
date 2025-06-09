@@ -2,18 +2,24 @@ import React from "react";
 import style from "./Location.module.css";
 import OverlappingTitle from "../../resources/overlappingTitle";
 import LocationForm from "./elements/LocationForm";
+import { motion } from "framer-motion";
 
 function Location() {
   return (
     <section className='w-full flex justify-center items-center py-20'>
-      <div className='w-[95%] lg:w-[80%] 2xl:w-[70%] flex flex-col justify-center items-start bg-white p-4 sm:p-8 md:p-14 pt-10 rounded-[15px] md:rounded-[40px]'>
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className='w-[95%] lg:w-[80%] 2xl:w-[70%] flex flex-col justify-center items-start bg-white p-4 sm:p-8 md:p-14 pt-10 rounded-[15px] md:rounded-[40px]'>
 
         <OverlappingTitle firstTitle={'CONTACTATE'} secondTitle={'CON NOSOTROS'} colorFirstTitle={'text-[#00491f]'} colorSecondTitle={'text-[#adc9b8]'} />
 
         <div className="flex flex-col-reverse md:flex-row-reverse justify-end items-start sm:gap-5 md:gap-10 lg:gap-12 pt-15 sm:pt-5 w-full">
 
           {/* Columna 1: formulario de contacto */}
-          <LocationForm/>
+          <LocationForm />
 
           {/* Columna 2: Mapa */}
           <div className='w-[100%] lg:w-[50%] h-[250px] md:h-[540px] rounded-[25px] overflow-hidden shadow-xl mt-10'>
@@ -29,7 +35,7 @@ function Location() {
         </div>
 
 
-      </div>
+      </motion.div>
     </section>
   );
 }

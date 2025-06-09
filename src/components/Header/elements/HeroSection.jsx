@@ -1,10 +1,16 @@
 import Button from "./Button";
 import banner1 from "../../../assets/banners/bannersupply.jpg";
+import { motion } from "framer-motion";
 
 function HeroSection() {
 
   return (
-    <div className='rounded-[20px] overflow-hidden'>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.3 }}
+      className='rounded-[20px] overflow-hidden'>
 
       <div className={`relative w-[100%] flex flex-col flex-nowrap justify-center items-center`}>
         <div className="absolute inset-0 bg-gray-500 opacity-10 z-10"></div>
@@ -12,7 +18,7 @@ function HeroSection() {
         {/* Imagen del slider */}
         <img
           src={banner1}
-          className={`object-cover w-full h-[60vh] md:h-[350px] blur-[1px]`}
+          className={`object-cover w-full h-[60vh] blur-[1px]`}
           alt={`Banner `}
         />
 
@@ -28,7 +34,7 @@ function HeroSection() {
         </div>
       </div>
 
-    </div>
+    </motion.div>
   );
 }
 

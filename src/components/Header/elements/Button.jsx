@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
+import { delay, motion } from 'framer-motion'
 import { IoMdArrowDown } from 'react-icons/io'
 import { Link } from 'react-router-dom';
 
-export default function Button({text, url}) {
+export default function Button({ text, url }) {
     const [isHovering, setIsHovering] = useState(false);
 
     return (
@@ -11,10 +11,11 @@ export default function Button({text, url}) {
             <motion.button
                 onMouseEnter={() => setIsHovering(true)}
                 onMouseLeave={() => setIsHovering(false)}
-
+                whileHover={{ scale: 1.05 }}
                 transition={{
                     delay: isHovering ? 0 : 0.1,
                     ease: "easeIn",
+                    whileHover:{ type: "spring", stiffness: 300, delay: 0}
                 }}
                 className=" overflow-clip z-50 relative bg-blue-500 rounded-[20px] text-white m-5 px-7 py-2 text-[20px] cursor-pointer">
                 {/* Fondo animado */}
@@ -35,7 +36,7 @@ export default function Button({text, url}) {
                     }}
                 />
                 {/* Texto del botón */}
-                <Link to={url} className="relative z-10 text-[15px] sm:text-[20px]">{text}</Link>
+                <Link to={url} className="relative z-10 text-[15px] sm:text-[20px] font-bold">{text}</Link>
 
             </motion.button>
         </div>

@@ -7,12 +7,7 @@ import CategoryCard from "./elements/CategoryCard";
 import { useProductContext } from "../../context/products";
 
 function Carrousel({
-    images,
-    slidesPerView = 4,
-    direction = "horizontal",
-    autoplayDelay = 5000,
-    loop = false,
-    autoplay = false
+
 }) {
 
 

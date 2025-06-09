@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion';
 
 export default function LocationForm() {
     return (
@@ -7,7 +8,8 @@ export default function LocationForm() {
         >
             <div className="flex flex-col">
                 <label htmlFor="nombre" className="font-semibold text-[#00491f] mb-1">Nombre</label>
-                <input
+                <motion.input
+                    whileFocus={{ scale: 1.01 }}
                     type="text"
                     id="nombre"
                     name="nombre"
@@ -20,7 +22,8 @@ export default function LocationForm() {
 
             <div className="flex flex-col">
                 <label htmlFor="email" className="font-semibold text-[#00491f] mb-1">Email</label>
-                <input
+                <motion.input
+                    whileFocus={{ scale: 1.01 }}
                     type="email"
                     id="email"
                     name="email"
@@ -33,7 +36,8 @@ export default function LocationForm() {
 
             <div className="flex flex-col">
                 <label htmlFor="telefono" className="font-semibold text-[#00491f] mb-1">Teléfono</label>
-                <input
+                <motion.input
+                    whileFocus={{ scale: 1.01 }}
                     type="tel"
                     id="telefono"
                     name="telefono"
@@ -45,14 +49,15 @@ export default function LocationForm() {
 
             <div className="flex flex-col">
                 <label htmlFor="mensaje" className="font-semibold text-[#00491f] mb-1">Mensaje</label>
-                <textarea
+                <motion.textarea
+                    whileFocus={{ scale: 1.01 }}
                     id="mensaje"
                     name="mensaje"
                     rows="4"
                     /* value='' */
                     /* onChange='{handleChange}' */
                     className="border border-[#00491f] rounded-[17px] px-4 py-2 outline-none bg-[#efefef] resize-none"
-                ></textarea>
+                ></motion.textarea>
             </div>
 
             <div
@@ -61,7 +66,7 @@ export default function LocationForm() {
                 <button className='border-2 bg-[#00491f] py-1 px-7 rounded-full text-[15px] cursor-pointer'>
                     Enviar
                 </button>
-                
+
             </div>
         </form>
     )
