@@ -2,7 +2,14 @@
 
 @font-face {
   font-family: 'MiFuente';
-  src: url('/fonts/EastmanRomanTrial-Bold.otf') format('opentype');
+  src: url('/fonts/EastmanRomanTrial-Black.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TituloBanner';
+  src: url('/fonts/EastmanRomanTrial-BlackItalic.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -10,6 +17,11 @@
 .font-miFuente {
   font-family: 'MiFuente', sans-serif;
 }
+
+.font-banner {
+  font-family: 'TituloBanner', sans-serif;
+}
+
 
 .app{
   display: flex;

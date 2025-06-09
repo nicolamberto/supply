@@ -1,22 +1,29 @@
 import React from 'react'
 
+
+function Divider() {
+    return (
+        <div className="bg-[#00491f] w-22 h-[2px] sm:w-px sm:h-12 mx-2 sm:mx-6 opacity-60"></div>
+    )
+}
+
 export default function Stats() {
     return (
-        <div className='flex flex-row justify-center items-center text-[#00491f]'>
+        <div className='flex flex-col sm:flex-row justify-center items-center text-[#00491f] w-full'>
 
-            <div className="flex flex-col justify-center items-center max-w-[150px] border-r px-7">
-                <p className='text-[30px] md:text-[55px] font-bold'>+40</p>
-                <p className='text-center text-[16px] text-nowrap'>Anos de trayectoria</p>
+            <div className="flex flex-col justify-center items-center max-w-[150px] pb-4 sm:pb-0">
+                <p className='text-[70px] md:text-[55px] font-extrabold pr-3'>+40</p>
+                <p className='text-center text-[20px] sm:text-[16px] text-nowrap'>Anos de trayectoria</p>
             </div>
-
-            <div className="flex flex-col justify-center items-center px-7">
-                <p className='text-[30px] md:text-[55px] font-bold'>+2000</p>
-                <p className='text-center text-[16px] text-nowrap'>Clientes satisfechos</p>
+            <Divider />
+            <div className="flex flex-col justify-center items-center pb-4 sm:pb-0">
+                <p className='text-[70px] md:text-[55px] font-extrabold pr-3'>+2000</p>
+                <p className='text-center text-[20px] sm:text-[16px] text-nowrap'>Clientes satisfechos</p>
             </div>
-
-            <div className="hidden sm:flex flex-col justify-center items-center px-7 border-l ">
-                <p className='text-[30px] md:text-[55px] font-bold'>+200</p>
-                <p className='text-center text-[16px]'>Empleados</p>
+            <Divider />
+            <div className="flex flex-col justify-center items-center">
+                <p className='text-[70px] md:text-[55px] font-extrabold pr-3'>+200</p>
+                <p className='text-center text-[20px] sm:text-[16px] text-nowrap'>Empleados</p>
             </div>
 
 

@@ -15,7 +15,7 @@ export default function ClientsCarousel() {
     const marcasDup = [...marcas, ...marcas, ...marcas, ...marcas] // Repetir para efecto infinito
 
     return (
-        <div className='w-full flex justify-center items-center py-10'>
+        <div className='w-full flex justify-center items-center py-10 relative'>
 
             <Swiper
                 modules={[Scrollbar, A11y, Autoplay, FreeMode]}
@@ -24,8 +24,7 @@ export default function ClientsCarousel() {
                 freeMode={true}
                 loop={true}
                 speed={200000}
-                autoplay={{ delay: 0, disableOnInteraction: false }}
-                loopedSlides={44} // Ajustalo según cuántos elementos tenés
+                autoplay={{ delay: 0, disableOnInteraction: false, pauseOnMouseEnter: false }}
                 slidesPerGroup={44}
                 allowTouchMove={false}       // Desactiva el swipe manual
                 simulateTouch={false}
@@ -46,6 +45,10 @@ export default function ClientsCarousel() {
                     </SwiperSlide>
                 ))}
             </Swiper>
+            <div
+                className="absolute inset-0 w-full h-full"
+                style={{ pointerEvents: 'all', background: 'transparent', zIndex: 10 }}
+            />
         </div>
     )
 }

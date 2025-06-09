@@ -1,5 +1,5 @@
 import Button from "./Button";
-import banner1 from "../../../assets/banners/bannersupply.png";
+import banner1 from "../../../assets/banners/bannersupply.jpg";
 
 function HeroSection() {
 
@@ -12,18 +12,18 @@ function HeroSection() {
         {/* Imagen del slider */}
         <img
           src={banner1}
-          className={`object-cover w-full h-[350px] blur-[1px]`}
+          className={`object-cover w-full h-[60vh] md:h-[350px] blur-[1px]`}
           alt={`Banner `}
         />
 
         {/* Contenido centrado */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-20 pt-24">
+        <div className="absolute inset-0 gap-0 md:gap-0 flex flex-col items-start md:items-center justify-center text-white z-20 pt-24 px-2">
 
-          <h2 className="text-[30px] md:text-4xl font-bold mb-0 uppercase text-center">productos plasticos industriales</h2>
-          <p className="text-lg mb-0 text-center opacity-70 px-5">
-            Soluciones resistentes, funcionales y a medida para tu industria.
+          <h2 className="text-[25px] sm:text-[30px] md:text-[40px] font-bold mb-0 uppercase text-start md:text-center font-banner px-5 ">SOLUCIONES PLÁSTICAS PARA LA INDUSTRIA</h2>
+          <p className="text-[15px] sm:text-[18px] xl:text-[24px] mb-0 text-start md:text-center opacity-70 px-5 pb-6">
+            Pallets, contenedores, cajas, residuos y más
           </p>
-          <Button text={'Conoce nuestros productos'} url={'/productos'}/>
+          <Button text={'VER CATALOGO'} url={'/productos'} />
 
         </div>
       </div>

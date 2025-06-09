@@ -27,7 +27,7 @@ export default function Faqs() {
                                 key={item.id}
                                 className="w-full flex flex-col justify-center items-start bg-white p-4 m-2 rounded-lg shadow-md cursor-pointer text-[#00491f]">
                                 <div className="w-full flex justify-between items-center">
-                                    <p className='text-[20px] font-semibold pb-4'>{item.question}</p>
+                                    <p className='text-[21px] xl:text-[30px] font-semibold pb-4'>{item.question}</p>
                                     <motion.div 
                                     animate={{ rotate: activeQuestion === item.id ? 180 : 0 }}
                                     className="relative">
@@ -42,7 +42,7 @@ export default function Faqs() {
                                             initial={{ opacity: 0, height: 0 }}
                                             animate={{ opacity: 1, height: 'auto' , transition: { opacity: { duration: 0.1, delay: 0.1 }, height: { duration: 0.2, } } }}
                                             exit={{ opacity: 0, height: 0, transition: { opacity: { duration: 0.1 }, height: { duration: 0.2, delay: 0 } } }} // opacidad rápida
-                                            className='text-[#00491f]/80 w-full'>
+                                            className='text-[#00491f]/80 w-full text-[18px] xl:text-[21px]'>
                                                 <p>
                                                     {item.answer}
                                                 </p>

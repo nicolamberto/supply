@@ -16,7 +16,7 @@ export default function Button({text, url}) {
                     delay: isHovering ? 0 : 0.1,
                     ease: "easeIn",
                 }}
-                className=" overflow-clip z-50 relative bg-blue-500 rounded-[20px] text-white m-10 px-7 py-2 text-[20px] cursor-pointer">
+                className=" overflow-clip z-50 relative bg-blue-500 rounded-[20px] text-white m-5 px-7 py-2 text-[20px] cursor-pointer">
                 {/* Fondo animado */}
                 <motion.div
                     animate={{

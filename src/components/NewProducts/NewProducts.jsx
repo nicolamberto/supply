@@ -1,5 +1,5 @@
 import React from 'react'
-import banner from '../../assets/banners/bannerproducts.png'
+import banner from '../../assets/banners/bannerproducts.jpg'
 import { useProductContext } from '../../context/products';
 import ProductGrid from './elements/ProductGrid';
 import FilterBar from './elements/FilterBar';

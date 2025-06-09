@@ -12,6 +12,7 @@ import Features from "../../components/Features/Features";
 import CategoriesPage from "../../components/CategoriesProducts/CategoriesPage";
 import Faqs from "../../components/Faqs/Faqs";
 import ClientsCarousel from "../../components/ClientsCarousel/ClientsCarousel";
+import ImagesMobile from "../../components/CompanyOverview/elements/ImagesMobile";
 
 
 function Home() {
@@ -24,7 +25,8 @@ function Home() {
       <Header />
       {/* <Categories /> */}
       <CategoriesPage/>
-      <CompanyOverview />
+      <CompanyOverview/>
+      <ImagesMobile/>
       <Features/>
       <ClientsCarousel/>
       <Faqs/>

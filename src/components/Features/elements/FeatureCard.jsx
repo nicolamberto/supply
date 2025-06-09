@@ -22,12 +22,12 @@ export default function ServiceCard() {
                 </div>
 
                 {/* titulo */}
-                <div className="text-[25px] font-bold leading-tight">
+                <div className="text-[25px] xl:text-[30px] font-bold leading-tight">
                     <p>Calidad Industrial Garantizada</p>
                 </div>
 
                 {/* texto */}
-                <div className="text-[#00491f]/70 group-hover:text-white/70 transition leading-tight">
+                <div className="text-[#00491f]/70 group-hover:text-white/70 transition leading-tight text-[18px] xl:text-[21px]">
                     <p>Fabricamos productos
                         resistentes, duraderos y
                         funcionales, pensados para las

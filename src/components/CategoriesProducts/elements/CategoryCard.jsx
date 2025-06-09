@@ -12,10 +12,10 @@ export default function CategoryCard({ item }) {
     <div className="flex flex-col justify-center gap-1 items-start h-full sm:h-[70%] w-full">
       <Link
         onClick={() => setCategory(item.slug)}
-        className='h-full'
+        className='h-[300px] w-full'
         to={`/productos`}
       >
-        <img src={item.img} alt="imagen" className="rounded-[20px] h-full object-cover" />
+        <img src={item.img} alt="imagen" className="rounded-[20px] h-full w-full object-cover" />
       </Link>
       <p className="uppercase font-semibold">{item.name}</p>
       <button className="w-full flex justify-end text-[30px]">
