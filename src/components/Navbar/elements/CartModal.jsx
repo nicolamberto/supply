@@ -32,10 +32,10 @@ export default function ModalCart({ setIsHoverCart }) {
                         >
                             <div className="text-nowrap flex flex-row justify-center items-center">
                                 <div className="border h-[60px] w-[60px] rounded-full overflow-hidden">
-                                    <img src={item.img} alt="" />
+                                    <img src={item.image} alt="" />
                                 </div>
                                 <div className="flex flex-col justify-center items-center w-[200px]">
-                                    <p>{item.name}</p>
+                                    <p>{item.nombre}</p>
                                     <div className="border rounded-full flex flex-row gap-6 justify-center items-center w-fit px-2">
                                         <FaMinus onClick={()=>{removeFromCart(item)}}/>
                                         <p className="text-[20px]">{item.quantity}</p>
