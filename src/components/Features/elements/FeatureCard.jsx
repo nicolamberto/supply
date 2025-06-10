@@ -9,10 +9,13 @@ import { DiHtml53dEffects } from "react-icons/di";
 export default function ServiceCard({ feature, index }) {
 
     const [isHovering, setIsHovering] = useState(false); // Estado para controlar el hover
+    console.log(isHovering);
 
 
     return (
         <motion.div
+            whileHover={() => setIsHovering(true)}
+            onHoverEnd={() => setIsHovering(false)}
             key={index}
             variants={{
                 hidden: { opacity: 0, y: 20 },
@@ -24,12 +27,24 @@ export default function ServiceCard({ feature, index }) {
             <div className="flex flex-col justify-center items-start gap-3  mx-10 mt-5 mb-10">
 
                 {/* icono */}
-                <div className="text-[35px]">
-                    <feature.icon />
+                <div className="text-[35px] relative w-[35px] h-[35px]">
+                    {/* Icono verde (visible cuando NO hay hover) */}
+                    <img
+                        src={feature.icongreen}
+                        alt=""
+                        className="absolute inset-0 w-full h-full object-contain group-hover:opacity-0 transition-opacity duration-300"
+                    />
+                    {/* Icono blanco (visible en hover) */}
+                    <img
+                        src={feature.iconwhite}
+                        alt=""
+                        className="absolute inset-0 w-full h-full object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    />
                 </div>
 
+
                 {/* titulo */}
-                <div className="text-[25px] xl:text-[30px] font-bold leading-tight">
+                <div className="text-[25px] xl:text-[30px] font-bold leading-tight 2xl:w-[75%]">
                     <p>{feature.title}</p>
                 </div>
 

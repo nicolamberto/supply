@@ -2842,22 +2842,31 @@ export const marcas = [
     },
 ]
 
-import { DiApple } from "react-icons/di";
+import feature1green from './assets/features/features1green.png'
+import feature2green from './assets/features/features2green.png'
+import feature3green from './assets/features/features3green.png'
+
+import feature1white from './assets/features/features1white.png'
+import feature2white from './assets/features/features2white.png'
+import feature3white from './assets/features/features3white.png'
 
 export const features = [
     {
-        icon: DiApple,
+        icongreen: feature1green,
+        iconwhite: feature1white,
         title: 'Calidad Industrial Garantizada',
         text: 'Fabricamos productos resistentes, duraderos y funcionales, pensados para las exigencias del trabajo diario y los entornos industriales más desafiantes.'
     },
     {
-        icon: DiApple,
-        title: 'Calidad Industrial Garantizada',
-        text: 'Fabricamos productos resistentes, duraderos y funcionales, pensados para las exigencias del trabajo diario y los entornos industriales más desafiantes.'
+        icongreen: feature2green,
+        iconwhite: feature2white,
+        title: 'Asesoramiento personalizado',
+        text: 'Te ayudamos a encontrar el producto ideal para tu necesidad específica. Nuestro equipo está listo para guiarte antes y después de tu compra.'
     },
     {
-        icon: DiApple,
-        title: 'Calidad Industrial Garantizada',
-        text: 'Fabricamos productos resistentes, duraderos y funcionales, pensados para las exigencias del trabajo diario y los entornos industriales más desafiantes.'
+        icongreen: feature3green,
+        iconwhite: feature3white,
+        title: 'Envíos a todo el país',
+        text: 'Contamos con disponibilidad inmediata en nuestros productos más solicitados y logística propia para llegar donde nos necesites, en el menor tiempo posible.'
     },
 ]
