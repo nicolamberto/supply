@@ -2764,33 +2764,43 @@ export const products = [
 export const faqs = [
     {
         id: 1,
-        question: '¿Qué tipo de maquinaria ofrecen?',
-        answer: 'Ofrecemos maquinaria industrial para lavado, teñido y acabado textil, como lavadoras, secadoras, centrífugas, calandras y sistemas de control. Nuestros equipos están diseñados para alto rendimiento y durabilidad.'
+        question: '¿Cuáles son las ventajas clave de sus recipientes plásticos?',
+        answer: 'Nuestros recipientes plásticos son duraderos, higiénicos, fáciles de limpiar y apilables, optimizando el espacio. Son ideales para alimentos y químicos, garantizando seguridad y una larga vida útil.'
     },
     {
         id: 2,
-        question: '¿Fabrican maquinaria a medida según las necesidades del cliente?',
-        answer: 'Sí, desarrollamos maquinaria totalmente personalizada según los procesos, volúmenes y necesidades técnicas de cada cliente, optimizando eficiencia, espacio y consumo energético.'
+        question: '¿Por qué elegir pallets plásticos en lugar de madera?',
+        answer: 'Los pallets plásticos son más higiénicos, livianos, resistentes a temperaturas extremas y no requieren fumigación para exportar. Ofrecen mayor durabilidad y son antideslizantes.'
     },
     {
         id: 3,
-        question: '¿Ofrecen servicio técnico y repuestos?',
-        answer: 'Contamos con servicio técnico especializado, atención postventa, mantenimiento programado y gran stock de repuestos originales para asegurar el funcionamiento continuo de cada equipo.'
+        question: '¿Qué tipos de contenedores con ruedas tienen y para qué sirven?',
+        answer: 'Ofrecemos contenedores plásticos con ruedas de varias capacidades (120L a 1110L). Son perfectos para gestión de residuos en industrias, consorcios y hospitales, facilitando la recolección.'
     },
     {
         id: 4,
-        question: '¿Cuál es el tiempo de entrega de una máquina?',
-        answer: 'Depende del modelo y su personalización. En general, el plazo de entrega va de 30 a 90 días hábiles desde la aprobación del pedido y confirmación de pago.'
+        question: '¿Hacen envíos a todo el país? ¿Cómo cotizo el envío?',
+        answer: 'Sí, realizamos envíos a todo el país. Para cotizar, contáctenos con los detalles de su pedido y la dirección de entrega; el costo y tiempo varían según el volumen y destino.'
     },
     {
         id: 5,
-        question: '¿Realizan envíos a todo el país o al exterior?',
-        answer: 'Sí, realizamos envíos nacionales e internacionales. Trabajamos con empresas logísticas confiables que garantizan el transporte seguro y puntual de nuestras máquinas a destino.'
+        question: '¿Sus productos tienen garantía o certificaciones de calidad?',
+        answer: 'Nuestros productos se fabrican bajo estrictos controles de calidad y cumplen con las normativas. Aseguramos la calidad de fabricación y la idoneidad de los materiales para su uso industrial.'
     },
     {
         id: 6,
-        question: '¿Ofrecen capacitación para el uso de las máquinas?',
-        answer: 'Sí, brindamos capacitación técnica al personal que operará las máquinas, con instructivos detallados y asistencia para asegurar una instalación y uso correctos desde el inicio.'
+        question: '¿Ofrecen descuentos por compras grandes? ',
+        answer: 'Sí, tenemos descuentos especiales por volumen para pedidos grandes. Contáctenos para una cotización personalizada y competitiva.'
+    },
+     {
+        id: 7,
+        question: '¿Cómo puedo solicitar una cotización o hacer un pedido?',
+        answer: 'Puede solicitar una cotización o hacer un pedido vía nuestro formulario web, por email o llamándonos directamente. Estamos para asesorarlo.'
+    },
+     {
+        id: 8,
+        question: '¿Sus recipientes plásticos son aptos para alimentos?',
+        answer: 'Sí, muchos de nuestros recipientes plásticos están fabricados con materiales aptos para contacto con alimentos, cumpliendo las regulaciones sanitarias. Consulte su necesidad específica.'
     },
 ]
 
