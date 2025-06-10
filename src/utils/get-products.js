@@ -1,11 +1,8 @@
 import { query } from "./strapi";
 
 export function getProducts({ categoryId }) {
+    let endpoint = "products?populate=img";
 
-    // Base endpoint
-    let endpoint = "products?populate=image";
-
-    // Agregar filtro si hay categoría
     if (categoryId) {
         endpoint += `&filters[product_category][slug][$contains]=${categoryId}`;
     }
@@ -13,16 +10,14 @@ export function getProducts({ categoryId }) {
     return query(endpoint)
         .then((res) => {
             return res.data.map((item) => {
-                const { name, slug, image, description } = item;
-                const img = image?.url
-                    ? `http://localhost:1337${image.url}`
-                    : null;
+                const { nombre, codigo, img, caracteristicas } = item;
+                const image = img?.url || null;
 
                 return {
-                    name,
-                    slug,
-                    img,
-                    description,
+                    nombre,
+                    codigo,
+                    image,
+                    caracteristicas,
                 };
             });
         });

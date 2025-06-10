@@ -20,7 +20,7 @@ export default function ProductGrid() {
             position: "top-end",
             toast: true,
             icon: "success",
-            title: `${product.name} añadido al carrito`,
+            title: `${product.nombre} añadido al carrito`,
             showConfirmButton: false,
             timer: 1500,
             backdrop: false,
@@ -35,10 +35,10 @@ export default function ProductGrid() {
             </div>
 
             {products.map(product => (
-                <div key={product.slug} className="p-4 rounded-[20px] bg-white/95 shadow h-[400px] relative">
-                    <h3 className="text-[#00491f] font-bold text-[20px]">{product.name}</h3>
-                    <img src={product.img} alt={product.name} className="w-full h-48 object-cover py-2" />
-                    <p className="text-sm text-gray-600">{product.description}</p>
+                <div key={product.codigo} className="p-4 rounded-[20px] bg-white/95 shadow h-[400px] relative">
+                    <h3 className="text-[#00491f] font-bold text-[20px]">{product.nombre}</h3>
+                    <img src={product.image} alt={product.nombre} className="w-full h-48 object-cover py-2" />
+                    <p className="text-sm text-gray-600">{product.caracteristicas}</p>
                     <div
                         onClick={() => { addFunction(product) }}
                         className=" rounded-full p-3 text-white bg-[#00491f] absolute right-3 bottom-3 hover:text-[#00491f] hover:bg-transparent transition hover:font-bold cursor-pointer">

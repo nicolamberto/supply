@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import banner from '../../assets/banners/bannerproducts.jpg'
 import { useProductContext } from '../../context/products';
 import ProductGrid from './elements/ProductGrid';
 import FilterBar from './elements/FilterBar';
 import OverlappingTitle from '../../resources/overlappingTitle';
 import FilterBarMobile from './elements/FilterBarMobile';
+import { getProducts } from '../../utils/get-products';
+
 
 export default function NewProducts() {
 
     const { products, categories, category, setCategory, cart, addToCart, removeFromCart } = useProductContext();
-
+    
+    
     const categoryTitle = category === ''
         ? 'TODOS LOS PRODUCTOS'
         : categories.find((item) => item.slug === category)?.name || '';

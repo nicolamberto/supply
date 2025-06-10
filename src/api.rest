@@ -1,3 +1,3 @@
 
-GET https://supply-db-app.onrender.com/api/product-categories?fields[0]=name&fields[1]=slug&populate[image][fields][0]=url
+GET https://supply-db-app.onrender.com/api/products?populate=img&filters[product_category][slug][$contains]=
 Authorization: Bearer c3c97fdca38b4fe8de757ef253f37c77ea6cdd40581223b7babe707e1ff4d2d78a68be1bc91806e00ad45118be427ab859d9965af2f8b92005edb12d6df6b4ded31882c6bff5a8788085b11f283dd122e6a0ba6cde7628493a1e3a053c2e2c7a523195aeadc5565ec2c2d05a63b8c9b2300218a09865db25f10fd50b0ac94875

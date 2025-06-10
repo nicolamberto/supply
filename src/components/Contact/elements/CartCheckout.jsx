@@ -17,11 +17,11 @@ export default function CartCheckout() {
         </thead>
         <tbody>
           {cart.map((item) => (
-            <tr key={item.id} className="bg-white shadow rounded">
+            <tr key={item.codigo} className="bg-white shadow rounded">
               <td className='px-4 py-2'>
                 <div className="flex items-center gap-3">
-                  <img src={item.img} alt={item.name} className='w-[50px]' />
-                  <p className=' font-semibold text-[14px] sm:text-[17px]'>{item.name}</p>
+                  <img src={item.image} alt={item.nombre} className='w-[50px]' />
+                  <p className=' font-semibold text-[14px] sm:text-[17px]'>{item.nombre}</p>
                 </div>
               </td>
               <td className='px-4 py-2'>
