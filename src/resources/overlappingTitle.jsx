@@ -9,9 +9,9 @@ export default function OverlappingTitle({ firstTitle, secondTitle, colorFirstTi
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className={`text-[35px] relative ${colorFirstTitle}`}>
+                className={`text-[30px] sm:text-[35px] relative ${colorFirstTitle}`}>
                 <p className='font-banner'>{firstTitle}</p>
-                <p className={`text-[40px] font-miFuente sm:text-[45px] absolute top-5 left-0 transform sm:left-0 sm:translate-x-0 text-nowrap ${colorSecondTitle}`}>{secondTitle}</p>
+                <p className={`text-[30px] font-miFuente sm:text-[45px] absolute top-5 left-0 transform sm:left-0 sm:translate-x-0 text-nowrap ${colorSecondTitle}`}>{secondTitle}</p>
             </motion.div>
         </div>
     )

@@ -1,35 +1,23 @@
-import React, { useEffect, useState } from 'react'
-import banner from '../../assets/banners/bannerproducts.jpg'
+import banner from '../../assets/banners/bannerproductosdesktop.png'
+import bannermobile from '../../assets/banners/bannerproductosmobile.png'
 import { useProductContext } from '../../context/products';
 import ProductGrid from './elements/ProductGrid';
 import FilterBar from './elements/FilterBar';
-import OverlappingTitle from '../../resources/overlappingTitle';
 import FilterBarMobile from './elements/FilterBarMobile';
-import { getProducts } from '../../utils/get-products';
 
 
 export default function NewProducts() {
 
-    const { products, categories, category, setCategory, cart, addToCart, removeFromCart } = useProductContext();
+    const { categories, category} = useProductContext();
     
-    
-    const categoryTitle = category === ''
-        ? 'TODOS LOS PRODUCTOS'
-        : categories.find((item) => item.slug === category)?.name || '';
-
-
-    const titleArray = categoryTitle.split(' ')
-
-
-
-
 
     return (
         <div className='w-full bg-[#efefef]'>
 
-            <div className="w-full relative overflow-hidden h-[350px] p-2 ">
-                <img src={banner} alt="banner" className='w-full h-full rounded-[20px] object-cover' />
-                <p className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-[25px] sm:text-[30px] md:text-[40px] font-bold text-center font-banner'>NUESTRO CATALOGO</p>
+            <div className="w-full relative overflow-hidden h-fit xl:h-[350px] p-2 ">
+                <img src={banner} alt="banner" className='w-full h-full rounded-[20px] object-cover hidden sm:block' />
+                <img src={bannermobile} alt="banner" className='w-full h-full rounded-[20px] object-cover block sm:hidden' />
+                <p className='absolute top-1/2 left-1/2 transform -translate-x-1/2 text-white text-[25px] sm:text-[30px] md:text-[40px] font-bold text-center font-banner text-nowrap'>NUESTRO CATALOGO</p>
             </div>
 
 

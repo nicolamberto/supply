@@ -22,12 +22,13 @@ export default function CartCheckout() {
             <tr key={item.codigo} className="bg-white shadow rounded">
               <td className='px-4 py-2'>
                 <div className="flex items-center gap-3">
-                  <img src={item.image} alt={item.nombre} className='w-[80px]' />
+                  <img src={item.image} alt={item.nombre} className='w-[70px] sm:w-[80px]' />
                   <p className=' font-semibold text-[14px] sm:text-[17px]'>{item.nombre}</p>
                 </div>
               </td>
               <td className='px-4 py-2'>
-                <div className="border rounded-full flex flex-row gap-6 justify-around items-center w-[150px] py-1 px-2">
+
+                <div className="border rounded-full flex flex-row gap-6 justify-around items-center w-[100px] sm:w-[150px] py-1 px-2">
                   <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}

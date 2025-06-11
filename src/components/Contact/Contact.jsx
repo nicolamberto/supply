@@ -1,5 +1,6 @@
 import React from 'react'
-import banner from '../../assets/banners/bannerproducts.png'
+import banner from '../../assets/banners/bannerpresupuestodesktop.png'
+import bannermobile from '../../assets/banners/bannerpresupuestomobile.png'
 import CartCheckout from './elements/CartCheckout'
 import Form from './elements/Form'
 import Button from '../Header/elements/Button'
@@ -10,10 +11,11 @@ export default function Contact() {
     <div className=' w-full flex flex-col justify-center items-center'>
 
       {/* Banner */}
-      <div className="w-full relative overflow-hidden h-[350px] p-2 ">
-        <img src={banner} alt="banner" className='w-full h-full rounded-[20px] object-cover' />
-        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-10 sm:-translate-y-5 text-white  text-center flex flex-col w-full sm:gap-5'>
-          <p className='text-[25px] sm:text-[30px] md:text-[40px] font-bold font-banner'>CONTACTANOS</p>
+      <div className="w-full relative overflow-hidden sm:h-[300px] p-2 ">
+        <img src={banner} alt="banner" className='w-full h-full rounded-[20px] object-cover hidden sm:block' />
+        <img src={bannermobile} alt="banner" className='w-full h-full rounded-[20px] object-cover block sm:hidden' />
+        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-5 sm:-translate-y-5 text-white text-center flex flex-col w-full sm:gap-0'>
+          <p className='text-[25px] sm:text-[30px] md:text-[40px] font-bold font-banner hidden sm:block'>CONTACTANOS</p>
           <Button text={'Volver al catalogo'} url={'/productos'} />
         </div>
       </div>
