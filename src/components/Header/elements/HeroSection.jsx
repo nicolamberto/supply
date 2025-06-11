@@ -18,12 +18,12 @@ function HeroSection() {
         {/* Imagen del slider */}
         <img
           src={banner1}
-          className={`object-cover w-full h-[60vh] blur-[1px] hidden sm:block`}
+          className={`object-cover w-full h-[60vh] blur-[0px] hidden sm:block`}
           alt={`Banner `}
         />
         <img
-          src={banner1}
-          className={`object-cover w-full h-[60vh] blur-[1px] block sm:hidden`}
+          src={bannermobile}
+          className={`w-full object-cover blur-[0px] block sm:hidden`}
           alt={`Banner `}
         />
 
