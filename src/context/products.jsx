@@ -32,7 +32,7 @@ export function ProductProvider({ children }) {
         }; */
 
     const addToCart = (product) => {
-        const prodInCartIndex = cart.findIndex(i => i.name === product.name)
+        const prodInCartIndex = cart.findIndex(i => i.nombre === product.nombre)
         if (prodInCartIndex >= 0) {
             const newCart = structuredClone(cart)
             newCart[prodInCartIndex].quantity += 1
@@ -52,9 +52,9 @@ export function ProductProvider({ children }) {
         }; */
 
     const removeFromCart = (product) => {
-        const prodInCartIndex = cart.findIndex(i => i.name === product.name)
+        const prodInCartIndex = cart.findIndex(i => i.nombre === product.nombre)
         if (product.quantity === 1) {
-            return setCart(prevState => prevState.filter(i => i.name !== product.name))
+            return setCart(prevState => prevState.filter(i => i.nombre !== product.nombre))
         }
         const newCart = structuredClone(cart)
         newCart[prodInCartIndex].quantity -= 1

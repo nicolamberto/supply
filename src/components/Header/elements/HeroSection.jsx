@@ -1,7 +1,7 @@
 import Button from "./Button";
-import banner1 from "../../../assets/banners/bannersupply.jpg";
+import banner1 from "../../../assets/banners/bannerdesktopnew.png";
 import { motion } from "framer-motion";
-
+import bannermobile from "../../../assets/banners/bannermobilenew.png";
 function HeroSection() {
 
   return (
@@ -18,7 +18,12 @@ function HeroSection() {
         {/* Imagen del slider */}
         <img
           src={banner1}
-          className={`object-cover w-full h-[60vh] blur-[1px]`}
+          className={`object-cover w-full h-[60vh] blur-[1px] hidden sm:block`}
+          alt={`Banner `}
+        />
+        <img
+          src={banner1}
+          className={`object-cover w-full h-[60vh] blur-[1px] block sm:hidden`}
           alt={`Banner `}
         />
 

@@ -28,11 +28,11 @@ export default function ModalCart({ setIsHoverCart }) {
                     {cart.map((item) => (
                         <div
                             key={item.id} // Asegurate de que `item.id` exista y sea único
-                            className="w-full flex flex-row border-t py-3 text-[#00491f]"
+                            className="w-full flex flex-row border-t py-1 text-[#00491f]"
                         >
                             <div className="text-nowrap flex flex-row justify-between items-center w-full">
                                 <div className="">
-                                    <div className="overflow-hidden">
+                                    <div className="overflow-hidden flex flex-col-reverse justify-center items-center">
                                         <img src={item.image} alt={item.image} className='h-[70px] w-[70px]' />
                                         <p>{item.nombre}</p>
                                     </div>
@@ -71,7 +71,6 @@ export default function ModalCart({ setIsHoverCart }) {
                                     className=' cursor-pointer'
                                 >
                                     <FaTrash className="text-[25px]" />
-
                                 </motion.button>
                             </div>
 

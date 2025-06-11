@@ -22,7 +22,7 @@ export default function Modal({ setIsHover, setMenuOpen }) {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className='h-fit w-full bg-white md:absolute top-20 left-0 z-0 md:px-20 py-10 flex justify-center itecems-center text-green-700 rounded-lg shadow-lg'
+            className='h-fit max-h-[80vh] w-full bg-white md:absolute top-20 left-0 z-0 md:px-20 py-10 flex justify-center items-center text-green-700 rounded-lg shadow-lg overflow-y-scroll'
         >
             <div className="grid grid-cols-1 xl:grid-cols-3 divide-y divide-[#00491f]/20 gap-2 md:gap-5 max-w-[2000px] w-[65%] no-underline">
                 {categories.map((item, index) => (
