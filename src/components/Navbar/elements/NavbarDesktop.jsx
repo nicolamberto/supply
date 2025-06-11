@@ -20,10 +20,13 @@ export default function NavbarDesktop({ isHover, setIsHover, isScrolled, isHover
 
             {/* PRODUCTOS Y MODAL */}
             <div
-                className='hidden md:block'
+                className='hidden md:block '
                 onMouseEnter={() => { setIsHover(true) }}
                 onMouseLeave={() => { setIsHover(false) }}>
-                <Link onClick={() => { setIsHover(false) }} to="/productos">Productos</Link>
+                <Link onClick={() => { setIsHover(false) }} to="/productos" className='relative'>
+                    <p>Productos</p>
+                    <div className="absolute w-[200px] left-1/2 right-1/2 -translate-x-25 h-10 z-0 bg-transparent" />
+                </Link>
                 <AnimatePresence>
                     {
                         isHover && (
@@ -31,7 +34,6 @@ export default function NavbarDesktop({ isHover, setIsHover, isScrolled, isHover
                         )
                     }
                 </AnimatePresence>
-                <div className="absolute w-[300px] left-1/2 right-1/2 h-10 z-0 bg-transparent" />
             </div>
 
             {/* CARRITO Y MODALCART */}

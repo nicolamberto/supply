@@ -11,7 +11,7 @@ function Footer() {
         <div className="flex flex-col md:flex-row justify-around w-full items-center">
 
           <img src={logo} alt="logo" className='w-[300px] opacity-90' />
-          <div className="flex flex-row font-bold text-white gap-10">
+          <div className="flex flex-row font-bold text-white/60 gap-10">
             <Link to={'/'}>INICIO</Link>
             <Link to={'/productos'}>PRODUCTOS</Link>
             <Link to={'/presupuesto'}>PRESUPUESTO</Link>

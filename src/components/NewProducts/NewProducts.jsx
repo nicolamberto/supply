@@ -29,7 +29,7 @@ export default function NewProducts() {
 
             <div className="w-full relative overflow-hidden h-[350px] p-2 ">
                 <img src={banner} alt="banner" className='w-full h-full rounded-[20px] object-cover' />
-                <p className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl font-bold text-center'>NUESTRO CATALOGO</p>
+                <p className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-[25px] sm:text-[30px] md:text-[40px] font-bold text-center font-banner'>NUESTRO CATALOGO</p>
             </div>
 
 

@@ -13,7 +13,7 @@ export default function Contact() {
       <div className="w-full relative overflow-hidden h-[350px] p-2 ">
         <img src={banner} alt="banner" className='w-full h-full rounded-[20px] object-cover' />
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-10 sm:-translate-y-5 text-white  text-center flex flex-col w-full sm:gap-5'>
-          <p className='text-3xl font-bold'>CONTACTANOS</p>
+          <p className='text-[25px] sm:text-[30px] md:text-[40px] font-bold font-banner'>CONTACTANOS</p>
           <Button text={'Volver al catalogo'} url={'/productos'} />
         </div>
       </div>
