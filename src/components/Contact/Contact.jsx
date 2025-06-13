@@ -16,7 +16,6 @@ export default function Contact() {
         <img src={bannermobile} alt="banner" className='w-full h-full rounded-[20px] object-cover block sm:hidden' />
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-5 sm:-translate-y-5 text-white text-center flex flex-col w-full sm:gap-0'>
           <p className='text-[25px] sm:text-[30px] md:text-[40px] font-bold font-banner hidden sm:block'>CONTACTANOS</p>
-          <Button text={'Volver al catalogo'} url={'/productos'} />
         </div>
       </div>
 

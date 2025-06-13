@@ -15,7 +15,7 @@ export default function ClientsCarousel() {
     const marcasDup = [...marcas, ...marcas, ...marcas, ...marcas] // Repetir para efecto infinito
 
     return (
-        <div className='w-full flex justify-center items-center py-10 relative'>
+        <div className='w-full flex justify-center items-center pb-10 relative'>
 
             <Swiper
                 modules={[Scrollbar, A11y, Autoplay, FreeMode]}
