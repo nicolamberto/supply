@@ -1,7 +1,7 @@
 import { query } from "./strapi";
 
 export function getProducts({ categoryId }) {
-let endpoint = "products?populate=img&populate=product_category";
+let endpoint = "products?populate=img&populate=product_category&pagination[limit]=100";
 
     if (categoryId) {
         endpoint += `&filters[product_category][slug][$contains]=${categoryId}`;

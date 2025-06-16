@@ -5,6 +5,13 @@ import OverlappingTitle from '../../../resources/overlappingTitle';
 import Swal from 'sweetalert2';
 import {motion} from 'framer-motion';
 import SkeletonCard from './skeleton/SkeletonCard';
+import capacidad from '../../../assets/iconos/capacidad.png'
+import caracteristicas from '../../../assets/iconos/caracteristicas.png'
+import diametroboca from '../../../assets/iconos/diametroboca.png'
+import entrada from '../../../assets/iconos/entrada.png'
+import material from '../../../assets/iconos/material.png'
+import medidas from '../../../assets/iconos/medidas.png'
+
 
 export default function ProductGrid() {
     const { products, categories, category, addToCart } = useProductContext();
@@ -79,22 +86,22 @@ export default function ProductGrid() {
                     className="p-4 rounded-[20px] bg-white/95 shadow h-fit relative">
                         <h3 className="text-[#00491f] font-bold text-[25px]">{product.nombre}</h3>
                         <img src={product.image} alt={product.nombre} className="w-full h-[300px] object-cover py-2" />
-                        <div className="pb-10 flex flex-col gap-2 items-start">
-                            <p className="text-[18px] text-gray-600"><span className='text-[#00491f] font-bold'>Caracteristicas:</span> {product.caracteristicas}</p>
+                        <div className="pb-10 flex flex-col gap-5 items-start">
+                            <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5"> <img className='w-[20px]' src={caracteristicas} alt='caracteristicas-icono' /> <p>{product.caracteristicas}</p> </div>
                             {product.material && (
-                                <p className="text-[18px] text-gray-600"><span className='text-[#00491f] font-bold'>Material:</span> {product.material}</p>
+                            <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5"> <img className='w-[20px]' src={material} alt='material-icono' /> <p>{product.material}</p> </div>
                             )}
                             {product.medidas && (
-                                <p className="text-[18px] text-gray-600"><span className='text-[#00491f] font-bold'>Medidas:</span> {product.medidas}</p>
+                            <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5"> <img className='w-[20px]' src={medidas} alt='medidas-icono' /> <p>{product.medidas}</p> </div>
                             )}
                             {product.capacidad && (
-                                <p className="text-[18px] text-gray-600"><span className='text-[#00491f] font-bold'>Capacidad:</span> {product.capacidad}</p>
+                            <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5"> <img className='w-[20px]' src={capacidad} alt='capacidad-icono' /> <p>{product.capacidad}</p> </div>
                             )}
                             {product.entrada && (
-                                <p className="text-[18px] text-gray-600"><span className='text-[#00491f] font-bold'>Entrada:</span> {product.entrada}</p>
+                            <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5"> <img className='w-[20px]' src={entrada} alt='entrada-icono' /> <p>{product.entrada}</p> </div>
                             )}
                             {product.diametroboca && (
-                                <p className="text-[18px] text-gray-600"><span className='text-[#00491f] font-bold'>Diametro de boca:</span> {product.diametroboca}</p>
+                            <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5"> <img className='w-[20px]' src={diametroboca} alt='diametroboca-icono' /> <p>{product.diametroboca}</p> </div>
                             )}
                         </div>
                         <div
