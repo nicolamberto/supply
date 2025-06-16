@@ -1,5 +1,7 @@
 import React from 'react'
 import { useProductContext } from '../../../context/products';
+import { motion } from 'framer-motion';
+
 
 export default function FilterBar() {
 
@@ -7,7 +9,13 @@ export default function FilterBar() {
 
 
     return (
-        <div className="hidden lg:block lg:col-span-1">
+        <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3 }}
+            className="hidden lg:block lg:col-span-1"
+        >
             <div className="p-4 rounded-[20px] bg-white/95">
                 <h2 className="text-[30px] text-[#00491f] font-bold mb-4">CATEGORÍAS</h2>
                 <div className="flex flex-col items-start justify-center w-full text-[17px]">
@@ -24,6 +32,6 @@ export default function FilterBar() {
                     }
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }

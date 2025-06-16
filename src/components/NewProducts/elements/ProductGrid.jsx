@@ -3,7 +3,7 @@ import { useProductContext } from '../../../context/products';
 import { FaPlus } from "react-icons/fa6";
 import OverlappingTitle from '../../../resources/overlappingTitle';
 import Swal from 'sweetalert2';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import SkeletonCard from './skeleton/SkeletonCard';
 import capacidad from '../../../assets/iconos/capacidad.png'
 import caracteristicas from '../../../assets/iconos/caracteristicas.png'
@@ -23,6 +23,13 @@ export default function ProductGrid() {
         const timeout = setTimeout(() => setLoading(false), 2000);
         return () => clearTimeout(timeout);
     }, [category]);
+
+    function parseCaracteristicas(textoPlano) {
+        return textoPlano
+            .split("-")                     // divide por guiones
+            .map(str => str.trim())        // saca espacios al inicio y fin
+            .filter(str => str.length > 0) // evita ítems vacíos
+    }
 
     const categoryTitle = category === ''
         ? 'TODOS LOS PRODUCTOS'
@@ -79,29 +86,40 @@ export default function ProductGrid() {
                     <SkeletonCard key={i} />
                 ))
                 : products.map(product => (
-                    <motion.div 
-                    initial={{ opacity: 0.6, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    key={product.codigo} 
-                    className="p-4 rounded-[20px] bg-white/95 shadow h-fit relative">
+                    <motion.div
+                        initial={{ opacity: 0.6, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        key={product.codigo}
+                        className="p-4 rounded-[20px] bg-white/95 shadow h-[600px] relative">
                         <h3 className="text-[#00491f] font-bold text-[25px]">{product.nombre}</h3>
                         <img src={product.image} alt={product.nombre} className="w-full h-[300px] object-cover py-2" />
-                        <div className="pb-10 flex flex-col gap-5 items-start">
-                            <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5"> <img className='w-[20px]' src={caracteristicas} alt='caracteristicas-icono' /> <p>{product.caracteristicas}</p> </div>
+                        <div className="pb-10 flex flex-col gap-2 items-start">
+
+                            {product.caracteristicas && (
+                                <div className="text-[18px] text-gray-600 flex flex-row justify-center items-start leading-5 gap-2">
+                                    <img className='w-[25px] pt-[3px]' src={caracteristicas} alt='caracteristicas-icono'/>
+                                    <ul>
+                                        {parseCaracteristicas(product.caracteristicas).map((item, idx) => (
+                                            <li key={idx}>-{item}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
+
                             {product.material && (
-                            <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5"> <img className='w-[20px]' src={material} alt='material-icono' /> <p>{product.material}</p> </div>
+                                <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5"> <img className='w-[20px]' src={material} alt='material-icono' /> <p>{product.material}</p> </div>
                             )}
                             {product.medidas && (
-                            <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5"> <img className='w-[20px]' src={medidas} alt='medidas-icono' /> <p>{product.medidas}</p> </div>
+                                <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5"> <img className='w-[20px]' src={medidas} alt='medidas-icono' /> <p>{product.medidas}</p> </div>
                             )}
                             {product.capacidad && (
-                            <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5"> <img className='w-[20px]' src={capacidad} alt='capacidad-icono' /> <p>{product.capacidad}</p> </div>
+                                <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5"> <img className='w-[20px]' src={capacidad} alt='capacidad-icono' /> <p>{product.capacidad}</p> </div>
                             )}
                             {product.entrada && (
-                            <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5"> <img className='w-[20px]' src={entrada} alt='entrada-icono' /> <p>{product.entrada}</p> </div>
+                                <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5"> <img className='w-[20px]' src={entrada} alt='entrada-icono' /> <p>{product.entrada}</p> </div>
                             )}
                             {product.diametroboca && (
-                            <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5"> <img className='w-[20px]' src={diametroboca} alt='diametroboca-icono' /> <p>{product.diametroboca}</p> </div>
+                                <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5"> <img className='w-[20px]' src={diametroboca} alt='diametroboca-icono' /> <p>{product.diametroboca}</p> </div>
                             )}
                         </div>
                         <div

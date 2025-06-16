@@ -6,17 +6,38 @@ import { motion } from 'framer-motion';
 import Button from '../../Header/elements/Button';
 
 export default function CartCheckout() {
+
   const { cart, removeFromCart, addToCart } = useProductContext()
+
+  const tbodyVariants = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const rowVariants = {
+    hidden: { opacity: 0, y: 10 },
+    show: { opacity: 1, y: 0 }
+  }
 
   return (
     <div className='w-full h-full flex justify-center items-center'>
       {
         cart.length === 0 ? (
-          <div className="w-full h-full flex flex-col justify-center items-center pt-10 lg:pt-40">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="w-full h-full flex flex-col justify-center items-center pt-10 lg:pt-40"
+          >
             <p className='text-[#00491f] font-bold font-banner sm:text-[25px] md:text-[25px] lg:text-[25px] xl:text-[30px] text-center'>NO HAY PRODUCTOS EN EL CARRITO</p>
-                      <Button text={'Volver al catalogo'} url={'/productos'} />
-            
-          </div>
+            <Button text={'Volver al catalogo'} url={'/productos'} />
+
+          </motion.div>
 
         ) : (
           <table className="table-auto w-full border-separate border-spacing-y-4">
@@ -27,17 +48,24 @@ export default function CartCheckout() {
                 <th className='text-start px-4 py-2'></th>
               </tr>
             </thead>
-            <tbody>
+            <motion.tbody
+              initial="hidden"
+              animate="show"
+              variants={tbodyVariants}
+            >
               {cart.map((item) => (
-                <tr key={item.codigo} className="bg-white shadow rounded">
+                <motion.tr
+                  key={item.codigo}
+                  variants={rowVariants}
+                  className="bg-white shadow rounded"
+                >
                   <td className='px-4 py-2'>
                     <div className="flex items-center gap-3 h-[80px] overflow-hidden">
-                      <img src={item.image} alt={item.nombre} className='w-[70px] sm:w-[80px] ' />
-                      <p className=' font-semibold text-[14px] sm:text-[17px]'>{item.nombre}</p>
+                      <img src={item.image} alt={item.nombre} className='w-[70px] sm:w-[80px]' />
+                      <p className='font-semibold text-[14px] sm:text-[17px]'>{item.nombre}</p>
                     </div>
                   </td>
                   <td className='px-4 py-2'>
-
                     <div className="border rounded-full flex flex-row gap-6 justify-around items-center w-[100px] sm:w-[150px] py-1 px-2">
                       <motion.button
                         whileHover={{ scale: 1.1 }}
@@ -47,7 +75,7 @@ export default function CartCheckout() {
                         <FaMinus onClick={() => { removeFromCart(item) }} className='text-[20px]' />
                       </motion.button>
                       <motion.p
-                        key={item.quantity} // clave para que detecte el cambio
+                        key={item.quantity}
                         initial={{ scale: 0, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         exit={{ scale: 0, opacity: 0 }}
@@ -56,12 +84,11 @@ export default function CartCheckout() {
                         {item.quantity}
                       </motion.p>
                       <motion.button
-                        className=' cursor-pointer'
+                        className='cursor-pointer'
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                       >
                         <FaPlus onClick={() => { addToCart(item) }} className='text-[18px]' />
-
                       </motion.button>
                     </div>
                   </td>
@@ -69,15 +96,14 @@ export default function CartCheckout() {
                     <motion.button
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
-                      transition={{ delay: 0 }}
-                      className=' cursor-pointer'
+                      className='cursor-pointer'
                     >
                       <FaTrash className="text-[25px] text-[#00491f]" />
-
-                    </motion.button>              </td>
-                </tr>
+                    </motion.button>
+                  </td>
+                </motion.tr>
               ))}
-            </tbody>
+            </motion.tbody>
           </table>
         )
       }
