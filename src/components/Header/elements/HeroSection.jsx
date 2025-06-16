@@ -1,5 +1,5 @@
 import Button from "./Button";
-import banner1 from "../../../assets/banners/bannerdesktopnew.png";
+import banner1 from "../../../assets/banners/bannernuevoprueba.png";
 import { motion } from "framer-motion";
 import bannermobile from "../../../assets/banners/bannermobilenew.png";
 import SwiperHero from "./SwiperHero";
@@ -30,30 +30,30 @@ function HeroSection() {
 
 
         <div className="absolute bottom-4 md:bottom-3 xl:bottom-5 2xl:bottom-2 right-0 z-20 hidden sm:flex sm:justify-end">
-<Swiper
-  modules={[Scrollbar, A11y, Autoplay, FreeMode, EffectFade]}
-  effect="fade"
-  fadeEffect={{ crossFade: true }}
-  spaceBetween={120}
-  slidesPerView={1}
-  freeMode={true}
-  loop={true}
-  speed={500}
-  autoplay={{ delay: 3000, disableOnInteraction: false }}
-  className="max-w-[300px] md:max-w-[360px] lg:max-w-[450px] xl:max-w-[500px] 2xl:max-w-[700px] h-[60px]" // Ajusta la altura según tu diseño
-  style={{ minWidth: 200 }}
->
-  {features.map((item, index) => (
-    <SwiperSlide key={index} className="h-full w-full flex items-center justify-center">
-      <div className="w-full h-full flex items-center justify-center gap-2 xl:gap-5">
-        <img src={item.icongreen} className="w-[20px] 2xl:w-[30px]" />
-        <p className="pt-1 2xl:pt-2 text-[12px] md:text-[16px] lg:text-[20px] xl:text-[23px] 2xl:text-[30px] font-banner font-bold text-[#00491f] uppercase">
-          {item.title}
-        </p>
-      </div>
-    </SwiperSlide>
-  ))}
-</Swiper>
+          <Swiper
+            modules={[Scrollbar, A11y, Autoplay, FreeMode, EffectFade]}
+            effect="fade"
+            fadeEffect={{ crossFade: true }}
+            spaceBetween={120}
+            slidesPerView={1}
+            freeMode={true}
+            loop={true}
+            speed={500}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            className="max-w-[300px] md:max-w-[360px] lg:max-w-[450px] xl:max-w-[500px] 2xl:max-w-[700px] h-[60px]" // Ajusta la altura según tu diseño
+            style={{ minWidth: 200 }}
+          >
+            {features.map((item, index) => (
+              <SwiperSlide key={index} className="h-full w-full flex items-center justify-center">
+                <div className="w-full h-full flex items-center justify-center gap-2 xl:gap-5">
+                  <img src={item.iconwhite} className="w-[20px] 2xl:w-[30px]" />
+                  <p className="pt-1 2xl:pt-2 text-[12px] md:text-[16px] lg:text-[20px] xl:text-[23px] 2xl:text-[30px] font-banner font-bold text-white uppercase">
+                    {item.title}
+                  </p>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
 
         {/* Imagen del slider */}
