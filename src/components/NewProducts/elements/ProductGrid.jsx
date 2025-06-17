@@ -20,7 +20,7 @@ export default function ProductGrid() {
     // Detectar cambio de categoría y forzar shimmer por 1 segundo
     useEffect(() => {
         setLoading(true);
-        const timeout = setTimeout(() => setLoading(false), 2000);
+        const timeout = setTimeout(() => setLoading(false), 1000);
         return () => clearTimeout(timeout);
     }, [category]);
 
