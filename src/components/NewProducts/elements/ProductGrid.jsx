@@ -1,23 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { useProductContext } from '../../../context/products';
-import { FaPlus } from "react-icons/fa6";
+import { FaPlus, FaEye } from "react-icons/fa6";
 import OverlappingTitle from '../../../resources/overlappingTitle';
 import Swal from 'sweetalert2';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import SkeletonCard from './skeleton/SkeletonCard';
-import capacidad from '../../../assets/iconos/capacidad.png'
-import caracteristicas from '../../../assets/iconos/caracteristicas.png'
-import diametroboca from '../../../assets/iconos/diametroboca.png'
-import entrada from '../../../assets/iconos/entrada.png'
-import material from '../../../assets/iconos/material.png'
-import medidas from '../../../assets/iconos/medidas.png'
-
+import capacidad from '../../../assets/iconos/capacidad.png';
+import caracteristicas from '../../../assets/iconos/caracteristicas.png';
+import diametroboca from '../../../assets/iconos/diametroboca.png';
+import entrada from '../../../assets/iconos/entrada.png';
+import material from '../../../assets/iconos/material.png';
+import medidas from '../../../assets/iconos/medidas.png';
 
 export default function ProductGrid() {
     const { products, categories, category, addToCart } = useProductContext();
     const [loading, setLoading] = useState(true);
+    const [modalImage, setModalImage] = useState(null);
 
-    // Detectar cambio de categoría y forzar shimmer por 1 segundo
     useEffect(() => {
         setLoading(true);
         const timeout = setTimeout(() => setLoading(false), 1000);
@@ -26,9 +25,9 @@ export default function ProductGrid() {
 
     function parseCaracteristicas(textoPlano) {
         return textoPlano
-            .split("-")                     // divide por guiones
-            .map(str => str.trim())        // saca espacios al inicio y fin
-            .filter(str => str.length > 0) // evita ítems vacíos
+            .split("-")
+            .map(str => str.trim())
+            .filter(str => str.length > 0)
     }
 
     const categoryTitle = category === ''
@@ -36,9 +35,7 @@ export default function ProductGrid() {
         : categories.find((item) => item.slug === category)?.name || '';
 
     const titleArray = categoryTitle.split(' ');
-
-    let firstTitle = '';
-    let secondTitle = '';
+    let firstTitle = '', secondTitle = '';
 
     if (titleArray.length === 3) {
         const [first, second, third] = titleArray;
@@ -70,65 +67,127 @@ export default function ProductGrid() {
         });
     };
 
+    const openVariantModal = (variantImage) => {
+        setModalImage(variantImage);
+    };
+
+    const closeModal = () => {
+        setModalImage(null);
+    };
+
     return (
-        <section className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 relative pt-26">
-            <div className="absolute col-span-3 w-full">
-                <OverlappingTitle
-                    firstTitle={firstTitle}
-                    secondTitle={secondTitle}
-                    colorFirstTitle="text-[#00491f]"
-                    colorSecondTitle="text-[#adc9b8]"
-                />
-            </div>
+        <>
+            <section className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 relative pt-26">
+                <div className="absolute col-span-3 w-full">
+                    <OverlappingTitle
+                        firstTitle={firstTitle}
+                        secondTitle={secondTitle}
+                        colorFirstTitle="text-[#00491f]"
+                        colorSecondTitle="text-[#adc9b8]"
+                    />
+                </div>
 
-            {loading
-                ? Array.from({ length: products.length || 6 }).map((_, i) => (
-                    <SkeletonCard key={i} />
-                ))
-                : products.map(product => (
-                    <motion.div
-                        initial={{ opacity: 0.6, scale: 0.95 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        key={product.codigo}
-                        className="p-4 rounded-[20px] bg-white/95 shadow h-[600px] relative">
-                        <h3 className="text-[#00491f] font-bold text-[25px]">{product.nombre}</h3>
-                        <img src={product.image} alt={product.nombre} className="w-full h-[300px] object-cover py-2" />
-                        <div className="pb-10 flex flex-col gap-2 items-start">
+                {loading
+                    ? Array.from({ length: products.length || 6 }).map((_, i) => (
+                        <SkeletonCard key={i} />
+                    ))
+                    : products.map(product => (
+                        <motion.div
+                            initial={{ opacity: 0.6, scale: 0.95 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            key={product.codigo}
+                            className="p-4 rounded-[20px] bg-white/95 shadow h-[600px] relative">
+                            <h3 className="text-[#00491f] font-bold text-[25px]">{product.nombre}</h3>
+                            <img src={product.image} alt={product.nombre} className="w-full h-[300px] object-cover py-2" />
+                            <div className="pb-10 flex flex-col gap-2 items-start">
 
-                            {product.caracteristicas && (
-                                <div className="text-[18px] text-gray-600 flex flex-row justify-center items-start leading-5 gap-2">
-                                    <img className='w-[25px] pt-[3px]' src={caracteristicas} alt='caracteristicas-icono'/>
-                                    <ul>
-                                        {parseCaracteristicas(product.caracteristicas).map((item, idx) => (
-                                            <li key={idx}>-{item}</li>
-                                        ))}
-                                    </ul>
+                                {product.caracteristicas && (
+                                    <div className="text-[18px] text-gray-600 flex flex-row justify-center items-start leading-5 gap-2">
+                                        <img className='w-[25px] pt-[3px]' src={caracteristicas} alt='caracteristicas-icono' />
+                                        <ul>
+                                            {parseCaracteristicas(product.caracteristicas).map((item, idx) => (
+                                                <li key={idx}>-{item}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
+
+                                {product.material && (
+                                    <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5">
+                                        <img className='w-[20px]' src={material} alt='material-icono' />
+                                        <p>{product.material}</p>
+                                    </div>
+                                )}
+                                {product.medidas && (
+                                    <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5">
+                                        <img className='w-[20px]' src={medidas} alt='medidas-icono' />
+                                        <p>{product.medidas}</p>
+                                    </div>
+                                )}
+                                {product.capacidad && (
+                                    <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5">
+                                        <img className='w-[20px]' src={capacidad} alt='capacidad-icono' />
+                                        <p>{product.capacidad}</p>
+                                    </div>
+                                )}
+                                {product.entrada && (
+                                    <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5">
+                                        <img className='w-[20px]' src={entrada} alt='entrada-icono' />
+                                        <p>{product.entrada}</p>
+                                    </div>
+                                )}
+                                {product.diametroboca && (
+                                    <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5">
+                                        <img className='w-[20px]' src={diametroboca} alt='diametroboca-icono' />
+                                        <p>{product.diametroboca}</p>
+                                    </div>
+                                )}
+                            </div>
+
+                            <div className="flex gap-2 absolute right-3 bottom-3">
+                                {product.variant && (
+                                    <div
+                                        onClick={() => openVariantModal(product.variant)}
+                                        className="rounded-full p-3 text-[#00491f] bg-transparent border border-[#00491f] hover:bg-[#00491f] hover:text-white transition font-bold cursor-pointer">
+                                        <FaEye />
+                                    </div>
+                                )}
+                                <div
+                                    onClick={() => { addFunction(product) }}
+                                    className="rounded-full p-3 text-white bg-[#00491f] hover:text-[#00491f] hover:bg-transparent transition hover:font-bold cursor-pointer">
+                                    <FaPlus />
                                 </div>
-                            )}
+                            </div>
+                        </motion.div>
+                    ))}
+            </section>
 
-                            {product.material && (
-                                <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5"> <img className='w-[20px]' src={material} alt='material-icono' /> <p>{product.material}</p> </div>
-                            )}
-                            {product.medidas && (
-                                <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5"> <img className='w-[20px]' src={medidas} alt='medidas-icono' /> <p>{product.medidas}</p> </div>
-                            )}
-                            {product.capacidad && (
-                                <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5"> <img className='w-[20px]' src={capacidad} alt='capacidad-icono' /> <p>{product.capacidad}</p> </div>
-                            )}
-                            {product.entrada && (
-                                <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5"> <img className='w-[20px]' src={entrada} alt='entrada-icono' /> <p>{product.entrada}</p> </div>
-                            )}
-                            {product.diametroboca && (
-                                <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5"> <img className='w-[20px]' src={diametroboca} alt='diametroboca-icono' /> <p>{product.diametroboca}</p> </div>
-                            )}
-                        </div>
-                        <div
-                            onClick={() => { addFunction(product) }}
-                            className="rounded-full p-3 text-white bg-[#00491f] absolute right-3 bottom-3 hover:text-[#00491f] hover:bg-transparent transition hover:font-bold cursor-pointer">
-                            <FaPlus />
-                        </div>
+            {/* Modal con blur y animación */}
+            <AnimatePresence>
+                {modalImage && (
+                    <motion.div
+                        key="modal-backdrop"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="fixed inset-0 z-50 bg-white/30 backdrop-blur-sm flex items-center justify-center"
+                        onClick={closeModal}
+                    >
+                        <motion.div
+                            key="modal-content"
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.8, opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="bg-white p-4 rounded-xl max-w-[90%] max-h-[90%]"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <img src={modalImage} alt="Variante del producto" className="max-h-[80vh] object-contain" />
+                        </motion.div>
                     </motion.div>
-                ))}
-        </section>
+                )}
+            </AnimatePresence>
+        </>
     );
 }
