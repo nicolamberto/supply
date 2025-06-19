@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-import { delay, motion } from 'framer-motion'
-import { IoMdArrowDown } from 'react-icons/io'
+import { useState } from 'react'
+import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom';
 
 export default function Button({ text, url }) {
@@ -36,7 +35,7 @@ export default function Button({ text, url }) {
                     }}
                 />
                 {/* Texto del botón */}
-                <Link to={url} className="relative z-10 text-[15px] sm:text-[20px] font-bold">{text}</Link>
+                <Link to={url} className="relative z-10 text-[15px] sm:text-[20px] font-MontExtraBoldItalic">{text}</Link>
 
             </motion.button>
         </div>

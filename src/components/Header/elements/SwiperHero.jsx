@@ -1,4 +1,3 @@
-import React from 'react'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Scrollbar, A11y, Autoplay, FreeMode } from 'swiper/modules'

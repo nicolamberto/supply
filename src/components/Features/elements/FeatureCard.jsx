@@ -26,20 +26,20 @@ export default function ServiceCard({ feature, index }) {
                     {/* Icono verde (visible cuando NO hay hover) */}
                     <img
                         src={feature.icongreen}
-                        alt=""
+                        alt="icongreen"
                         className="absolute inset-0 w-full h-full object-contain group-hover:opacity-0 transition-opacity duration-300"
                     />
                     {/* Icono blanco (visible en hover) */}
                     <img
                         src={feature.iconwhite}
-                        alt=""
+                        alt="iconwhite"
                         className="absolute inset-0 w-full h-full object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     />
                 </div>
 
 
                 {/* titulo */}
-                <div className="text-[25px] xl:text-[30px] font-bold leading-tight 2xl:w-[75%]">
+                <div className="text-[25px] xl:text-[25px] leading-tight 2xl:w-[75%] font-MontBoldItalic">
                     <p>{feature.title}</p>
                 </div>
 

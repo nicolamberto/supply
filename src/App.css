@@ -14,6 +14,40 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'MontBold';
+  src: url('/fonts/Montserrat-Bold.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MontBoldItalic';
+  src: url('/fonts/Montserrat-BoldItalic.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MontExtraBoldItalic';
+  src: url('/fonts/Montserrat-ExtraBoldItalic.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-MontBold {
+  font-family: 'MontBold', sans-serif;
+}
+
+.font-MontBoldItalic {
+  font-family: 'MontBoldItalic', sans-serif;
+}
+
+.font-MontExtraBoldItalic {
+  font-family: 'MontExtraBoldItalic', sans-serif;
+}
+
+
 .font-miFuente {
   font-family: 'MiFuente', sans-serif;
 }

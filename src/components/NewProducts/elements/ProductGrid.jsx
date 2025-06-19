@@ -11,9 +11,11 @@ import diametroboca from '../../../assets/iconos/diametroboca.png';
 import entrada from '../../../assets/iconos/entrada.png';
 import material from '../../../assets/iconos/material.png';
 import medidas from '../../../assets/iconos/medidas.png';
+import Pagination from '../../Pagination/Pagination';
 
 export default function ProductGrid() {
-    const { products, categories, category, addToCart } = useProductContext();
+
+    const { products, categories, category, addToCart, currentPage } = useProductContext();
     const [loading, setLoading] = useState(true);
     const [modalImage, setModalImage] = useState(null);
 
@@ -21,7 +23,7 @@ export default function ProductGrid() {
         setLoading(true);
         const timeout = setTimeout(() => setLoading(false), 1000);
         return () => clearTimeout(timeout);
-    }, [category]);
+    }, [category, currentPage]);
 
     function parseCaracteristicas(textoPlano) {
         return textoPlano
@@ -77,7 +79,7 @@ export default function ProductGrid() {
 
     return (
         <>
-            <section className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 relative pt-26">
+            <section className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 relative pt-26  pb-28">
                 <div className="absolute col-span-3 w-full">
                     <OverlappingTitle
                         firstTitle={firstTitle}
@@ -97,7 +99,7 @@ export default function ProductGrid() {
                             animate={{ opacity: 1, scale: 1 }}
                             key={product.codigo}
                             className="p-4 rounded-[20px] bg-white/95 shadow h-[600px] relative">
-                            <h3 className="text-[#00491f] font-bold text-[25px]">{product.nombre}</h3>
+                            <h3 className="text-[#00491f] font-bold text-[25px] font-MontExtraBoldItalic">{product.nombre}</h3>
                             <img src={product.image} alt={product.nombre} className="w-full h-[300px] object-cover py-2" />
                             <div className="pb-10 flex flex-col gap-2 items-start">
 
@@ -160,8 +162,10 @@ export default function ProductGrid() {
                             </div>
                         </motion.div>
                     ))}
+                <div className="absolute bottom-0 w-full flex justify-center md:justify-start">
+                    <Pagination />
+                </div>
             </section>
-
             {/* Modal con blur y animación */}
             <AnimatePresence>
                 {modalImage && (
@@ -188,6 +192,7 @@ export default function ProductGrid() {
                     </motion.div>
                 )}
             </AnimatePresence>
+
         </>
     );
 }

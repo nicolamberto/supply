@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
@@ -156,7 +156,7 @@ export default function LocationForm() {
                 <button
                     type='submit'
                     onClick={(e) => handleSubmit(e, "email")}
-                    className='border-2 bg-[#00491f] py-1 px-7 rounded-full text-[15px] cursor-pointer'>
+                    className='border-2 bg-[#00491f] py-1 px-7 rounded-full text-[15px] cursor-pointer font-MontBold'>
                     Enviar
                 </button>
 

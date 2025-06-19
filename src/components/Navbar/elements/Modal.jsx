@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { useProductContext } from '../../../context/products'
 
@@ -36,7 +35,7 @@ export default function Modal({ setIsHover, setMenuOpen }) {
                         to={`/productos`}
                     >
 
-                        <p className='text-start font-semibold text-nowrap uppercase w-full text-[17px]' key={item.id}>
+                        <p className='text-start font-semibold text-nowrap uppercase w-full text-[17px] font-MontBoldItalic' key={item.id}>
                             {item.name}
                         </p>
                         <div className=" w-[20px] md:w-[80px] h-[50px] overflow-hidden">

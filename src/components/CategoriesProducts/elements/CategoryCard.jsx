@@ -38,7 +38,7 @@ export default function CategoryCard({ item }) {
 
       <div className="relative">
         <motion.p
-          className="uppercase font-bold text-[#00491f] line-clamp-2 h-[3em] sm:h-[2em] leading-snug">{item.name}
+          className="uppercase text-[#00491f] line-clamp-2 h-[3em] sm:h-[2em] leading-snug font-MontBoldItalic">{item.name}
         </motion.p>
         <motion.div
           variants={{
@@ -53,7 +53,7 @@ export default function CategoryCard({ item }) {
 
       <motion.button className="w-full flex justify-end text-[30px]">
         <Link to={`/productos`}>
-          <div className="border-2 flex justify-center items-center px-5 rounded-full text-green-800 group-hover:bg-green-800 group-hover:text-white cursor-pointer transition">
+          <div className="border-2 flex justify-center items-center px-5 rounded-full text-green-800 group-hover:bg-[#00491f] group-hover:text-white cursor-pointer transition">
             <HiArrowLongRight />
           </div>
         </Link>

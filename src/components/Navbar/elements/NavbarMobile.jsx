@@ -1,8 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Modal from './Modal'
-
 
 
 export default function NavbarMobile({ setMenuOpen, isHover, setIsHover }) {

@@ -1,5 +1,3 @@
-import React from "react";
-import style from "./Location.module.css";
 import OverlappingTitle from "../../resources/overlappingTitle";
 import LocationForm from "./elements/LocationForm";
 import { motion } from "framer-motion";

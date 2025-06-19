@@ -1,8 +1,19 @@
+@font-face {
+  font-family: 'FuenteGeneral';
+  src: url('/fonts/Montserrat-Italic.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: #efefef;
+    font-family: 'FuenteGeneral', sans-serif;
+
 
 }
 

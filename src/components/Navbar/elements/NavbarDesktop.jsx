@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import Modal from './Modal'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -13,7 +12,7 @@ export default function NavbarDesktop({ isHover, setIsHover, isScrolled, isHover
 
     return (
         <div
-            className={`flex flex-row flex-wrap gap-10 lg:gap-10 xl:gap-16 font-semibold uppercase transitiontext-[15px] ${isScrolled ? 'text-green-700' : 'text-white'}`}
+            className={`flex flex-row flex-wrap gap-10 lg:gap-10 xl:gap-16 font-semibold uppercase transitiontext-[15px] font-MontBold ${isScrolled ? 'text-green-700' : 'text-white'}`}
         >
 
             <Link className='hidden md:block' to="/">Inicio</Link>

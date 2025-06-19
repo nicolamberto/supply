@@ -1,4 +1,3 @@
-// /src/context/ProductContext.jsx
 import { createContext, useState, useEffect, useContext } from "react";
 import { getProducts } from "../utils/get-products";
 import { getProductCategories } from "../utils/get-product-categories";
@@ -6,11 +5,21 @@ import { getProductCategories } from "../utils/get-product-categories";
 const ProductContext = createContext();
 
 export function ProductProvider({ children }) {
-    const [categories, setCategories] = useState([]);
+    // Inicializar categorías y cart desde localStorage si existen
+    const [categories, setCategories] = useState(() => {
+        const stored = localStorage.getItem("categories");
+        return stored ? JSON.parse(stored) : [];
+    });
+    const [cart, setCart] = useState(() => {
+        const stored = localStorage.getItem("cart");
+        return stored ? JSON.parse(stored) : [];
+    });
     const [category, setCategory] = useState("");
     const [products, setProducts] = useState([]);
-    const [cart, setCart] = useState([]);
     const [isCartModalOpen, setIsCartModalOpen] = useState(false);
+    const [pagination, setPagination] = useState(null);
+    const [currentPage, setCurrentPage] = useState(1);
+    const pageSize = 20;
 
     // Set category and persist to localStorage
     const setCategoryAndPersist = (value) => {
@@ -26,17 +35,38 @@ export function ProductProvider({ children }) {
         }
     }, []);
 
-    // Fetch categories once
+    // Guardar categorías en localStorage cuando cambian
     useEffect(() => {
-        getProductCategories().then((data) => {
-            setCategories(data);
-        });
-    }, []);
+        if (categories.length > 0) {
+            localStorage.setItem("categories", JSON.stringify(categories));
+        }
+    }, [categories]);
 
-    // Fetch products when category changes
+    // Guardar cart en localStorage cuando cambia
     useEffect(() => {
-        getProducts({ categoryId: category }).then(setProducts);
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }, [cart]);
+
+    //pagination and fetch products function
+    useEffect(() => {
+        getProducts({ categoryId: category, page: currentPage, pageSize }).then(res => {
+            setProducts(res.data || []);
+            setPagination(res.pagination || null);
+        });
+    }, [category, currentPage]);
+
+    useEffect(() => {
+        setCurrentPage(1);
     }, [category]);
+
+    // Fetch categories solo si no hay en localStorage
+    useEffect(() => {
+        if (categories.length === 0) {
+            getProductCategories().then((data) => {
+                setCategories(data);
+            });
+        }
+    }, []);
 
     const addToCart = (product) => {
         const prodInCartIndex = cart.findIndex(i => i.nombre === product.nombre);
@@ -86,6 +116,10 @@ export function ProductProvider({ children }) {
                 categories,
                 setCategories,
                 products,
+                pagination,
+                currentPage,
+                setCurrentPage,
+                pageSize,
                 cart,
                 addToCart,
                 removeFromCart,

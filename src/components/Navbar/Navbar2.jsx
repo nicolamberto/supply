@@ -1,17 +1,15 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { AnimatePresence, useMotionValueEvent, useScroll, motion } from "framer-motion";
+import { useMotionValueEvent, useScroll, motion } from "framer-motion";
 
-import NavbarMobile from "./elements/NavbarMobile";
 import NavbarDesktop from "./elements/NavbarDesktop";
-import { HamburgerButton } from "./elements/AnimatedHamburgerButton";
 import logoverde from "../../assets/logos/logo_small.png";
 import logoblanco from "../../assets/logos/logoblanco.png";
 import logomobile from '../../assets/logos/logomobile.jpg'
+import logoblancomobile from '../../assets/logos/logosimpleblanco.png'
 
 function Navbar2() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const [isHover, setIsHover] = useState(false);
 
   const [isHoverCart, setIsHoverCart] = useState(false)
@@ -62,7 +60,7 @@ function Navbar2() {
             isScrolled ?
               <img className='w-[50px] block md:hidden' src={logomobile} alt="logotipo" />
               :
-              <img className='w-[70px] block md:hidden pl-5' src={logomobile} alt="logotipo" />
+              <img className='w-[70px] block md:hidden pl-5' src={logoblancomobile} alt="logotipo" />
 
           }
 

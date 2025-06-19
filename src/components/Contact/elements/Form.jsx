@@ -157,7 +157,7 @@ export default function Form() {
       <button
         type="submit"
         onClick={(e) => handleSubmit(e, "email")}
-        className="bg-[#00491f] text-white py-2 px-6 rounded-full hover:bg-green-900 transition cursor-pointer"
+        className="bg-[#00491f] text-white py-2 px-6 rounded-full hover:bg-green-900 transition cursor-pointer font-MontBold"
       >
         Enviar
       </button>

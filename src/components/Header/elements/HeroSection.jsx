@@ -2,7 +2,6 @@ import Button from "./Button";
 import banner1 from "../../../assets/banners/bannernuevoprueba.png";
 import { motion } from "framer-motion";
 import bannermobile from "../../../assets/banners/bannermobilenew.png";
-import SwiperHero from "./SwiperHero";
 import { features } from "../../../data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Scrollbar, A11y, Autoplay, FreeMode, EffectFade } from 'swiper/modules'
@@ -23,7 +22,7 @@ function HeroSection() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.3 }}
-      className='rounded-[20px] overflow-hidden'>
+      className='rounded-[60px] overflow-hidden'>
 
       <div className={`relative w-[100%] flex flex-col flex-nowrap justify-center items-center`}>
         <div className="absolute inset-0 bg-gray-500 opacity-10 z-10"></div>
@@ -47,7 +46,7 @@ function HeroSection() {
               <SwiperSlide key={index} className="h-full w-full flex items-center justify-center">
                 <div className="w-full h-full flex items-center justify-center gap-2 xl:gap-5">
                   <img src={item.iconwhite} className="w-[20px] 2xl:w-[30px]" />
-                  <p className="pt-1 2xl:pt-2 text-[12px] md:text-[16px] lg:text-[20px] xl:text-[23px] 2xl:text-[30px] font-banner font-bold text-white uppercase">
+                  <p className="pt-1 2xl:pt-2 text-[12px] md:text-[16px] lg:text-[20px] xl:text-[23px] 2xl:text-[30px] text-white uppercase">
                     {item.title}
                   </p>
                 </div>
@@ -72,7 +71,7 @@ function HeroSection() {
         <div className="absolute inset-0 gap-0 md:gap-0 flex flex-col items-start md:items-center justify-center text-white z-20 pt-24 px-0">
 
           <h2 className="text-[24px] sm:text-[30px] md:text-[40px] font-bold mb-0 uppercase text-start md:text-center font-banner px-5 ">SOLUCIONES PLÁSTICAS PARA LA INDUSTRIA</h2>
-          <p className="text-[15px] sm:text-[18px] xl:text-[24px] mb-0 text-start md:text-center opacity-70 px-5 pb-6">
+          <p className="text-[15px] sm:text-[18px] xl:text-[24px] mb-0 text-start md:text-center opacity-90 px-5 pb-6 font-MontBoldItalic">
             Pallets, contenedores, cajas, residuos y más
           </p>
           <Button text={'VER CATALOGO'} url={'/productos'} />

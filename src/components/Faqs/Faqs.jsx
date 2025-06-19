@@ -29,7 +29,7 @@ export default function Faqs() {
                                 <div className="w-full flex justify-between items-center">
                                     <p className='text-[21px] xl:text-[23px] font-semibold pb-4'>{item.question}</p>
                                     <motion.div 
-                                    animate={{ rotate: activeQuestion === item.id ? 180 : 0 }}
+                                    animate={{ rotate: activeQuestion === item.id ? 0 : 180 }}
                                     className="relative">
                                             <IoMdArrowDropup className='text-[25px]' />
                                     </motion.div>
