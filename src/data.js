@@ -2880,3 +2880,33 @@ export const features = [
         text: 'Contamos con disponibilidad inmediata en nuestros productos más solicitados y logística propia para llegar donde nos necesites, en el menor tiempo posible.'
     },
 ]
+
+
+import { FaInstagram, FaLinkedin, FaTwitter, FaFacebook  } from "react-icons/fa";
+
+export const socialMedia = [
+    {
+        id: 1,
+        name: 'Facebook',
+        url: 'https://www.facebook.com/AlonaArgentina',
+        icon: FaFacebook 
+    },
+    {
+        id: 2,
+        name: 'Instagram',
+        url: 'https://www.instagram.com/alonaargentina/',
+        icon: FaInstagram 
+    },
+    {
+        id: 3,
+        name: 'Twitter',
+        url: 'https://www.linkedin.com/company/alona-argentina/',
+        icon: FaTwitter 
+    },
+    {
+        id: 4,
+        name: 'LinkdeIn',
+        url: 'https://www.youtube.com/@alonatextil',
+        icon: FaLinkedin 
+    }
+]

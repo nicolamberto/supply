@@ -12,12 +12,12 @@ export default function Stats() {
         <div className='flex flex-col sm:flex-row justify-between items-center text-[#00491f] w-full'>
 
             <div className="flex flex-col justify-center items-center max-w-[150px] pb-4 sm:pb-0">
-                <p className='text-[70px] md:text-[55px] 2xl:text-[80px] font-extrabold pr-3'>+40</p>
-                <p className='text-center text-[20px] sm:text-[16px] lg:text-[22px] xl:text-[25px] text-nowrap'>Anos de trayectoria</p>
+                <p className='text-[70px] md:text-[55px] 2xl:text-[80px] font-extrabold pr-3'>+15</p>
+                <p className='text-center text-[20px] sm:text-[16px] lg:text-[22px] xl:text-[25px] text-nowrap'>Años de trayectoria</p>
             </div>
             <Divider />
             <div className="flex flex-col justify-center items-center pb-4 sm:pb-0">
-                <p className='text-[70px] md:text-[55px] 2xl:text-[80px] font-extrabold pr-3'>+2000</p>
+                <p className='text-[70px] md:text-[55px] 2xl:text-[80px] font-extrabold pr-3'>+5000</p>
                 <p className='text-center text-[20px] sm:text-[16px] lg:text-[22px] xl:text-[25px] text-nowrap'>Clientes satisfechos</p>
             </div>
             <Divider />

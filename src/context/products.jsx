@@ -64,6 +64,10 @@ export function ProductProvider({ children }) {
         return setCart(newCart);
     };
 
+    const removeFullProductFromCart = (product) => {
+        setCart(prevState => prevState.filter(i => i.nombre !== product.nombre));
+    };
+
     const clearCart = () => setCart([]);
 
     const openCartModal = () => {
@@ -85,6 +89,7 @@ export function ProductProvider({ children }) {
                 cart,
                 addToCart,
                 removeFromCart,
+                removeFullProductFromCart,
                 clearCart,
                 openCartModal,
                 closeCartModal

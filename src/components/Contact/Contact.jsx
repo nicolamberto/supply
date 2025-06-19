@@ -1,9 +1,7 @@
-import React from 'react'
 import banner from '../../assets/banners/bannerpresupuestodesktop.png'
 import bannermobile from '../../assets/banners/bannerpresupuestomobile.png'
 import CartCheckout from './elements/CartCheckout'
 import Form from './elements/Form'
-import Button from '../Header/elements/Button'
 import { motion } from 'framer-motion'
 
 export default function Contact() {

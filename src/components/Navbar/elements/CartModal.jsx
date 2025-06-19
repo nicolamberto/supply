@@ -6,12 +6,11 @@ import { FaMinus } from "react-icons/fa6";
 import { FaPlus } from "react-icons/fa";
 import { FaTrash } from "react-icons/fa";
 
-const MotionLink = motion(Link)
 
 
-export default function ModalCart({ setIsHoverCart }) {
+export default function ModalCart() {
 
-    const { cart, addToCart, removeFromCart } = useProductContext()
+    const { cart, addToCart, removeFromCart, removeFullProductFromCart } = useProductContext()
 
     console.log(cart);
 
@@ -21,7 +20,7 @@ export default function ModalCart({ setIsHoverCart }) {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className='w-[500px] h-fit bg-white hidden lg:block md:absolute left-1/2 -translate-x-1/2 top-10 z-0 rounded-lg shadow-lg p-10'
+            className='w-[500px] h-fit bg-white hidden lg:block md:absolute left-1/2 -translate-x-1/2 top-10 z-0 rounded-lg shadow-lg p-10 max-h-[80vh] overflow-y-scroll'
         >
             {cart.length > 0 ? (
                 <div className="flex flex-col justify-center items-center w-full">
@@ -65,6 +64,7 @@ export default function ModalCart({ setIsHoverCart }) {
                                     </motion.button>
                                 </div>
                                 <motion.button
+                                    onClick={() => { removeFullProductFromCart(item) }}
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.9 }}
                                     transition={{ delay: 0 }}
@@ -78,7 +78,7 @@ export default function ModalCart({ setIsHoverCart }) {
                     ))}
                     <div className="w-full text-end pt-5 text-[#00491f]">
                         <Link
-                        to={`/presupuesto`}
+                            to={`/presupuesto`}
                             className="px-4 py-1 border-2 rounded-[10px] hover:bg-[#00491f] hover:text-white transition cursor-pointer">
                             FINALIZAR PEDIDO
                         </Link>

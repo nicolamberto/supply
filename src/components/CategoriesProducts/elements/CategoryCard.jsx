@@ -1,4 +1,3 @@
-import React from 'react'
 import { HiArrowLongRight } from 'react-icons/hi2'
 import { Link } from 'react-router-dom'
 import { useProductContext } from '../../../context/products'

@@ -1,7 +1,7 @@
 
 import { faqs } from '../../data';
 import { motion, AnimatePresence } from 'framer-motion';
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { IoMdArrowDropup } from "react-icons/io";
 import OverlappingTitle from '../../resources/overlappingTitle';
 

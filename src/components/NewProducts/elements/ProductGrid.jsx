@@ -59,7 +59,7 @@ export default function ProductGrid() {
             position: "top-end",
             toast: true,
             icon: "success",
-            title: `${product.nombre} añadido al carrito`,
+            title: `${product.nombre} agregado!`,
             showConfirmButton: false,
             timer: 1500,
             backdrop: false,
@@ -144,7 +144,7 @@ export default function ProductGrid() {
                                 )}
                             </div>
 
-                            <div className="flex gap-2 absolute right-3 bottom-3">
+                            <div className="flex gap-2 absolute right-4 bottom-4">
                                 {product.variant && (
                                     <div
                                         onClick={() => openVariantModal(product.variant)}
@@ -152,11 +152,11 @@ export default function ProductGrid() {
                                         <FaEye />
                                     </div>
                                 )}
-                                <div
+                                <button
                                     onClick={() => { addFunction(product) }}
-                                    className="rounded-full p-3 text-white bg-[#00491f] hover:text-[#00491f] hover:bg-transparent transition hover:font-bold cursor-pointer">
-                                    <FaPlus />
-                                </div>
+                                    className="rounded-full px-4 py-1 text-white bg-[#00491f] hover:text-[#00491f] hover:bg-transparent transition font-bold cursor-pointer">
+                                    Agregar al pedido
+                                </button>
                             </div>
                         </motion.div>
                     ))}

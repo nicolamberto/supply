@@ -1,5 +1,3 @@
-import React from 'react'
-import OverlappingTitle from '../../resources/overlappingTitle'
 import { marcas } from '../../data'
 
 import { Swiper, SwiperSlide } from 'swiper/react'

@@ -1,15 +1,10 @@
 
 import { motion } from 'framer-motion';
-import React, { useState } from 'react'
-import { DiApple } from "react-icons/di";
-
-import { DiHtml53dEffects } from "react-icons/di";
-
+import { useState } from 'react'
 
 export default function ServiceCard({ feature, index }) {
 
     const [isHovering, setIsHovering] = useState(false); // Estado para controlar el hover
-    console.log(isHovering);
 
 
     return (

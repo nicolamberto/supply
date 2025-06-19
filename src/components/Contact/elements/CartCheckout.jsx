@@ -7,7 +7,7 @@ import Button from '../../Header/elements/Button';
 
 export default function CartCheckout() {
 
-  const { cart, removeFromCart, addToCart } = useProductContext()
+  const { cart, removeFromCart, addToCart, removeFullProductFromCart } = useProductContext()
 
   const tbodyVariants = {
     hidden: {},
@@ -94,6 +94,7 @@ export default function CartCheckout() {
                   </td>
                   <td className='px-4 py-2'>
                     <motion.button
+                      onClick={() => { removeFullProductFromCart(item) }}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                       className='cursor-pointer'

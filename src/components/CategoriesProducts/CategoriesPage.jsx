@@ -1,4 +1,3 @@
-import React from 'react'
 import CategoriesProducts2 from './CategoriesProducts2'
 import OverlappingTitle from '../../resources/overlappingTitle'
 export default function CategoriesPage() {

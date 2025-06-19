@@ -1,7 +1,5 @@
-import React from 'react';
 import TextBlock from './elements/TextBlock';
 import Images from './elements/Images';
-import ImagesMobile from './elements/ImagesMobile';
 import { motion } from 'framer-motion';
 function CompanyOverview() {
 

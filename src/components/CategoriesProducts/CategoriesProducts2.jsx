@@ -1,6 +1,4 @@
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Scrollbar, A11y } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import CategoryCard from "./elements/CategoryCard";
@@ -15,7 +13,6 @@ function Carrousel({
     const {categories} = useProductContext()
 
   
-    
 
     return (
         <div className='w-[100%] flex flex-col justify-center items-center mt-10 md:mt-20 relative'>
