@@ -31,8 +31,8 @@ export default function ImagesMobile() {
                 {imagesAbout.map((img, index) => (
                     // ...existing code...
                     <SwiperSlide key={index}>
-                        <div className="w-full h-[240px] flex justify-center items-center">
-                            <img src={img} alt={`imagenabout-${index}`} className="w-[80%] h-full object-cover rounded-[30px] overflow-hidden" />
+                        <div className="w-full h-[240px] flex justify-center items-center my-5">
+                            <img src={img} alt={`imagenabout-${index}`} className="w-[80%] h-full object-cover rounded-[30px] overflow-hidden shadow-md" />
                         </div>
                     </SwiperSlide>
                     // ...existing code...

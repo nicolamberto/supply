@@ -12,21 +12,21 @@ function Footer() {
 
         <div className="flex flex-col md:flex-row-reverse justify-around w-full md:items-start pt-10 md:pt-16 xl:pt-28 gap-10">
 
-          <div className="flex flex-row justify-center items-center font-bold text-white/60 gap-3 sm:gap-10 font-MontBold z-20">
+          <div className="flex flex-row justify-around items-center font-bold text-white/60 sm:gap-10 font-MontBold z-20">
             <Link to={'/'}>INICIO</Link>
             <Link to={'/productos'}>PRODUCTOS</Link>
             <Link to={'/presupuesto'}>PRESUPUESTO</Link>
           </div>
 
-          <div className=" flex flex-col justify-center items-center md:items-start gap-2 sm:gap-6 opacity-45 z-20">
-            <img src={logoblanco} alt='logoblanco' className='w-[350px]' />
-            <div className="flex flex-col justify-center items-center sm:flex-row sm:gap-5">
+          <div className=" flex flex-col justify-center items-center md:items-start gap-0 sm:gap-6 opacity-45 z-20">
+            <img src={logoblanco} alt='logoblanco' className='w-[300px] pb-10' />
+            <div className="flex flex-col justify-center items-center sm:flex-row sm:gap-5 leading-5">
               <p>Supply Argentina SRL</p>
               {" - "}
               <p>0800 444 0152</p>
             </div>
-            <p>ventas@supplyargentina.com.ar</p>
-            <div className="flex flex-row justify-center items-center gap-3">
+            <p className='pt-4'>ventas@supplyargentina.com.ar</p>
+            <div className="flex flex-row justify-center items-center gap-3 pt-7">
               {
                 socialMedia.map(({ id, url, icon: Icon }) => (
                   <Link

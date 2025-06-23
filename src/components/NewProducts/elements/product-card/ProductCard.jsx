@@ -17,14 +17,14 @@ export default function ProductCard({ product, openVariantModal, addFunction }) 
             initial={{ opacity: 0.6, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             key={product.codigo}
-            className="p-4 rounded-[20px] bg-white/95 shadow h-[600px] relative">
+            className="p-4 rounded-[20px] bg-white/95 shadow h-[620px] relative">
             <h3 className="text-[#00491f] font-bold text-[25px] font-MontExtraBoldItalic">{product.nombre}</h3>
             <ZoomImage src={product.image} alt={product.nombre} className={product.name} />
-            <div className="pb-10 flex flex-col gap-2 items-start">
+            <div className="pb-10 flex flex-col gap-5 items-start">
 
                 {product.caracteristicas && (
-                    <div className="text-[18px] text-gray-600 flex flex-row justify-center items-start leading-5 gap-2">
-                        <img className='w-[25px] pt-[3px]' src={caracteristicas} alt='caracteristicas-icono' />
+                    <div className="text-[18px] text-gray-600 flex flex-row justify-center items-start leading-5 gap-5">
+                        <img className='w-[30px] pt-[3px]' src={caracteristicas} alt='caracteristicas-icono' />
                         <ul>
                             {parseCaracteristicas(product.caracteristicas).map((item, idx) => (
                                 <li key={idx}>-{item}</li>
@@ -35,31 +35,31 @@ export default function ProductCard({ product, openVariantModal, addFunction }) 
 
                 {product.material && (
                     <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5">
-                        <img className='w-[20px]' src={material} alt='material-icono' />
+                        <img className='w-[30px]' src={material} alt='material-icono' />
                         <p>{product.material}</p>
                     </div>
                 )}
                 {product.medidas && (
                     <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5">
-                        <img className='w-[20px]' src={medidas} alt='medidas-icono' />
+                        <img className='w-[30px]' src={medidas} alt='medidas-icono' />
                         <p>{product.medidas}</p>
                     </div>
                 )}
                 {product.capacidad && (
                     <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5">
-                        <img className='w-[20px]' src={capacidad} alt='capacidad-icono' />
+                        <img className='w-[30px]' src={capacidad} alt='capacidad-icono' />
                         <p>{product.capacidad}</p>
                     </div>
                 )}
                 {product.entrada && (
                     <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5">
-                        <img className='w-[20px]' src={entrada} alt='entrada-icono' />
+                        <img className='w-[30px]' src={entrada} alt='entrada-icono' />
                         <p>{product.entrada}</p>
                     </div>
                 )}
                 {product.diametroboca && (
                     <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5">
-                        <img className='w-[20px]' src={diametroboca} alt='diametroboca-icono' />
+                        <img className='w-[30px]' src={diametroboca} alt='diametroboca-icono' />
                         <p>{product.diametroboca}</p>
                     </div>
                 )}

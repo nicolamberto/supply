@@ -22,7 +22,7 @@ function HeroSection() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.3 }}
-      className='rounded-[60px] overflow-hidden'>
+      className='rounded-[40px] md:rounded-[60px] overflow-hidden'>
 
       <div className={`relative w-[100%] flex flex-col flex-nowrap justify-center items-center`}>
         <div className="absolute inset-0 bg-gray-500 opacity-10 z-10"></div>
@@ -39,7 +39,7 @@ function HeroSection() {
             loop={true}
             speed={500}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
-            className="max-w-[300px] md:max-w-[360px] lg:max-w-[450px] xl:max-w-[500px] 2xl:max-w-[700px] h-[60px]" // Ajusta la altura según tu diseño
+            className="max-w-[300px] md:max-w-[360px] lg:max-w-[450px] xl:max-w-[500px] 2xl:max-w-[700px] h-[60px]"
             style={{ minWidth: 200 }}
           >
             {features.map((item, index) => (
@@ -63,15 +63,14 @@ function HeroSection() {
         />
         <img
           src={bannermobile}
-          className={` h-[50vh] w-full object-cover blur-[0px] block sm:hidden`}
+          className={` h-[60vh] w-full object-cover blur-[0px] block sm:hidden`}
           alt={`Banner `}
         />
 
         {/* Contenido centrado */}
-        <div className="absolute inset-0 gap-0 md:gap-0 flex flex-col items-start md:items-center justify-center text-white z-20 pt-24 px-0">
-
-          <h2 className="text-[24px] sm:text-[30px] md:text-[40px] font-bold mb-0 uppercase text-start md:text-center font-banner px-5 ">SOLUCIONES PLÁSTICAS PARA LA INDUSTRIA</h2>
-          <p className="text-[15px] sm:text-[18px] xl:text-[24px] mb-0 text-start md:text-center opacity-90 px-5 pb-6 font-MontBoldItalic">
+        <div className="absolute inset-0 gap-0 md:gap-0 flex flex-col items-start md:items-center justify-center text-white z-20 pt-52 px-0">
+          <h2 className="text-[22px] sm:text-[30px] md:text-[40px] font-bold mb-0 uppercase text-start md:text-center font-banner px-5 pb-2">SOLUCIONES PLÁSTICAS PARA LA INDUSTRIA</h2>
+          <p className="text-[12px] sm:text-[18px] xl:text-[24px] mb-0 text-start md:text-center opacity-90 px-5 pb-0 font-MontBoldItalic leading-0">
             Pallets, contenedores, cajas, residuos y más
           </p>
           <Button text={'VER CATALOGO'} url={'/productos'} />

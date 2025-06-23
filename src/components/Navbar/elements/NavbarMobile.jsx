@@ -35,8 +35,16 @@ export default function NavbarMobile({ openMenu }) {
 
                             <div className="h-[1px] w-full bg-[#033908]/30" />
 
-                            <div className="relative pr-9 md:pr-0">
+                            <div className="flex flex-row items-center justify-start gap-5">
+                                <img src={catalogo} alt="catalogo" className='w-[25px] inline-block' />
+                                <Link to="/productos">CATALOGO</Link>
+                            </div>
 
+
+                            <div className="h-[1px] w-full bg-[#033908]/30" />
+
+
+                            <div className="relative pr-9 md:pr-0">
                                 <div className="flex flex-row items-center justify-start gap-5 relative">
                                     <img src={presupuesto} alt="presupuesto" className='w-[25px] inline-block' />
                                     <Link to="/presupuesto">PRESUPUESTO</Link>
@@ -56,12 +64,8 @@ export default function NavbarMobile({ openMenu }) {
                                     </AnimatePresence>
                                 </div>
                             </div>
-                            <div className="h-[1px] w-full bg-[#033908]/30" />
 
-                            <div className="flex flex-row items-center justify-start gap-5">
-                                <img src={catalogo} alt="catalogo" className='w-[25px] inline-block' />
-                                <Link to="/productos">CATALOGO</Link>
-                            </div>
+
                         </motion.div>
                         <div className='absolute inset-0 z-0 opacity-45 flex justify-center items-center'>
                             <img src={bgnavbar} alt="bgnavbar" className='object-cover w-full h-full' />

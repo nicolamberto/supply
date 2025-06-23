@@ -37,7 +37,7 @@ export default function CartCheckout() {
             className="w-full h-full flex flex-col justify-center items-center pt-10 lg:pt-40"
           >
             <p className='text-[#00491f] font-bold font-banner sm:text-[25px] md:text-[25px] lg:text-[25px] xl:text-[30px] text-center'>NO HAY PRODUCTOS EN EL CARRITO</p>
-            <Button text={'Volver al catalogo'} url={'/productos'} />
+            <Button text={'VER CATÁLOGO'} url={'/productos'} />
 
           </motion.div>
 
