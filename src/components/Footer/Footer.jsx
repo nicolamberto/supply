@@ -8,17 +8,17 @@ function Footer() {
   return (
     <footer className='h-[60vh] sm:h-[55vh] xl:h-[60vh] w-[96%] sm:w-[98%] bg-[#00491f] rounded-t-[20px] md:rounded-t-[100px] relative overflow-hidden'>
 
-      <div className="w-full z-20 flex flex-col justify-between items-center h-full gap-20 text-white pb-10">
+      <div className="w-full z-20 flex flex-col justify-between items-center h-full gap-0 md:gap-20 text-white pb-10">
 
         <div className="flex flex-col md:flex-row-reverse justify-around w-full md:items-start pt-10 md:pt-16 xl:pt-28 gap-10">
 
-          <div className="flex flex-row justify-center items-center font-bold text-white/60 gap-3 sm:gap-10 font-MontBold">
+          <div className="flex flex-row justify-center items-center font-bold text-white/60 gap-3 sm:gap-10 font-MontBold z-20">
             <Link to={'/'}>INICIO</Link>
             <Link to={'/productos'}>PRODUCTOS</Link>
             <Link to={'/presupuesto'}>PRESUPUESTO</Link>
           </div>
 
-          <div className=" flex flex-col justify-center items-center md:items-start gap-6 opacity-45 z-30">
+          <div className=" flex flex-col justify-center items-center md:items-start gap-2 sm:gap-6 opacity-45 z-20">
             <img src={logoblanco} alt='logoblanco' className='w-[350px]' />
             <div className="flex flex-col justify-center items-center sm:flex-row sm:gap-5">
               <p>Supply Argentina SRL</p>

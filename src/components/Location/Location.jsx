@@ -14,7 +14,7 @@ function Location() {
 
         <OverlappingTitle firstTitle={'CONTACTATE'} secondTitle={'CON NOSOTROS'} colorFirstTitle={'text-[#00491f]'} colorSecondTitle={'text-[#adc9b8]'} />
 
-        <div className="flex flex-col-reverse md:flex-row-reverse justify-end items-start sm:gap-5 md:gap-10 lg:gap-12 pt-15 sm:pt-5 w-full">
+        <div className="flex flex-col-reverse md:flex-row-reverse justify-end items-start sm:gap-5 md:gap-10 lg:gap-12 pt-5 w-full">
 
           {/* Columna 1: formulario de contacto */}
           <LocationForm />

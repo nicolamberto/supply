@@ -17,9 +17,9 @@ export default function FilterBarMobile() {
                     onClick={() => setOpenFilters(!openFilters)}
                     className="flex flex-row justify-around items-center text-[#00491f]"
                 >
-                    <h2 className="text-[30px]  font-bold mb-0 text-center">CATEGORÍAS</h2>
+                    <h2 className="text-[25px]  font-bold mb-0 text-center">CATEGORÍAS</h2>
                     <motion.div
-                        animate={{ rotate: openFilters ? 180 : 0 }}
+                        animate={{ rotate: openFilters ? 0 : 180 }}
                     >
                         <IoIosArrowUp className='text-3xl' />
                     </motion.div>
@@ -34,17 +34,27 @@ export default function FilterBarMobile() {
                                 animate={{ opacity: 1, height: 'auto', transition: { opacity: { duration: 0.2, delay: 0.2 }, height: { duration: 0.2, } } }} // entrada lenta
                                 exit={{ opacity: 0, height: 0, transition: { opacity: { duration: 0.2 }, height: { duration: 0.2, delay: 0.3 } } }} // opacidad rápida
                                 onClick={() => setOpenFilters(!openFilters)}
-                                className="flex flex-col items-start justify-center w-full text-[17px]">
+                                className="flex flex-col items-start justify-center w-full text-[17px] mt-4">
                                 <button onClick={() => { setCategory('') }}
                                     className={`mb-2 block cursor-pointer border-t w-full text-start py-1 ${category === '' ? 'font-bold text-[#00491f] text-nowrap transition' : ''}`}>Todos los Productos</button>
                                 {
-                                    categories.map((item) => (
-                                        <button
-                                            key={item.id}
-                                            onClick={() => { setCategory(item.slug) }}
-                                            className={`mb-2 block cursor-pointer w-full text-start border-t-[1px] py-1 last:border-b ${category === item.slug ? 'font-bold text-[#00491f] text-nowrap transition' : ''} `}>{item.name}</button>
+                                    categories.map((item) => {
+                                        // Convertir a minúsculas y luego capitalizar cada palabra
+                                        const nameFormatted = item.name
+                                            .toLowerCase()
+                                            .replace(/\b\w/g, (c) => c.toUpperCase());
 
-                                    ))
+                                        return (
+                                            <button
+                                                key={item.slug}
+                                                onClick={() => setCategory(item.slug)}
+                                                className={`mb-2 block cursor-pointer w-full text-start border-t-[1px] py-1 last:border-b ${category === item.slug ? 'font-bold text-[#00491f] text-nowrap transition' : ''
+                                                    }`}
+                                            >
+                                                {nameFormatted}
+                                            </button>
+                                        );
+                                    })
                                 }
                             </motion.div>
 

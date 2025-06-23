@@ -17,7 +17,7 @@ export default function ServiceCard({ feature, index }) {
                 show: { opacity: 1, y: 0 }
             }}
             transition={{ duration: 0.4 }}
-            className="group bg-white text-[#00491f] hover:bg-[#00491f] hover:text-white transition rounded-b-[70px] flex justify-center items-center shadow-sm/20 hover:inset-shadow-sm/20 ">
+            className="group bg-white text-[#00491f] hover:bg-[#00491f] hover:text-white transition rounded-b-[70px] flex justify-center items-center shadow-sm/20 hover:inset-shadow-sm/20 mx-5 lg:mx-0 ">
 
             <div className="flex flex-col justify-center items-start gap-3  mx-10 mt-5 mb-10">
 
@@ -39,12 +39,12 @@ export default function ServiceCard({ feature, index }) {
 
 
                 {/* titulo */}
-                <div className="text-[25px] xl:text-[25px] leading-tight 2xl:w-[75%] font-MontBoldItalic">
+                <div className="text-[22px] xl:text-[25px] leading-tight 2xl:w-[75%] font-MontBoldItalic">
                     <p>{feature.title}</p>
                 </div>
 
                 {/* texto */}
-                <div className="text-[#00491f]/70 group-hover:text-white/70 transition leading-tight text-[18px] xl:text-[21px]">
+                <div className="text-[#00491f]/70 group-hover:text-white/70 transition leading-tight text-[16px] xl:text-[21px]">
                     <p>{feature.text}</p>
                 </div>
 

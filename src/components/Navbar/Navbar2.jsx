@@ -1,18 +1,22 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { useMotionValueEvent, useScroll, motion } from "framer-motion";
+import { useMotionValueEvent, useScroll, motion, AnimatePresence } from "framer-motion";
 
 import NavbarDesktop from "./elements/NavbarDesktop";
 import logoverde from "../../assets/logos/logo_small.png";
 import logoblanco from "../../assets/logos/logoblanco.png";
-import logomobile from '../../assets/logos/logomobile.jpg'
+import logomobile from '../../assets/logos/logoverde.png'
 import logoblancomobile from '../../assets/logos/logosimpleblanco.png'
+import NavbarMobile from "./elements/NavbarMobile";
+import { AnimatedHamburgerButton } from "./elements/AnimatedHamburgerButton";
 
 function Navbar2() {
   const [isHover, setIsHover] = useState(false);
 
   const [isHoverCart, setIsHoverCart] = useState(false)
+
+  const [openMenu, setOpenMenu] = useState(false);
 
   const [isScrolled, setIsScrolled] = useState(false);
   const { scrollY } = useScroll()
@@ -31,8 +35,8 @@ function Navbar2() {
     <motion.section
       initial={{ y: -50, opacity: 0 }}
       animate={{
-        y: 0, 
-        opacity: 1 ,
+        y: 0,
+        opacity: 1,
         background: isScrolled ? 'rgba(228, 239, 231, 1)' : 'rgba(255, 255, 255, 0)',
         height: isScrolled ? '80px' : '90px',
       }}
@@ -51,17 +55,15 @@ function Navbar2() {
 
           {
             isScrolled ?
-              <img className='max-w-[250px] hidden md:block' src={logoverde} alt="logotipo" /> 
+              <img className='max-w-[250px] hidden md:block' src={logoverde} alt="logotipo" />
               :
-              <img className='max-w-[250px] hidden md:block' src={logoblanco} alt="logotipo" /> 
-
+              <img className='max-w-[250px] hidden md:block' src={logoblanco} alt="logotipo" />
           }
           {
             isScrolled ?
-              <img className='w-[50px] block md:hidden' src={logomobile} alt="logotipo" />
+              <img className='w-[50px] block md:hidden ' src={logomobile} alt="logotipo" />
               :
               <img className='w-[70px] block md:hidden pl-5' src={logoblancomobile} alt="logotipo" />
-
           }
 
         </Link>
@@ -75,11 +77,28 @@ function Navbar2() {
 
         <AnimatePresence>
 
-          {menuOpen && (
             <NavbarMobile setMenuOpen={setMenuOpen} isHover={isHover} setIsHover={setIsHover} />
-          )}
 
         </AnimatePresence> */}
+        <NavbarMobile isScrolled={isScrolled} openMenu={openMenu} />
+        <AnimatedHamburgerButton setOpenMenu={setOpenMenu} openMenu={openMenu} isScrolled={isScrolled} />
+
+        {/* BACKGROUND BLUR ON MENUMOBILE */}
+        <AnimatePresence>
+          {/* Backdrop */}
+          {openMenu && (
+            <motion.div
+              key="backdrop"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              onClick={() => setOpenMenu(false)}
+              className="fixed inset-0 bg-black/30 backdrop-blur-sm z-10 sm:hidden"
+            />
+          )}
+        </AnimatePresence>
+
       </div>
 
 

@@ -1,10 +1,15 @@
 import banner from '../../assets/banners/bannerpresupuestodesktop.png'
 import bannermobile from '../../assets/banners/bannerpresupuestomobile.png'
+import { useProductContext } from '../../context/products'
+import Button from '../Header/elements/Button'
 import CartCheckout from './elements/CartCheckout'
 import Form from './elements/Form'
 import { motion } from 'framer-motion'
 
 export default function Contact() {
+
+  const { cart } = useProductContext()
+
   return (
     <div className=' w-full flex flex-col justify-center items-center'>
 
@@ -20,6 +25,13 @@ export default function Contact() {
         <img src={bannermobile} alt="banner" className='w-full h-full rounded-[20px] object-cover block sm:hidden' />
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-5 sm:-translate-y-5 text-white text-center flex flex-col w-full sm:gap-0'>
           <p className='text-[25px] sm:text-[30px] md:text-[40px] font-bold font-banner hidden sm:block'>CONTACTANOS</p>
+
+          {cart.length > 0 && (
+            <div className="">
+                          <Button text={'Volver al catalogo'} url={'/productos'} />
+            </div>
+          )}
+
         </div>
       </motion.div>
 

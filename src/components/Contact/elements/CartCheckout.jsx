@@ -103,7 +103,7 @@ export default function CartCheckout() {
                         whileTap={{ scale: 0.9 }}
                         className='cursor-pointer'
                       >
-                        <FaTrash className="text-[25px] text-[#00491f]" />
+                        <FaTrash className="text-[20px] text-[#00491f]" />
                       </motion.button>
                     </td>
                   </motion.tr>
