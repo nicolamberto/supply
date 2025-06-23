@@ -25,7 +25,7 @@ export default function NavbarMobile({ openMenu }) {
                 >
                     <div className="w-full h-full flex justify-center items-center relative">
                         <motion.div
-                            className="flex flex-col font-semibold text-[20px] text-[#033908]/80 uppercase w-[80%] h-[80%] gap-5 py-20 z-50"
+                            className="flex flex-col font-semibold text-[20px] text-[#033908]/80 uppercase w-[80%] h-[80%] gap-5 py-20 z-20"
                         >
 
                             <div className="flex flex-row items-center justify-start gap-5">
@@ -61,7 +61,8 @@ export default function NavbarMobile({ openMenu }) {
                             <div className="flex flex-row items-center justify-start gap-5">
                                 <img src={catalogo} alt="catalogo" className='w-[25px] inline-block' />
                                 <Link to="/productos">CATALOGO</Link>
-                            </div>                        </motion.div>
+                            </div>
+                        </motion.div>
                         <div className='absolute inset-0 z-0 opacity-45 flex justify-center items-center'>
                             <img src={bgnavbar} alt="bgnavbar" className='' />
                         </div>
