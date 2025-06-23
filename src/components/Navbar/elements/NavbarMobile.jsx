@@ -21,7 +21,7 @@ export default function NavbarMobile({ openMenu }) {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.3 }}
-                    className="m-2 z-30 bg-white/80 backdrop-blur-md flex flex-col justify-center items-center absolute right-0 h-fit top-0 rounded-[20px] sm:hidden w-[80%]"
+                    className="m-2 z-30 bg-white/80 backdrop-blur-md flex flex-col justify-center items-center absolute right-0 top-0 rounded-[20px] sm:hidden w-[80%]"
                 >
                     <div className="w-full h-full flex justify-center items-center relative">
                         <motion.div
@@ -64,7 +64,7 @@ export default function NavbarMobile({ openMenu }) {
                             </div>
                         </motion.div>
                         <div className='absolute inset-0 z-0 opacity-45 flex justify-center items-center'>
-                            <img src={bgnavbar} alt="bgnavbar" className='' />
+                            <img src={bgnavbar} alt="bgnavbar" className='object-cover w-full h-full' />
                         </div>
                     </div>
 

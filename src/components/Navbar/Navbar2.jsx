@@ -84,7 +84,7 @@ function Navbar2() {
         <AnimatedHamburgerButton setOpenMenu={setOpenMenu} openMenu={openMenu} isScrolled={isScrolled} />
 
         {/* BACKGROUND BLUR ON MENUMOBILE */}
-{/*         <AnimatePresence>
+        <AnimatePresence>
           {openMenu && (
             <motion.div
               key="backdrop"
@@ -96,7 +96,7 @@ function Navbar2() {
               className="fixed inset-0 bg-black/30 backdrop-blur-sm z-10 sm:hidden"
             />
           )}
-        </AnimatePresence> */}
+        </AnimatePresence>
 
       </div>
 
