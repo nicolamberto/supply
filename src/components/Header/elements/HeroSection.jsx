@@ -1,7 +1,7 @@
 import Button from "./Button";
-import banner1 from "../../../assets/banners/bannernuevoprueba.png";
+import banner1 from "../../../assets/banners/bannerdesktopnew.jpg";
 import { motion } from "framer-motion";
-import bannermobile from "../../../assets/banners/bannermobilenew.png";
+import bannermobile from "../../../assets/banners/bannermobilenew.jpg";
 import { features } from "../../../data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Scrollbar, A11y, Autoplay, FreeMode, EffectFade } from 'swiper/modules'
