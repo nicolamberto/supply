@@ -16,7 +16,7 @@ export default function Button({ text, url }) {
                     ease: "easeIn",
                     whileHover:{ type: "spring", stiffness: 300, delay: 0}
                 }}
-                className=" overflow-clip z-00 relative bg-blue-500 rounded-[20px] text-white m-5 px-7 py-2 text-[20px] cursor-pointer">
+                className=" overflow-clip z-00 relative bg-blue-500 rounded-[20px] text-white mx-3 my-5 px-5 py-1 text-[20px] cursor-pointer">
                 {/* Fondo animado */}
                 <motion.div
                     animate={{
@@ -35,7 +35,7 @@ export default function Button({ text, url }) {
                     }}
                 />
                 {/* Texto del botón */}
-                <Link to={url} className="relative z-10 text-[15px] sm:text-[20px] font-MontExtraBoldItalic">{text}</Link>
+                <Link to={url} className="relative z-10 text-[14px] sm:text-[20px] font-MontExtraBoldItalic">{text}</Link>
 
             </motion.button>
         </div>

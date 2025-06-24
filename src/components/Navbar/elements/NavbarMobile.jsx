@@ -37,7 +37,7 @@ export default function NavbarMobile({ openMenu }) {
 
                             <div className="flex flex-row items-center justify-start gap-5">
                                 <img src={catalogo} alt="catalogo" className='w-[25px] inline-block' />
-                                <Link to="/productos">CATALOGO</Link>
+                                <Link to="/productos">CATÁLOGO</Link>
                             </div>
 
 

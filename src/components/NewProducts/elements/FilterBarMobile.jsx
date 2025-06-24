@@ -11,13 +11,13 @@ export default function FilterBarMobile() {
 
     return (
         <div className="block lg:hidden">
-            <div className="p-4 rounded-[20px] bg-white/95">
+            <div className="px-3 py-2 rounded-[20px] bg-white/95">
 
                 <div
                     onClick={() => setOpenFilters(!openFilters)}
                     className="flex flex-row justify-around items-center text-[#00491f]"
                 >
-                    <h2 className="text-[25px]  font-bold mb-0 text-center">CATEGORÍAS</h2>
+                    <h2 className="text-[25px] font-bold mb-0 text-start w-full">CATEGORÍAS</h2>
                     <motion.div
                         animate={{ rotate: openFilters ? 0 : 180 }}
                     >
@@ -36,7 +36,7 @@ export default function FilterBarMobile() {
                                 onClick={() => setOpenFilters(!openFilters)}
                                 className="flex flex-col items-start justify-center w-full text-[17px] mt-4">
                                 <button onClick={() => { setCategory('') }}
-                                    className={`mb-2 block cursor-pointer border-t w-full text-start py-1 ${category === '' ? 'font-bold text-[#00491f] text-nowrap transition' : ''}`}>Todos los Productos</button>
+                                    className={`mb-2 block cursor-pointer w-full text-start py-1 ${category === '' ? 'font-bold text-[#00491f] text-nowrap transition' : ''}`}>Todos los Productos</button>
                                 {
                                     categories.map((item) => {
                                         // Convertir a minúsculas y luego capitalizar cada palabra
@@ -48,7 +48,7 @@ export default function FilterBarMobile() {
                                             <button
                                                 key={item.slug}
                                                 onClick={() => setCategory(item.slug)}
-                                                className={`mb-2 block cursor-pointer w-full text-start border-t-[1px] py-1 last:border-b ${category === item.slug ? 'font-bold text-[#00491f] text-nowrap transition' : ''
+                                                className={`mb-2 block cursor-pointer w-full text-start border-t-[1px] border-black/10 py-1 last:border-b ${category === item.slug ? 'font-bold text-[#00491f] text-nowrap transition' : ''
                                                     }`}
                                             >
                                                 {nameFormatted}

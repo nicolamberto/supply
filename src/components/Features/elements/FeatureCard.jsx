@@ -17,7 +17,7 @@ export default function ServiceCard({ feature, index }) {
                 show: { opacity: 1, y: 0 }
             }}
             transition={{ duration: 0.4 }}
-            className="group bg-white text-[#00491f] hover:bg-[#00491f] hover:text-white transition rounded-b-[70px] flex justify-center items-center shadow-sm/20 hover:inset-shadow-sm/20 mx-5 lg:mx-0 ">
+            className="group bg-white text-[#00491f] hover:bg-[#00491f] hover:text-white transition rounded-b-[70px] flex justify-center items-center shadow-sm/20 hover:inset-shadow-sm/20 mx-0 lg:mx-0 ">
 
             <div className="flex flex-col justify-center items-start gap-3  mx-10 mt-5 mb-10">
 

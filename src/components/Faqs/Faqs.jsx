@@ -13,10 +13,10 @@ export default function Faqs() {
 
 
     return (
-        <div className='w-full py-10 sm:py-20 flex justify-center items-center px-4 md:px-0'>
+        <div className='w-full py-10 sm:py-20 flex justify-center items-center md:px-0'>
 
             {/* contenedor que contiene al titulo y el contenedor de faqs */}
-            <div className="-[95%] lg:w-[80%] 2xl:w-[70%] flex flex-col gap-10 justify-center items-center">
+            <div className="w-[88%] lg:w-[80%] 2xl:w-[70%] flex flex-col gap-10 justify-center items-center">
 
                 <OverlappingTitle firstTitle={'PREGUNTAS'} secondTitle={'FRECUENTES'} colorFirstTitle={'text-[#00491f]'} colorSecondTitle={'text-[#adc9b8]'}/>
                 <div className="flex flex-col justify-center items-center w-full ">

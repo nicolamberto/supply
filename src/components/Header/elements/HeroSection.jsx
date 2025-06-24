@@ -28,7 +28,7 @@ function HeroSection() {
         <div className="absolute inset-0 bg-gray-500 opacity-10 z-10"></div>
 
 
-        <div className="absolute bottom-4 md:bottom-3 xl:bottom-5 2xl:bottom-2 right-0 z-20 hidden sm:flex sm:justify-end">
+        <div className="absolute bottom-4 md:bottom-2 xl:bottom-3 2xl:bottom-1 right-0 z-20 hidden sm:flex sm:justify-end">
           <Swiper
             modules={[Scrollbar, A11y, Autoplay, FreeMode, EffectFade]}
             effect="fade"
@@ -69,8 +69,8 @@ function HeroSection() {
 
         {/* Contenido centrado */}
         <div className="absolute inset-0 gap-0 md:gap-0 flex flex-col items-start md:items-center justify-center text-white z-20 pt-52 px-0">
-          <h2 className="text-[22px] sm:text-[30px] md:text-[40px] font-bold mb-0 uppercase text-start md:text-center font-banner px-5 pb-2">SOLUCIONES PLÁSTICAS PARA LA INDUSTRIA</h2>
-          <p className="text-[12px] sm:text-[18px] xl:text-[24px] mb-0 text-start md:text-center opacity-90 px-5 pb-0 font-MontBoldItalic leading-0">
+          <h1 className="text-[24px] sm:text-[30px] md:text-[40px] font-bold mb-0 uppercase text-start md:text-center font-banner px-3 pb-2">SOLUCIONES PLÁSTICAS <br className="md:hidden" /> PARA LA INDUSTRIA</h1>
+          <p className="text-[12px] sm:text-[18px] xl:text-[24px] mb-0 text-start md:text-center opacity-90 px-3 pb-0 font-MontBoldItalic leading-0">
             Pallets, contenedores, cajas, residuos y más
           </p>
           <Button text={'VER CATALOGO'} url={'/productos'} />

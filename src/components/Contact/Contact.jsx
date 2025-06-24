@@ -28,7 +28,7 @@ export default function Contact() {
 
           {cart.length > 0 && (
             <div className="">
-                          <Button text={'VER CATÁLOGO'} url={'/productos'} />
+              <Button text={'VER CATÁLOGO'} url={'/productos'} />
             </div>
           )}
 

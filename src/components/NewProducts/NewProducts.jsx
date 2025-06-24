@@ -22,7 +22,7 @@ export default function NewProducts() {
             >
                 <img src={banner} alt="banner" className='w-full h-full rounded-[20px] object-cover hidden sm:block' />
                 <img src={bannermobile} alt="banner" className='w-full h-full rounded-[20px] object-cover block sm:hidden' />
-                <p className='absolute top-1/2 left-1/2 transform -translate-x-1/2 text-white text-[25px] sm:text-[30px] md:text-[40px] xl:text-[70px] font-bold text-center font-banner text-nowrap'>NUESTRO CATALOGO</p>
+                <p className='absolute top-1/2 left-1/2 transform -translate-x-1/2 text-white text-[25px] sm:text-[30px] md:text-[40px] xl:text-[70px] font-bold text-center font-banner text-nowrap'>NUESTRO CATÁLOGO</p>
             </motion.div>
 
 
