@@ -17,10 +17,10 @@ export default function ProductCard({ product, openVariantModal, addFunction }) 
             initial={{ opacity: 0.6, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             key={product.codigo}
-            className="p-4 rounded-[20px] bg-white/95 shadow h-[620px] relative">
+            className="p-4 rounded-[20px] bg-white/95 shadow h-[650px] relative">
             <h3 className="text-[#00491f] font-bold text-[25px] font-MontExtraBoldItalic">{product.nombre}</h3>
             <ZoomImage src={product.image} alt={product.nombre} className={product.name} />
-            <div className="pb-10 flex flex-col gap-5 items-start">
+            <div className="pb-10 flex flex-col gap-3 items-start">
 
                 {product.caracteristicas && (
                     <div className="text-[18px] text-gray-600 flex flex-row justify-center items-start leading-5 gap-5">
