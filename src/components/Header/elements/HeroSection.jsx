@@ -73,7 +73,7 @@ function HeroSection() {
           <p className="text-[12px] sm:text-[18px] xl:text-[24px] mb-0 text-start md:text-center opacity-90 px-3 pb-0 font-MontBoldItalic leading-0 lg:pb-10">
             Pallets, contenedores, cajas, residuos y más
           </p>
-          <Button text={'VER CATALOGO'} url={'/productos'} />
+          <Button text={'VER CATÁLOGO'} url={'/productos'} />
 
         </div>
       </div>

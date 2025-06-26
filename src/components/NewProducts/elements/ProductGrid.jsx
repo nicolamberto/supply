@@ -7,13 +7,17 @@ import Pagination from '../../Pagination/Pagination';
 import ProductCard from './product-card/ProductCard';
 import ModalVariantes from './product-card/ModalVariantes';
 import { splitCategoryTitle } from '../utils/utils';
-
+import { useParams } from 'react-router-dom';
 
 export default function ProductGrid() {
-
-    const { products, categories, category, addToCart, currentPage } = useProductContext();
+    const { slug } = useParams();
+    const { products, categories, category, setCategory, addToCart, currentPage } = useProductContext();
     const [loading, setLoading] = useState(true);
     const [modalImage, setModalImage] = useState(null);
+
+    useEffect(() => {
+        setCategory(slug || '');
+    }, [slug]);
 
     useEffect(() => {
         setLoading(true);
@@ -51,7 +55,7 @@ export default function ProductGrid() {
 
     return (
         <>
-            <section className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 relative pt-26  pb-28">
+            <section className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 relative pt-26 pb-28">
                 <div className="absolute col-span-3 w-full">
                     <OverlappingTitle
                         firstTitle={firstTitle}
@@ -67,17 +71,15 @@ export default function ProductGrid() {
                     ))
                     : products.map(product => (
                         <ProductCard product={product} openVariantModal={openVariantModal} addFunction={addFunction} />
+                    ))
+                }
 
-                    ))}
                 <div className="absolute bottom-0 w-full flex justify-center md:justify-start">
                     <Pagination />
                 </div>
             </section>
 
-            {/* Modal con blur y animación */}
             <ModalVariantes modalImage={modalImage} closeModal={closeModal} />
-
-
         </>
     );
 }

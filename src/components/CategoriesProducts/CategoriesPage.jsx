@@ -5,7 +5,7 @@ export default function CategoriesPage() {
         <div className='w-full flex flex-col justify-center items-center pt-10'>
 
             <div className="w-[88%] lg:w-[80%] 2xl:w-[80%]">
-                <OverlappingTitle firstTitle={'PLASTICOS'} secondTitle={'INDUSTRIALES'} colorFirstTitle={'text-[#00491f]'} colorSecondTitle={'text-[#adc9b8]'}/>
+                <OverlappingTitle firstTitle={'PLÁSTICOS'} secondTitle={'INDUSTRIALES'} colorFirstTitle={'text-[#00491f]'} colorSecondTitle={'text-[#adc9b8]'}/>
                 <CategoriesProducts2 />
             </div>
 

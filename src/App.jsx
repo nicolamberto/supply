@@ -6,11 +6,11 @@ import useScrollToTop from "./hooks/useScrollToTop";
 import { ProductProvider } from "./context/products";
 import Footer from "./components/Footer/Footer";
 import { DelayedSuspense } from "./wrapper-suspense/DelayedSuspense";
-import { BarLoader  } from "react-spinners";
+import { BarLoader } from "react-spinners";
 import Contact from "./components/Contact/Contact";
 
 const Loader = () => <div className="w-full h-[100vh] flex justify-center items-center text-center py-10">
-  <BarLoader  color="#00491f" size={100}/>
+  <BarLoader color="#00491f" size={100} />
 </div>;
 
 const Home = lazy(() => import("./pages/Home/Home"));
@@ -33,10 +33,11 @@ function App() {
             <Route path="*" element={<NotFound />} />
             <Route path="/404" element={<NotFound />} />
             <Route path="/productos" element={<NewProducts />} />
+            <Route path="/:slug" element={<NewProducts />} /> {/* <- AGREGADA */}
             <Route path="/" element={<Home />} />
-            {/* AGREGAR PAGINA EN PRESUPUESTO DEL SHOPPING CART DESDE CERO */}
-             <Route path="/Presupuesto" element={<Contact/>} /> 
+            <Route path="/Presupuesto" element={<Contact />} />
           </Routes>
+
           <Footer />
         </DelayedSuspense>
 
