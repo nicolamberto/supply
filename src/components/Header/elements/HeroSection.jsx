@@ -1,5 +1,5 @@
 import Button from "./Button";
-import banner1 from "../../../assets/banners/bannerdesktopnew.jpg";
+import banner1 from "../../../assets/banners/bannerdesktopnuevo.png";
 import { motion } from "framer-motion";
 import bannermobile from "../../../assets/banners/bannermobilenew.jpg";
 import { features } from "../../../data";
@@ -68,9 +68,9 @@ function HeroSection() {
         />
 
         {/* Contenido centrado */}
-        <div className="absolute inset-0 gap-0 md:gap-0 flex flex-col items-start md:items-center justify-center text-white z-20 pt-52 px-0">
+        <div className="absolute inset-0 gap-0 md:gap-0 flex flex-col items-start md:items-center justify-center text-white z-20 pt-52 lg:pt-40 px-0">
           <h1 className="text-[24px] sm:text-[30px] md:text-[40px] font-bold mb-0 uppercase text-start md:text-center font-banner px-3 pb-2">SOLUCIONES PLÁSTICAS <br className="md:hidden" /> PARA LA INDUSTRIA</h1>
-          <p className="text-[12px] sm:text-[18px] xl:text-[24px] mb-0 text-start md:text-center opacity-90 px-3 pb-0 font-MontBoldItalic leading-0">
+          <p className="text-[12px] sm:text-[18px] xl:text-[24px] mb-0 text-start md:text-center opacity-90 px-3 pb-0 font-MontBoldItalic leading-0 lg:pb-10">
             Pallets, contenedores, cajas, residuos y más
           </p>
           <Button text={'VER CATALOGO'} url={'/productos'} />
