@@ -2,11 +2,18 @@ import React, { useState } from 'react'
 import { useProductContext } from '../../../context/products';
 import { IoIosArrowUp } from "react-icons/io";
 import { motion, AnimatePresence, delay } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 export default function FilterBarMobile() {
 
     const [openFilters, setOpenFilters] = useState(false)
     const { categories, category, setCategory } = useProductContext();
+    const navigate = useNavigate();
+
+    const handleCategoryClick = (slug) => {
+        setCategory(slug);
+        navigate(`/${slug}`);
+    };
 
 
     return (
@@ -35,7 +42,13 @@ export default function FilterBarMobile() {
                                 exit={{ opacity: 0, height: 0, transition: { opacity: { duration: 0.2 }, height: { duration: 0.2, delay: 0.3 } } }} // opacidad rápida
                                 onClick={() => setOpenFilters(!openFilters)}
                                 className="flex flex-col items-start justify-center w-full text-[17px] mt-4">
-                                <button onClick={() => { setCategory('') }}
+                                <button onClick={
+                                    () => {
+                                        setCategory('');
+                                        navigate('/productos'); // Navegar a la ruta de productos
+                                    }
+
+                                }
                                     className={`mb-2 block cursor-pointer w-full text-start py-1 ${category === '' ? 'font-bold text-[#00491f] text-nowrap transition' : ''}`}>Todos los Productos</button>
                                 {
                                     categories.map((item) => {
@@ -47,7 +60,7 @@ export default function FilterBarMobile() {
                                         return (
                                             <button
                                                 key={item.slug}
-                                                onClick={() => setCategory(item.slug)}
+                                                onClick={() => handleCategoryClick(item.slug)}
                                                 className={`mb-2 block cursor-pointer w-full text-start border-t-[1px] border-black/10 py-1 last:border-b ${category === item.slug ? 'font-bold text-[#00491f] text-nowrap transition' : ''
                                                     }`}
                                             >

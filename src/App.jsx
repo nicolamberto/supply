@@ -33,7 +33,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
             <Route path="/404" element={<NotFound />} />
             <Route path="/productos" element={<NewProducts />} />
-            <Route path="/:slug" element={<NewProducts />} /> {/* <- AGREGADA */}
+            <Route path="/:slug" element={<NewProducts />} /> 
             <Route path="/" element={<Home />} />
             <Route path="/Presupuesto" element={<Contact />} />
           </Routes>
