@@ -53,9 +53,9 @@ export default function Stats() {
 
             <div className="flex flex-col justify-center items-center">
                 <p className='text-[70px] md:text-[55px] 2xl:text-[80px] font-extrabold pr-3 font-MontExtraBoldItalic'>
-                    +<AnimatedNumber to={200} />
+                    +<AnimatedNumber to={250} />
                 </p>
-                <p className='text-center text-[20px] sm:text-[16px] lg:text-[22px] xl:text-[20px] text-nowrap'>Empleados</p>
+                <p className='text-center text-[20px] sm:text-[16px] lg:text-[22px] xl:text-[20px] text-nowrap'>Productos disponibles</p>
             </div>
 
         </div>

@@ -26,13 +26,12 @@ export default function ProductCard({ product, openVariantModal, addFunction }) 
                     <div className="text-[18px] text-gray-600 flex flex-row justify-center items-start leading-5 gap-5">
                         <img className='w-[30px] pt-[3px]' src={caracteristicas} alt='caracteristicas-icono' />
                         <ul>
-                            {parseCaracteristicas(product.caracteristicas).map((item, idx) => (
-                                <li key={idx}>-{item}</li>
+                            {parseCaracteristicas(product.caracteristicas).map((item, index)=> (
+                                <li key={index}>-{item}</li>
                             ))}
                         </ul>
                     </div>
                 )}
-
                 {product.material && (
                     <div className="text-[18px] text-gray-600 flex flex-row justify-center items-center leading-5 gap-5">
                         <img className='w-[30px]' src={material} alt='material-icono' />

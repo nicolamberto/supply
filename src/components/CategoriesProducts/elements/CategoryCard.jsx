@@ -1,9 +1,16 @@
 import { HiArrowLongRight } from 'react-icons/hi2'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useProductContext } from '../../../context/products'
 import { motion } from 'framer-motion'
 
 export default function CategoryCard({ item }) {
+
+  const navigate = useNavigate();
+
+  const handleCategoryClick = (slug) => {
+    setCategory(slug);
+    navigate(`/${slug}`);
+  };
 
   const cardVariants = {
     initial: {},
@@ -28,8 +35,8 @@ export default function CategoryCard({ item }) {
       <Link
         onClick={() => setCategory(item.slug)}
         className='h-[200px] md:h-[420px] w-full overflow-hidden rounded-[20px]'
-        to={`/productos`}
-      >
+        to={`/${item.slug}`}      
+        >
         <motion.img
           variants={imageVariants}
 
@@ -52,7 +59,7 @@ export default function CategoryCard({ item }) {
 
 
       <motion.button className="w-full flex justify-end text-[30px]">
-        <Link to={`/productos`}>
+        <Link to={`/${item.slug}`}>
           <div className="border-2 flex justify-center items-center px-5 rounded-full text-green-800 group-hover:bg-[#00491f] group-hover:text-white cursor-pointer transition">
             <HiArrowLongRight />
           </div>

@@ -32,7 +32,7 @@ export default function Modal({ setIsHover, setMenuOpen }) {
                         className='w-full py-0 flex justify-between md:justify-center rounded-[10px] items-center gap-3 pl-5 z-10 overflow-hidden hover:bg-green-700 hover:text-white duration-100 text-[14px] md:text-[13px] bg-[#efefef]'
                         onClick={() => {handleClickProductButton(item.slug)} }
                         key={item.id}
-                        to={`/productos`}
+                        to={`/${item.slug}`}
                     >
 
                         <p className='text-start font-semibold text-nowrap uppercase w-full text-[17px] font-MontBoldItalic' key={item.id}>

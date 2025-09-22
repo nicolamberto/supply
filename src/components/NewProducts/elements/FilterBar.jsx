@@ -1,4 +1,3 @@
-import React from 'react';
 import { useProductContext } from '../../../context/products';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
