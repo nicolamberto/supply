@@ -5,6 +5,14 @@ import { FaTrash } from "react-icons/fa";
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from '../../Header/elements/Button';
 
+function getCartImage(item) {
+  if (!item) return null;
+  if (item.images?.small) return item.images.small;
+  if (item.images?.thumbnail) return item.images.thumbnail;
+  if (typeof item.image === 'string') return item.image;
+  return null;
+}
+
 export default function CartCheckout() {
 
   const { cart, removeFromCart, addToCart, removeFullProductFromCart } = useProductContext()
@@ -37,7 +45,7 @@ export default function CartCheckout() {
             className="w-full h-full flex flex-col justify-center items-center pt-10 lg:pt-40"
           >
             <p className='text-[#00491f] font-bold font-banner sm:text-[25px] md:text-[25px] lg:text-[25px] xl:text-[30px] text-center'>NO HAY PRODUCTOS EN EL CARRITO</p>
-            <Button text={'VER CATÁLOGO'} url={'/productos'} />
+            <Button text={'VER CATALOGO'} url={'/productos'} />
 
           </motion.div>
 
@@ -57,57 +65,69 @@ export default function CartCheckout() {
               className=''
             >
               <AnimatePresence>
-                {cart.map((item) => (
-                  <motion.tr
-                    key={item.codigo}
-                    variants={rowVariants}
-                    className="bg-white shadow rounded"
-                  >
-                    <td className='px-4 py-2'>
-                      <div className="flex items-center gap-3 h-[80px] overflow-hidden">
-                        <img src={item.image} alt={item.nombre} className='w-[70px] sm:w-[80px]' />
-                        <p className='font-semibold text-[14px] sm:text-[17px]'>{item.nombre}</p>
-                      </div>
-                    </td>
-                    <td className='px-4 py-2'>
-                      <div className="border rounded-full flex flex-row gap-6 justify-around items-center w-[100px] sm:w-[150px] py-1 px-2">
+                {cart.map((item) => {
+                  const imageSrc = getCartImage(item);
+
+                  return (
+                    <motion.tr
+                      key={item.id ?? item.codigo}
+                      variants={rowVariants}
+                      className="bg-white shadow rounded"
+                    >
+                      <td className='px-4 py-2'>
+                        <div className="flex items-center gap-3 h-[80px] overflow-hidden">
+                          {imageSrc && (
+                            <img
+                              src={imageSrc}
+                              alt={item.nombre}
+                              className='w-[70px] sm:w-[80px] object-cover'
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          )}
+                          <p className='font-semibold text-[14px] sm:text-[17px]'>{item.nombre}</p>
+                        </div>
+                      </td>
+                      <td className='px-4 py-2'>
+                        <div className="border rounded-full flex flex-row gap-6 justify-around items-center w-[100px] sm:w-[150px] py-1 px-2">
+                          <motion.button
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            className='cursor-pointer'
+                          >
+                            <FaMinus onClick={() => { removeFromCart(item) }} className='text-[20px]' />
+                          </motion.button>
+                          <motion.p
+                            key={item.quantity}
+                            initial={{ scale: 0, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0, opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className='absolute ml-1 px-[5px] text-[20px] rounded-full text-center font-light'>
+                            {item.quantity}
+                          </motion.p>
+                          <motion.button
+                            className='cursor-pointer'
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                          >
+                            <FaPlus onClick={() => { addToCart(item) }} className='text-[18px]' />
+                          </motion.button>
+                        </div>
+                      </td>
+                      <td className='px-4 py-2'>
                         <motion.button
+                          onClick={() => { removeFullProductFromCart(item) }}
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
                           className='cursor-pointer'
                         >
-                          <FaMinus onClick={() => { removeFromCart(item) }} className='text-[20px]' />
+                          <FaTrash className="text-[20px] text-[#00491f]" />
                         </motion.button>
-                        <motion.p
-                          key={item.quantity}
-                          initial={{ scale: 0, opacity: 0 }}
-                          animate={{ scale: 1, opacity: 1 }}
-                          exit={{ scale: 0, opacity: 0 }}
-                          transition={{ duration: 0.2 }}
-                          className='absolute ml-1 px-[5px] text-[20px] rounded-full text-center font-light'>
-                          {item.quantity}
-                        </motion.p>
-                        <motion.button
-                          className='cursor-pointer'
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.9 }}
-                        >
-                          <FaPlus onClick={() => { addToCart(item) }} className='text-[18px]' />
-                        </motion.button>
-                      </div>
-                    </td>
-                    <td className='px-4 py-2'>
-                      <motion.button
-                        onClick={() => { removeFullProductFromCart(item) }}
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        className='cursor-pointer'
-                      >
-                        <FaTrash className="text-[20px] text-[#00491f]" />
-                      </motion.button>
-                    </td>
-                  </motion.tr>
-                ))}
+                      </td>
+                    </motion.tr>
+                  );
+                })}
               </AnimatePresence>
 
             </motion.tbody>

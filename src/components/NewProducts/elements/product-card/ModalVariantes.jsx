@@ -23,7 +23,13 @@ export default function ModalVariantes({ modalImage, closeModal }) {
                         className="bg-white p-4 rounded-xl max-w-[90%] max-h-[90%]"
                         onClick={(e) => e.stopPropagation()}
                     >
-                        <img src={modalImage} alt="Variante del producto" className="max-h-[80vh] object-contain" />
+                        <img
+                            src={modalImage}
+                            alt="Variante del producto"
+                            className="max-h-[80vh] object-contain"
+                            loading="lazy"
+                            decoding="async"
+                        />
                     </motion.div>
                 </motion.div>
             )}

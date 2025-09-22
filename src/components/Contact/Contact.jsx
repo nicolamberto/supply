@@ -1,5 +1,5 @@
-import banner from '../../assets/banners/bannerpresupuestodesktop.png'
-import bannermobile from '../../assets/banners/bannerpresupuestomobile.png'
+import banner from '../../assets/banners/bannerpresupuestodesktop.webp'
+import bannermobile from '../../assets/banners/bannerpresupuestomobile.webp'
 import { useProductContext } from '../../context/products'
 import Button from '../Header/elements/Button'
 import CartCheckout from './elements/CartCheckout'

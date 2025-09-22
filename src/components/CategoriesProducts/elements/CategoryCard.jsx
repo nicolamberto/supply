@@ -3,6 +3,28 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useProductContext } from '../../../context/products'
 import { motion } from 'framer-motion'
 
+function getCategoryImage(item) {
+  if (!item) return null;
+  if (typeof item.img === 'string' && item.img) return item.img;
+  if (item.images?.medium) return item.images.medium;
+  if (item.images?.small) return item.images.small;
+  return item.images?.fallback || null;
+}
+
+function buildSrcSet(images) {
+  if (!images) return undefined;
+
+  const candidates = [
+    images.thumbnail && `${images.thumbnail} 156w`,
+    images.small && `${images.small} 500w`,
+    images.medium && `${images.medium} 750w`,
+    images.large && `${images.large} 1000w`,
+    images.original && `${images.original} 1536w`,
+  ].filter(Boolean);
+
+  return candidates.length ? candidates.join(', ') : undefined;
+}
+
 export default function CategoryCard({ item }) {
 
   const navigate = useNavigate();
@@ -22,9 +44,10 @@ export default function CategoryCard({ item }) {
     hover: { scale: 1.05, transition: { duration: 0.3 } },
   };
 
-
-
   const { category, setCategory } = useProductContext()
+
+  const imageSrc = getCategoryImage(item);
+  const imageSrcSet = buildSrcSet(item.images);
 
   return (
     <motion.div
@@ -39,8 +62,14 @@ export default function CategoryCard({ item }) {
         >
         <motion.img
           variants={imageVariants}
-
-          src={item.img} alt="imagen" className="rounded-[20px] h-full w-full object-cover" />
+          src={imageSrc || ''}
+          srcSet={imageSrcSet}
+          sizes="(min-width: 1536px) 18vw, (min-width: 1280px) 20vw, (min-width: 1024px) 24vw, (min-width: 768px) 30vw, 45vw"
+          alt={item.name}
+          className="rounded-[20px] h-full w-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
       </Link>
 
       <div className="relative">

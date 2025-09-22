@@ -5,13 +5,13 @@ function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
 }
 
-function ZoomImage({ src, alt, className }) {
+function ZoomImage({ src, fullSrc, alt, className, srcSet, sizes }) {
   const containerRef = useRef(null);
   const [isZoomed, setIsZoomed] = useState(false);
 
   const x = useMotionValue(50);
   const y = useMotionValue(50);
-  const zoom = useMotionValue(100); // nuevo motion value para el zoom
+  const zoom = useMotionValue(100);
 
   const springX = useSpring(x, { stiffness: 100, damping: 20 });
   const springY = useSpring(y, { stiffness: 100, damping: 20 });
@@ -38,13 +38,15 @@ function ZoomImage({ src, alt, className }) {
 
   const handleMouseEnter = () => {
     setIsZoomed(true);
-    zoom.set(150); // Zoom suave
+    zoom.set(150);
   };
 
   const handleMouseLeave = () => {
     setIsZoomed(false);
-    zoom.set(100); // Volver al normal suavemente
+    zoom.set(100);
   };
+
+  const displaySrc = isZoomed && fullSrc ? fullSrc : src;
 
   return (
     <div
@@ -56,13 +58,24 @@ function ZoomImage({ src, alt, className }) {
     >
       <motion.div
         style={{
-          backgroundImage: `url(${src})`,
+          backgroundImage: displaySrc ? `url(${displaySrc})` : undefined,
           backgroundSize,
           backgroundPosition,
         }}
         className="w-full h-full"
       >
-        <img src={src} alt={alt} className="w-full h-full object-cover opacity-0" draggable={false} />
+        {displaySrc && (
+          <img
+            src={displaySrc}
+            srcSet={srcSet}
+            sizes={sizes}
+            alt={alt}
+            className="w-full h-full object-cover opacity-0"
+            draggable={false}
+            loading="lazy"
+            decoding="async"
+          />
+        )}
       </motion.div>
     </div>
   );

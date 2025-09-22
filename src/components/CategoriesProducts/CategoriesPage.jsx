@@ -1,5 +1,4 @@
 import CategoriesProducts2 from './CategoriesProducts2'
-import OverlappingTitle from '../../resources/overlappingTitle'
 import { motion } from 'framer-motion'
 export default function CategoriesPage() {
     return (

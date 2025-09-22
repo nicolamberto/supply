@@ -1,17 +1,40 @@
 import { query } from "./strapi";
 
+function buildImageSources(asset) {
+  if (!asset) return null;
+
+  const formats = asset.formats || {};
+
+  const sources = {
+    original: asset.url || null,
+    large: formats.large?.url || null,
+    medium: formats.medium?.url || null,
+    small: formats.small?.url || null,
+    thumbnail: formats.thumbnail?.url || null,
+  };
+
+  const fallback = sources.medium || sources.small || sources.large || sources.original || null;
+
+  return {
+    ...sources,
+    fallback,
+  };
+}
+
 export function getProductCategories() {
   return query(
-    "product-categories?sort=orden:asc&fields[0]=name&fields[1]=slug&populate[image][fields][0]=url"
+    "product-categories?sort=orden:asc&populate=image"
   ).then((res) => {
-    return res.data.map((item) => {
-      const { name, slug, image } = item;
-      const img = image?.url ? `${image.url}` : null;
+    return (res?.data || []).map((item) => {
+      const { id, name, slug, image } = item || {};
+      const imageSources = buildImageSources(image);
 
       return {
+        id,
         name,
         slug,
-        img,
+        img: imageSources?.fallback || null,
+        images: imageSources,
       };
     });
   });

@@ -9,8 +9,24 @@ import material from '../../../../assets/iconos/material.png';
 import medidas from '../../../../assets/iconos/medidas.png';
 import { parseCaracteristicas } from '../../utils/utils';
 
-export default function ProductCard({ product, openVariantModal, addFunction }) {
+function buildSrcSet(images) {
+    if (!images) return undefined;
 
+    const candidates = [
+        images.thumbnail && `${images.thumbnail} 156w`,
+        images.small && `${images.small} 500w`,
+        images.medium && `${images.medium} 750w`,
+        images.large && `${images.large} 1000w`,
+        images.original && `${images.original} 1080w`,
+    ].filter(Boolean);
+
+    return candidates.length ? candidates.join(', ') : undefined;
+}
+
+export default function ProductCard({ product, openVariantModal, addFunction }) {
+    const previewSrc = product.images?.medium || product.images?.small || product.image;
+    const zoomSrc = product.images?.large || product.images?.original || previewSrc;
+    const imageSrcSet = buildSrcSet(product.images);
 
     return (
         <motion.div
@@ -19,7 +35,14 @@ export default function ProductCard({ product, openVariantModal, addFunction }) 
             key={product.codigo}
             className="p-4 rounded-[20px] bg-white/95 shadow h-[650px] relative">
             <h3 className="text-[#00491f] font-bold text-[25px] font-MontExtraBoldItalic">{product.nombre}</h3>
-            <ZoomImage src={product.image} alt={product.nombre} className={product.name} />
+            <ZoomImage
+                src={previewSrc}
+                fullSrc={zoomSrc}
+                srcSet={imageSrcSet}
+                sizes="(min-width: 1024px) 32vw, (min-width: 640px) 45vw, 90vw"
+                alt={product.nombre}
+                className={product.name}
+            />
             <div className="pb-10 flex flex-col gap-3 items-start">
 
                 {product.caracteristicas && (
@@ -67,7 +90,7 @@ export default function ProductCard({ product, openVariantModal, addFunction }) 
             <div className="flex gap-2 absolute right-4 bottom-4">
                 {product.variant && (
                     <div
-                        onClick={() => openVariantModal(product.variant)}
+                        onClick={() => openVariantModal(product.variantImages?.original || product.variant)}
                         className="rounded-full p-3 text-[#00491f] bg-transparent border border-[#00491f] hover:bg-[#00491f] hover:text-white transition font-bold cursor-pointer">
                         <FaEye />
                     </div>

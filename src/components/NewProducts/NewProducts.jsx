@@ -1,6 +1,5 @@
-import banner from '../../assets/banners/bannerproductosdesktop.png'
-import bannermobile from '../../assets/banners/bannerproductosmobile.png'
-import { useProductContext } from '../../context/products';
+import banner from '../../assets/banners/bannerproductosdesktop.webp'
+import bannermobile from '../../assets/banners/bannerproductosmobile.webp'
 import ProductGrid from './elements/ProductGrid';
 import FilterBar from './elements/FilterBar';
 import FilterBarMobile from './elements/FilterBarMobile';
